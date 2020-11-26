@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../componenets/Header";
 import ProjectMenuItem from "../componenets/ProjectMenuItem";
+import ProjectMenuItem2 from "../componenets/ProjectMenuItem2";
 import { motion } from "framer-motion";
 
 export default function Home(props) {
@@ -42,6 +43,31 @@ export default function Home(props) {
     },
   };
 
+  const slideIn = {
+    initial: (custom) => ({
+      x: "10%",
+      opacity: 0,
+    }),
+    animate: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        damping: 20,
+        stiffness: 100,
+      },
+    }),
+    exit: {
+      opacity: 0,
+      x: "-10%",
+      transition: {
+        duration: 0.55,
+        ease: [0.32, 0, 0.67, 0],
+        // easing: easing,
+      },
+    },
+  };
+
   const stagger = {
     animate: {
       transition: {
@@ -68,18 +94,19 @@ export default function Home(props) {
         <motion.div variants={stagger} className="flex flex-wrap">
           {projects.map((project, i) => (
             <motion.div
-              className="xl:w-1/4 lg:w-1/3 md:w-1/3 sm:w-1/2 w-full p-5"
+              className="xl:w-1/2 lg:w-1/2 w-full xl:px-16 lg:px-8 md:px-8 px-4 py-6"
               custom={
                 Math.random() < 0.5 ? Math.random() * -1 : Math.random() * 1
               }
               key={project.id}
-              variants={fadeInUp}
+              variants={slideIn}
               style={{
                 originX: 0.5,
                 originY: 1,
               }}
             >
-              <ProjectMenuItem key={project.id} data={project} />
+              <ProjectMenuItem2 key={project.id} data={project} />
+              {/* <ProjectMenuItem key={project.id} data={project} /> */}
             </motion.div>
           ))}
         </motion.div>
