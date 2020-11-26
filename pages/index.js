@@ -11,15 +11,16 @@ export default function Home(props) {
   const fadeInUp = {
     initial: (custom) => ({
       x: "20%",
-      y: "5%",
-      skewX: 1.5,
+      y: "0%",
+      skewX: "1deg",
+      rotate: "2deg",
       opacity: 0,
     }),
     animate: (custom) => ({
       x: 0,
       y: 0,
-      skewX: 0,
-      scale: 1,
+      skewX: "0deg",
+      rotate: "0deg",
       opacity: 1,
       transition: {
         type: "spring",
@@ -30,7 +31,9 @@ export default function Home(props) {
     exit: {
       opacity: 0,
       x: "-20%",
-      y: "5%",
+      y: "0%",
+      skewX: "3deg",
+      rotate: "-2deg",
       transition: {
         duration: 0.55,
         ease: [0.32, 0, 0.67, 0],
@@ -72,8 +75,8 @@ export default function Home(props) {
               key={project.id}
               variants={fadeInUp}
               style={{
-                originX: Math.round(Math.random()),
-                originY: Math.round(Math.random()),
+                originX: 0.5,
+                originY: 1,
               }}
             >
               <ProjectMenuItem key={project.id} data={project} />
