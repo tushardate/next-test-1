@@ -2,32 +2,25 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 function ProjectMenuItem2(props) {
-  const { client_name, title, id, featured_image } = props.data;
+  const { client_name, title, id, featured_image, slug } = props.data;
   return (
-    <Link as={`/projects/${id}`} href="/projects/[id]" scroll={false}>
+    <Link as={`/projects/${slug}`} href="/projects/[slug]" scroll={false}>
       <a>
-        <div className="flex h-full pt-4 border-t border-black">
-          <div className="flex w-3/5 h-full">
-            <motion.div className="w-3/5 h-full">
-              <p className="block w-full text-sm pr-16 font-bold" layoutId={id}>
+        <div className="flex h-full border-t border-black">
+          <div className="flex flex-col w-7/12 h-full pt-5">
+            <motion.div className="w-full flex-1 h-full">
+              <p className="block w-full text-3xl font-tdsans tracking-wide leading-tight pr-16">
                 {title}
               </p>
             </motion.div>
-            <motion.div className="w-2/5 h-full ">
-              <p className="block pt-1 text-xs w-full" layoutId={id}>
-                {client_name && (
-                  <>
-                    {" "}
-                    Client:
-                    <br />
-                    {client_name}
-                  </>
-                )}
+            <motion.div className="w-full transform translate-y-1 h-full flex items-end">
+              <p className="block text-sm font-tdsans w-full">
+                {client_name && `Client: ${client_name}`}
               </p>
             </motion.div>
           </div>
 
-          <motion.div className="w-2/5 h-full rounded overflow-hidden">
+          <motion.div className="w-5/12 h-full overflow-hidden">
             <img
               className="object-cover w-full"
               src={featured_image.thumbnail && featured_image.thumbnail}

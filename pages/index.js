@@ -94,7 +94,7 @@ export default function Home(props) {
         <motion.div variants={stagger} className="flex flex-wrap">
           {projects.map((project, i) => (
             <motion.div
-              className="xl:w-1/2 lg:w-1/2 w-full xl:px-16 lg:px-8 md:px-8 px-4 py-6"
+              className="xl:w-1/2 lg:w-1/2 w-full xl:px-16 lg:px-8 md:px-8 px-4 xl:py-12 lg:py-10 md:py-8 py-6"
               custom={
                 Math.random() < 0.5 ? Math.random() * -1 : Math.random() * 1
               }
@@ -123,6 +123,9 @@ export async function getStaticProps(context) {
   const res = await fetch(
     "http://testing.tushardate.com/wp-json/td/v1/projects"
   );
+  // const res = await fetch(
+  //   "http://duplicatetushardate.local/wp-json/td/v1/projects"
+  // );
   const data = await res.json();
   return {
     props: {

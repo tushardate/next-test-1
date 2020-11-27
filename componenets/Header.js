@@ -9,10 +9,13 @@ export default function Header() {
     { name: "Contact", url: "/contact" },
   ];
   return (
-    <nav className="list-none w-full h-12 sm:h-16 md:h-16 lg:h-24 flex justify-around items-center">
+    <nav className="fixed z-50 list-none w-full h-12 sm:h-16 md:h-16 lg:h-24 flex justify-around items-center">
       {links.map((link) => (
-        <div className="w-full h-full flex justify-center items-center">
-          <li key={link.name} className="inline-block">
+        <div
+          key={link.name}
+          className="w-full h-full flex justify-center items-center"
+        >
+          <li className="inline-block">
             <Link href={link.url}>
               <a>
                 <motion.div
@@ -22,6 +25,7 @@ export default function Header() {
                     scale: 1.2,
                   }}
                   animate={{ color: "#000", scale: 1 }}
+                  className="customFont"
                 >
                   {link.name}
                 </motion.div>

@@ -3,12 +3,11 @@ import Header from "../../../componenets/Header";
 import { motion } from "framer-motion";
 
 export default function Project({ post }) {
-  const { id, title, acf, content } = post;
-  const { general_project_description } = acf;
+  const { id, title, general_project_description, content } = post;
 
   useEffect(() => {
     return () => {
-      console.log(`Exiting ${title.rendered}`);
+      console.log(`Exiting ${title}`);
     };
   }, []);
 
@@ -56,15 +55,29 @@ export default function Project({ post }) {
         animate="animate"
         className="container mx-auto"
       >
-        <div className="">
-          <motion.div variants={stagger} layoutId={id}>
-            <motion.h1 variants={fadeInUp} className="text-5xl mb-4">
-              {title.rendered}
-            </motion.h1>
-            <motion.p variants={fadeInUp} className="">
-              {general_project_description}
-            </motion.p>
-            <img></img>
+        <div className="border-t border-black xl:mx-16 lg:mx-8 md:mx-8 mx-4">
+          <motion.div
+            className="mt-10 flex w-full"
+            variants={stagger}
+            layoutId={id}
+          >
+            <div className="w-2/3">
+              <motion.h1
+                variants={fadeInUp}
+                className="mr-10 font-tdsans font-medium text-6xl md:text-8xl lg:text-9xl leading-none"
+              >
+                {title}
+              </motion.h1>
+            </div>
+            <div className="w-1/3 flex items-end">
+              <motion.p
+                className="block"
+                variants={fadeInUp}
+                className="font-tdsans font-light text-xl"
+              >
+                {general_project_description}
+              </motion.p>
+            </div>
           </motion.div>
         </div>
       </motion.div>
@@ -77,7 +90,7 @@ export async function getStaticProps({ params }) {
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
   const res = await fetch(
-    `http://testing.tushardate.com/wp-json/wp/v2/projects/${params.id}`
+    `http://testing.tushardate.com/wp-json/td/v1/projects/${params.slug}`
   );
   const post = await res.json();
 
@@ -88,13 +101,13 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths(params) {
   // Call an external API endpoint to get posts
   const res = await fetch(
-    "http://testing.tushardate.com/wp-json/wp/v2/projects"
+    "http://testing.tushardate.com/wp-json/td/v1/projects"
   );
   const posts = await res.json();
 
   // Get the paths we want to pre-render based on posts
   const paths = posts.map((post) => ({
-    params: { id: post.id.toString() },
+    params: { slug: post.slug.toString() },
   }));
 
   // We'll pre-render only these paths at build time.
