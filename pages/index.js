@@ -45,11 +45,11 @@ export default function Home(props) {
 
   const slideIn = {
     initial: (custom) => ({
-      x: "10%",
+      y: "10%",
       opacity: 0,
     }),
     animate: (custom) => ({
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         type: "spring",
@@ -59,10 +59,11 @@ export default function Home(props) {
     }),
     exit: {
       opacity: 0,
-      x: "-10%",
+      y: "10%",
       transition: {
         duration: 0.55,
-        ease: [0.32, 0, 0.67, 0],
+        ease: [0.4, -0.15, 0.66, 0],
+        // ease: [0.36, 0, 0.66, -0.56], //ease back out
         // easing: easing,
       },
     },
@@ -86,7 +87,7 @@ export default function Home(props) {
     <>
       <Header />
       <motion.div
-        className="container mx-auto"
+        className="container mx-auto mt-32"
         exit="exit"
         initial="initial"
         animate="animate"
@@ -94,7 +95,7 @@ export default function Home(props) {
         <motion.div variants={stagger} className="flex flex-wrap">
           {projects.map((project, i) => (
             <motion.div
-              className="xl:w-1/2 lg:w-1/2 w-full xl:px-16 lg:px-8 md:px-8 px-4 xl:py-12 lg:py-10 md:py-8 py-6"
+              className="project-column xl:w-1/2 lg:w-1/2 w-full xl:pb-20 lg:pb-12 md:pb-8 pb-6"
               custom={
                 Math.random() < 0.5 ? Math.random() * -1 : Math.random() * 1
               }

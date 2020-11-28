@@ -1,4 +1,3 @@
-import "../styles/globals.css";
 import "../styles/index.css";
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
 

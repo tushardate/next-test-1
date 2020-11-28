@@ -3,6 +3,7 @@ import Header from "../../../componenets/Header";
 import { motion } from "framer-motion";
 
 export default function Project({ post }) {
+  console.log(post);
   const { id, title, general_project_description, content } = post;
 
   useEffect(() => {
@@ -13,19 +14,20 @@ export default function Project({ post }) {
 
   const fadeInUp = {
     initial: {
-      y: 20,
+      y: "10%",
       opacity: 0,
     },
     animate: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.75,
-        ease: [0, 0.55, 0.45, 1],
+        type: "spring",
+        damping: 20,
+        stiffness: 100,
       },
     },
     exit: {
-      y: 40,
+      y: "10%",
       opacity: 0,
       transition: {
         duration: 0.75,
@@ -42,7 +44,7 @@ export default function Project({ post }) {
     exit: {
       transition: {
         staggerChildren: 0.15,
-        staggerDirection: -1,
+        // staggerDirection: -1,
       },
     },
   };
@@ -53,11 +55,11 @@ export default function Project({ post }) {
         exit="exit"
         initial="initial"
         animate="animate"
-        className="container mx-auto"
+        className="container mx-auto mt-32"
       >
         <div className="border-t border-black xl:mx-16 lg:mx-8 md:mx-8 mx-4">
           <motion.div
-            className="mt-10 flex w-full"
+            className="mt-5 flex w-full items-end"
             variants={stagger}
             layoutId={id}
           >

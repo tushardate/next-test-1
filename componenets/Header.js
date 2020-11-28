@@ -9,7 +9,7 @@ export default function Header() {
     { name: "Contact", url: "/contact" },
   ];
   return (
-    <nav className="fixed z-50 list-none w-full h-12 sm:h-16 md:h-16 lg:h-24 flex justify-around items-center">
+    <nav className="fixed z-50 top-0 left-0 right-0 list-none w-full h-12 sm:h-16 md:h-16 lg:h-24 flex justify-around items-center">
       {links.map((link) => (
         <div
           key={link.name}
