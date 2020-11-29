@@ -55,22 +55,22 @@ export default function Project({ post }) {
         exit="exit"
         initial="initial"
         animate="animate"
-        className="container mx-auto mt-32"
+        className="container mx-auto mt-20"
       >
         <div className="xl:mx-16 lg:mx-8 md:mx-8 mx-4">
           <motion.div className="flex w-full" variants={stagger} layoutId={id}>
-            <div className="w-4/6 ml-auto">
+            <div className="w-full sm:w-4/6 ml-auto">
               <motion.h1
                 variants={fadeInUp}
-                className="font-tdsans font-medium text-6xl md:text-8xl lg:text-8xl leading-none"
+                className="font-tdsans font-medium text-6xl md:text-7xl lg:text-8xl leading-none"
               >
                 {title}
               </motion.h1>
             </div>
           </motion.div>
           <motion.div className="flex w-full" variants={stagger} layoutId={id}>
-            <div className="flex w-full mt-3">
-              <div className="w-2/6 flex">
+            <div className="flex w-full mt-1 sm:mt-3">
+              <div className="w-2/6 flex hidden sm:block">
                 <motion.p
                   variants={fadeInUp}
                   className="pt-5 border-t border-black w-full mr-8 font-tdsans font-light text-md"
@@ -79,10 +79,10 @@ export default function Project({ post }) {
                 </motion.p>
               </div>
 
-              <div className="w-4/6 flex">
+              <div className="w-full sm:w-4/6 flex">
                 <motion.p
                   variants={fadeInUp}
-                  className="w-5/6 block font-tdsans font-light text-3xl pt-3"
+                  className="w-full lg:w-5/6 block font-tdsans font-light text-1xl md:text-2xl lg:text-3xl pt-3"
                 >
                   {general_project_description}
                 </motion.p>
