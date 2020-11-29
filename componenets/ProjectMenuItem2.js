@@ -7,14 +7,14 @@ function ProjectMenuItem2(props) {
     <Link as={`/projects/${slug}`} href="/projects/[slug]" scroll={false}>
       <a>
         <div className="flex h-full border-t border-black">
-          <div className="flex flex-col w-8/12 h-full pt-5">
+          <div className="flex flex-col w-8/12 h-full pt-3 xs:pt-5">
             <motion.div className="w-full flex-1 h-full">
-              <p className="block w-full text-3xl font-tdsans tracking-wide leading-tight pr-16">
+              <p className="block w-full text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl font-tdsans tracking-wide leading-tight pr-16">
                 {title}
               </p>
             </motion.div>
             <motion.div className="w-full transform translate-y-1 h-full flex items-end">
-              <p className="block text-sm font-tdsans w-full">
+              <p className="block text-xs sm:text-sm font-tdsans w-full">
                 {client_name && `Client: ${client_name}`}
               </p>
             </motion.div>

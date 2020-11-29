@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Project({ post }) {
   console.log(post);
-  const { id, title, general_project_description, content } = post;
+  const { id, title, general_project_description, content, client_name } = post;
 
   useEffect(() => {
     return () => {
@@ -57,28 +57,36 @@ export default function Project({ post }) {
         animate="animate"
         className="container mx-auto mt-32"
       >
-        <div className="border-t border-black xl:mx-16 lg:mx-8 md:mx-8 mx-4">
-          <motion.div
-            className="mt-5 flex w-full items-end"
-            variants={stagger}
-            layoutId={id}
-          >
-            <div className="w-2/3">
+        <div className="xl:mx-16 lg:mx-8 md:mx-8 mx-4">
+          <motion.div className="flex w-full" variants={stagger} layoutId={id}>
+            <div className="w-4/6 ml-auto">
               <motion.h1
                 variants={fadeInUp}
-                className="mr-10 font-tdsans font-medium text-6xl md:text-8xl lg:text-9xl leading-none"
+                className="font-tdsans font-medium text-6xl md:text-8xl lg:text-8xl leading-none"
               >
                 {title}
               </motion.h1>
             </div>
-            <div className="w-1/3 flex items-end">
-              <motion.p
-                className="block"
-                variants={fadeInUp}
-                className="font-tdsans font-light text-xl"
-              >
-                {general_project_description}
-              </motion.p>
+          </motion.div>
+          <motion.div className="flex w-full" variants={stagger} layoutId={id}>
+            <div className="flex w-full mt-3">
+              <div className="w-2/6 flex">
+                <motion.p
+                  variants={fadeInUp}
+                  className="pt-5 border-t border-black w-full mr-8 font-tdsans font-light text-md"
+                >
+                  {client_name && `Client: ${client_name}`}
+                </motion.p>
+              </div>
+
+              <div className="w-4/6 flex">
+                <motion.p
+                  variants={fadeInUp}
+                  className="w-5/6 block font-tdsans font-light text-3xl pt-3"
+                >
+                  {general_project_description}
+                </motion.p>
+              </div>
             </div>
           </motion.div>
         </div>

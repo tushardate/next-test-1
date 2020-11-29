@@ -2,6 +2,10 @@
 @tailwind base;
 @tailwind components;
 
+body {
+  background-color: hsla(0, 10%, 87%, 1);
+}
+
 .project-column:nth-child(odd) {
   @apply pr-4 pl-4;
 }
