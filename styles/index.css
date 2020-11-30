@@ -13,6 +13,10 @@ body {
   @apply pr-4 pl-4;
 }
 
+.p-16-9 {
+  padding-top: 56.25%;
+}
+
 @screen lg {
   .project-column:nth-child(odd) {
     @apply pr-6;

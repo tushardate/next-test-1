@@ -121,12 +121,9 @@ export async function getStaticProps(context) {
   // const res = await fetch(
   //   "http://testing.tushardate.com/wp-json/wp/v2/projects?per_page=50"
   // );
-  const res = await fetch(
-    "http://testing.tushardate.com/wp-json/td/v1/projects"
-  );
-  // const res = await fetch(
-  //   "http://duplicatetushardate.local/wp-json/td/v1/projects"
-  // );
+  const baseUrl = `${process.env.NEXT_PUBLIC_WORDPRESS_SITE_URL}/wp-json/td/v1/projects`;
+  const res = await fetch(baseUrl);
+
   const data = await res.json();
   return {
     props: {

@@ -3,11 +3,18 @@ import Header from "../../../componenets/Header";
 import { motion } from "framer-motion";
 
 export default function Project({ post }) {
+  console.log(post);
   const { id, title, general_project_description, content, client_name } = post;
+
+  useEffect(() => {
+    return () => {
+      console.log(`Exiting ${title}`);
+    };
+  }, []);
 
   const fadeInUp = {
     initial: {
-      y: 20,
+      y: "10%",
       opacity: 0,
     },
     animate: {
@@ -20,7 +27,7 @@ export default function Project({ post }) {
       },
     },
     exit: {
-      y: 20,
+      y: "10%",
       opacity: 0,
       transition: {
         duration: 0.75,
@@ -28,7 +35,6 @@ export default function Project({ post }) {
       },
     },
   };
-
   const stagger = {
     animate: {
       transition: {
@@ -42,7 +48,6 @@ export default function Project({ post }) {
       },
     },
   };
-
   return (
     <>
       <Header />
@@ -50,12 +55,11 @@ export default function Project({ post }) {
         exit="exit"
         initial="initial"
         animate="animate"
-        className="container mx-auto sm:mt-40 mt-20"
-        variants={stagger}
+        className="container mx-auto mt-20"
       >
         <div className="xl:mx-16 lg:mx-8 md:mx-8 mx-4">
-          <div className="grid grid-cols-12 gap-4">
-            <div className="col-start-1 col-span-12 sm:col-start-2 sm:col-span-10 md:col-start-3 md:col-span-6">
+          <motion.div className="flex w-full" variants={stagger} layoutId={id}>
+            <div className="w-full sm:w-4/6 ml-auto">
               <motion.h1
                 variants={fadeInUp}
                 className="font-tdsans font-medium text-6xl md:text-7xl lg:text-8xl leading-none"
@@ -63,37 +67,29 @@ export default function Project({ post }) {
                 {title}
               </motion.h1>
             </div>
-          </div>
-          <div className="grid grid-cols-12 gap-4">
-            <motion.div
-              variants={fadeInUp}
-              className="col-start-1 col-span-12 sm:col-start-5 sm:col-span-7 md:col-start-6 md:col-span-6 sm:mt-6 mt-1 border-b border-black sm:pb-6 pb-4"
-            >
-              <div className="w-full">
-                <p className="w-full block font-tdsans font-light text-lg md:text-1xl lg:text-2xl pt-3">
-                  {general_project_description}
-                </p>
+          </motion.div>
+          <motion.div className="flex w-full" variants={stagger} layoutId={id}>
+            <div className="flex w-full mt-1 sm:mt-3">
+              <div className="w-2/6 flex hidden sm:block">
+                <motion.p
+                  variants={fadeInUp}
+                  className="pt-5 border-t border-black w-full mr-8 font-tdsans font-light text-md"
+                >
+                  {client_name && `Client: ${client_name}`}
+                </motion.p>
               </div>
-            </motion.div>
-          </div>
-          <div className="grid grid-cols-12 gap-4">
-            <motion.div
-              variants={fadeInUp}
-              className="col-start-1 col-span-12 sm:col-start-5 sm:col-span-7 md:col-start-6 md:col-span-2 sm:mt-6 mt-4"
-            >
-              <div className="w-full font-tdsans font-light sm:text-md text-sm">
-                {client_name && (
-                  <>
-                    <p>Client:</p>
-                    <p>{client_name}</p>
-                  </>
-                )}
-              </div>
-            </motion.div>
-          </div>
-        </div>
 
-        <div className="content"></div>
+              <div className="w-full sm:w-4/6 flex">
+                <motion.p
+                  variants={fadeInUp}
+                  className="w-full lg:w-5/6 block font-tdsans font-light text-1xl md:text-2xl lg:text-3xl pt-3"
+                >
+                  {general_project_description}
+                </motion.p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </motion.div>
     </>
   );
@@ -101,11 +97,10 @@ export default function Project({ post }) {
 
 // This also gets called at build time
 export async function getStaticProps({ params }) {
-  console.log(params);
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_WORDPRESS_SITE_URL}/wp-json/td/v1/projects/${params.slug}`
+    `http://testing.tushardate.com/wp-json/td/v1/projects/${params.slug}`
   );
   const post = await res.json();
 
@@ -116,15 +111,13 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths(params) {
   // Call an external API endpoint to get posts
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_WORDPRESS_SITE_URL}/wp-json/td/v1/projects`
+    "http://testing.tushardate.com/wp-json/td/v1/projects"
   );
   const posts = await res.json();
 
   // Get the paths we want to pre-render based on posts
   const paths = posts.map((post) => ({
-    params: {
-      slug: post.slug.toString(),
-    },
+    params: { slug: post.slug.toString() },
   }));
 
   // We'll pre-render only these paths at build time.
