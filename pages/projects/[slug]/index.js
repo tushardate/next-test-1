@@ -6,91 +6,43 @@ export default function Project({ post }) {
   console.log(post);
   const { id, title, general_project_description, content, client_name } = post;
 
-  useEffect(() => {
-    return () => {
-      console.log(`Exiting ${title}`);
-    };
-  }, []);
-
-  const fadeInUp = {
-    initial: {
-      y: "10%",
-      opacity: 0,
-    },
-    animate: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        damping: 20,
-        stiffness: 100,
-      },
-    },
-    exit: {
-      y: "10%",
-      opacity: 0,
-      transition: {
-        duration: 0.75,
-        ease: [0.36, 0, 0.66, -0.56],
-      },
-    },
-  };
-  const stagger = {
-    animate: {
-      transition: {
-        staggerChildren: 0.15,
-      },
-    },
-    exit: {
-      transition: {
-        staggerChildren: 0.15,
-        // staggerDirection: -1,
-      },
-    },
-  };
   return (
     <>
       <Header />
-      <motion.div
-        exit="exit"
-        initial="initial"
-        animate="animate"
-        className="container mx-auto mt-20"
-      >
+      <div className="container mx-auto sm:mt-40 mt-20">
         <div className="xl:mx-16 lg:mx-8 md:mx-8 mx-4">
-          <motion.div className="flex w-full" variants={stagger} layoutId={id}>
-            <div className="w-full sm:w-4/6 ml-auto">
-              <motion.h1
-                variants={fadeInUp}
-                className="font-tdsans font-medium text-6xl md:text-7xl lg:text-8xl leading-none"
-              >
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-start-1 col-span-12 sm:col-start-2 sm:col-span-10 md:col-start-3 md:col-span-9">
+              <h1 className="font-tdsans font-medium text-6xl md:text-7xl lg:text-8xl leading-none">
                 {title}
-              </motion.h1>
+              </h1>
             </div>
-          </motion.div>
-          <motion.div className="flex w-full" variants={stagger} layoutId={id}>
-            <div className="flex w-full mt-1 sm:mt-3">
-              <div className="w-2/6 flex hidden sm:block">
-                <motion.p
-                  variants={fadeInUp}
-                  className="pt-5 border-t border-black w-full mr-8 font-tdsans font-light text-md"
-                >
-                  {client_name && `Client: ${client_name}`}
-                </motion.p>
-              </div>
-
-              <div className="w-full sm:w-4/6 flex">
-                <motion.p
-                  variants={fadeInUp}
-                  className="w-full lg:w-5/6 block font-tdsans font-light text-1xl md:text-2xl lg:text-3xl pt-3"
-                >
+          </div>
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-start-1 col-span-12 sm:col-start-5 sm:col-span-7 md:col-start-6 md:col-span-6 sm:mt-6 border-b border-black pb-6">
+              <div className="w-full">
+                <p className="w-full block font-tdsans font-light text-lg md:text-1xl lg:text-2xl pt-3">
                   {general_project_description}
-                </motion.p>
+                </p>
               </div>
             </div>
-          </motion.div>
+          </div>
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-start-1 col-span-12 sm:col-start-5 sm:col-span-7 md:col-start-6 md:col-span-2 mt-6">
+              <div className="w-full font-tdsans font-light text-md">
+                {client_name && (
+                  <>
+                    <p>Client:</p>
+                    <p>{client_name}</p>
+                  </>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
-      </motion.div>
+
+        <div className="content"></div>
+      </div>
     </>
   );
 }

@@ -95,7 +95,7 @@ export default function Home(props) {
         <motion.div variants={stagger} className="flex flex-wrap">
           {projects.map((project, i) => (
             <motion.div
-              className="project-column xl:w-1/2 lg:w-1/2 w-full xl:pb-20 lg:pb-12 md:pb-8 pb-6"
+              className="project-column xl:w-1/2 lg:w-1/2 w-full xl:pb-20 pb-16"
               custom={
                 Math.random() < 0.5 ? Math.random() * -1 : Math.random() * 1
               }
