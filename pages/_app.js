@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <AnimatePresence exitBeforeEnter>
       {/* <AnimateSharedLayout> */}
-      <Component {...pageProps} key={router.route} />
+      <Component {...pageProps} key={router.asPath} />
       {/* </AnimateSharedLayout> */}
     </AnimatePresence>
   );

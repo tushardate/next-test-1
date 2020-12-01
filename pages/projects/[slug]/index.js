@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import Header from "../../../componenets/Header";
+import Header from "../../../components/Header";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function Project({ post }) {
+export default function Project({ post, next, prev }) {
   const { id, title, general_project_description, content, client_name } = post;
 
   const fadeInUp = {
@@ -32,12 +33,12 @@ export default function Project({ post }) {
   const stagger = {
     animate: {
       transition: {
-        staggerChildren: 0.15,
+        staggerChildren: 0.025,
       },
     },
     exit: {
       transition: {
-        staggerChildren: 0.15,
+        staggerChildren: 0.025,
         // staggerDirection: -1,
       },
     },
@@ -92,8 +93,33 @@ export default function Project({ post }) {
             </motion.div>
           </div>
         </div>
-
-        <div className="content"></div>
+        <div className="w-full grid grid-cols-12 justify-between mt-20 mb-10 font-tdsans text-2xl">
+          <Link
+            as={`/projects/${prev.slug}`}
+            href="/projects/[slug]"
+            scroll={false}
+          >
+            <a className="col-start-1 col-span-4">
+              <motion.p variants={fadeInUp} className="pl-5 md:pl-20">
+                {prev.title}
+              </motion.p>
+            </a>
+          </Link>
+          <Link
+            as={`/projects/${next.slug}`}
+            href="/projects/[slug]"
+            scroll={false}
+          >
+            <a className="col-start-9 col-span-4">
+              <motion.p
+                variants={fadeInUp}
+                className="text-right pr-5 md:pr-20"
+              >
+                {next.title}
+              </motion.p>
+            </a>
+          </Link>
+        </div>
       </motion.div>
     </>
   );
@@ -101,16 +127,25 @@ export default function Project({ post }) {
 
 // This also gets called at build time
 export async function getStaticProps({ params }) {
-  console.log(params);
-  // params contains the post `id`.
-  // If the route is like /posts/1, then params.id is 1
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_WORDPRESS_SITE_URL}/wp-json/td/v1/projects/${params.slug}`
   );
   const post = await res.json();
 
+  const resAll = await fetch(
+    `${process.env.NEXT_PUBLIC_WORDPRESS_SITE_URL}/wp-json/td/v1/projects`
+  );
+
+  const projects = await resAll.json();
+  const currentIdx = projects.findIndex((p) => p.slug === params.slug);
+  const nextIdx = currentIdx < projects.length - 1 ? currentIdx + 1 : 0;
+  const prevIdx = currentIdx > 0 ? currentIdx - 1 : projects.length - 1;
+
   // Pass post data to the page via props
-  return { props: { post }, revalidate: 1 };
+  return {
+    props: { post, next: projects[nextIdx], prev: projects[prevIdx] },
+    revalidate: 1,
+  };
 }
 
 export async function getStaticPaths(params) {

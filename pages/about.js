@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Header from "../componenets/Header";
+import Header from "../components/Header";
 import { motion } from "framer-motion";
 
 export default function About() {

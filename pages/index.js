@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Header from "../componenets/Header";
-import ProjectMenuItem from "../componenets/ProjectMenuItem";
-import ProjectMenuItem2 from "../componenets/ProjectMenuItem2";
+import Header from "../components/Header";
+import ProjectMenuItem from "../components/ProjectMenuItem";
+import ProjectMenuItem2 from "../components/ProjectMenuItem2";
 import { motion } from "framer-motion";
 
 export default function Home(props) {
