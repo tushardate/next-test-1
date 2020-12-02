@@ -7,31 +7,31 @@ body {
 }
 
 .project-column:nth-child(odd) {
-  @apply pr-4 pl-4;
+  @apply pl-4 pr-4;
 }
 .project-column:nth-child(even) {
   @apply pr-4 pl-4;
 }
 
-.p-16-9 {
-  padding-top: 56.25%;
+.headline {
+  font-size: 11vw;
 }
 
 @screen lg {
   .project-column:nth-child(odd) {
-    @apply pr-6;
+    @apply pl-6 pr-0;
   }
   .project-column:nth-child(even) {
-    @apply pl-6;
+    @apply pr-6 pl-0;
   }
 }
 
 @screen xl {
   .project-column:nth-child(odd) {
-    @apply pr-10;
+    @apply pl-10 pr-0;
   }
   .project-column:nth-child(even) {
-    @apply pl-10;
+    @apply pr-10 pl-0;
   }
 }
 

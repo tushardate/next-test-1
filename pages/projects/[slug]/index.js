@@ -1,10 +1,18 @@
 import React, { useEffect } from "react";
 import Header from "../../../components/Header";
+import SingleItem from "../../../components/SingleItem";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Project({ post, next, prev }) {
-  const { id, title, general_project_description, content, client_name } = post;
+  const {
+    id,
+    title,
+    general_project_description,
+    content,
+    client_name,
+    group_row_repeater,
+  } = post;
 
   const fadeInUp = {
     initial: {
@@ -51,15 +59,25 @@ export default function Project({ post, next, prev }) {
         exit="exit"
         initial="initial"
         animate="animate"
-        className="container mx-auto sm:mt-40 mt-20"
+        className="container mx-auto sm:mt-24 mt-20"
         variants={stagger}
       >
-        <div className="xl:mx-16 lg:mx-8 md:mx-8 mx-4">
+        <div className="">
           <div className="grid grid-cols-12 gap-4">
-            <div className="col-start-1 col-span-12 sm:col-start-2 sm:col-span-10 md:col-start-3 md:col-span-6">
+            <div className="col-start-1 col-span-12 sm:col-start-2 sm:col-span-10 md:col-start-2 md:col-span-9">
               <motion.h1
                 variants={fadeInUp}
-                className="font-tdsans font-medium text-6xl md:text-7xl lg:text-8xl leading-none"
+                className="font-tdspace text-lg md:text-2xl"
+              >
+                {client_name}:
+              </motion.h1>
+            </div>
+          </div>
+          <div className="grid grid-cols-12 gap-4">
+            <div className="col-start-1 col-span-12 sm:col-start-2 sm:col-span-10 md:col-start-2 md:col-span-9">
+              <motion.h1
+                variants={fadeInUp}
+                className="font-tdspace font-bold text-6xl md:text-7xl lg:text-9xl tracking-tight leading-point-90"
               >
                 {title}
               </motion.h1>
@@ -68,41 +86,38 @@ export default function Project({ post, next, prev }) {
           <div className="grid grid-cols-12 gap-4">
             <motion.div
               variants={fadeInUp}
-              className="col-start-1 col-span-12 sm:col-start-5 sm:col-span-7 md:col-start-6 md:col-span-6 sm:mt-6 mt-1 border-b border-black sm:pb-6 pb-4"
+              className="col-start-1 col-span-12 sm:col-start-5 sm:col-span-7 md:col-start-6 md:col-span-6 sm:mt-6 mt-1"
             >
               <div className="w-full">
-                <p className="w-full block font-tdsans font-light text-lg md:text-1xl lg:text-2xl pt-3">
+                <p className="w-full block font-tdspace text-lg md:text-1xl lg:text-3xl pt-3">
                   {general_project_description}
                 </p>
               </div>
             </motion.div>
           </div>
-          <div className="grid grid-cols-12 gap-4">
-            <motion.div
-              variants={fadeInUp}
-              className="col-start-1 col-span-12 sm:col-start-5 sm:col-span-7 md:col-start-6 md:col-span-2 sm:mt-6 mt-4"
-            >
-              <div className="w-full font-tdsans font-light sm:text-md text-sm">
-                {client_name && (
-                  <>
-                    <p>Client:</p>
-                    <p>{client_name}</p>
-                  </>
-                )}
-              </div>
-            </motion.div>
-          </div>
         </div>
-        <div className="w-full grid grid-cols-12 justify-between mt-20 mb-10 font-tdsans text-2xl">
+        <div className="content">
+          {group_row_repeater.map((row, i) => (
+            <div key={i} className={row.group_row_repeater_classes}>
+              {row.group_row_repeater_items.map((el, j) => (
+                <div key={j} className={el.single_item_classes}>
+                  <SingleItem {...el.single_item[0]} />
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+        <div className="w-full flex justify-between mt-20 mb-10 font-tdspace tracking-tight leading-none text-3xl">
           <Link
             as={`/projects/${prev.slug}`}
             href="/projects/[slug]"
             scroll={false}
           >
-            <a className="col-start-1 col-span-4">
-              <motion.p variants={fadeInUp} className="pl-5 md:pl-20">
-                {prev.title}
-              </motion.p>
+            <a>
+              <motion.div variants={fadeInUp} className="flex items-center">
+                <p className="pr-2 font-light text-6xl">&#8598;</p>
+                <p className="font-medium">{prev.title}</p>
+              </motion.div>
             </a>
           </Link>
           <Link
@@ -110,13 +125,11 @@ export default function Project({ post, next, prev }) {
             href="/projects/[slug]"
             scroll={false}
           >
-            <a className="col-start-9 col-span-4">
-              <motion.p
-                variants={fadeInUp}
-                className="text-right pr-5 md:pr-20"
-              >
-                {next.title}
-              </motion.p>
+            <a>
+              <motion.div variants={fadeInUp} className="flex items-center">
+                <p className="font-medium text-right">{next.title}</p>
+                <p className="pl-2 font-light text-6xl">&#8599;</p>
+              </motion.div>
             </a>
           </Link>
         </div>

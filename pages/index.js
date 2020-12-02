@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Header from "../components/Header";
-import ProjectMenuItem from "../components/ProjectMenuItem";
-import ProjectMenuItem2 from "../components/ProjectMenuItem2";
+import ProjectMenuItem3 from "../components/ProjectMenuItem3";
 import { motion } from "framer-motion";
 
 export default function Home(props) {
@@ -87,15 +86,24 @@ export default function Home(props) {
     <>
       <Header />
       <motion.div
-        className="container mx-auto mt-32"
+        className="container mx-auto mt-24"
         exit="exit"
         initial="initial"
         animate="animate"
       >
         <motion.div variants={stagger} className="flex flex-wrap">
+          <motion.div variants={slideIn} className="w-full pb-16">
+            <p className="w-8/12 font-tdspace font-medium text-10xl headline tracking-tight leading-point-85">
+              {/* Tushar Date is a creative director based in Los Angeles */}
+              Work
+            </p>
+          </motion.div>
+
           {projects.map((project, i) => (
             <motion.div
-              className="project-column xl:w-1/2 lg:w-1/2 w-full xl:pb-20 pb-16"
+              className={`project-column xl:w-1/2 lg:w-1/2 w-full xl:pb-20 pb-16 ${
+                i % 2 === 0 ? "even" : "odd"
+              }`}
               custom={
                 Math.random() < 0.5 ? Math.random() * -1 : Math.random() * 1
               }
@@ -106,7 +114,7 @@ export default function Home(props) {
                 originY: 1,
               }}
             >
-              <ProjectMenuItem2 key={project.id} data={project} />
+              <ProjectMenuItem3 key={project.id} data={project} />
               {/* <ProjectMenuItem key={project.id} data={project} /> */}
             </motion.div>
           ))}
