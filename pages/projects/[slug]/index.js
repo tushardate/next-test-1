@@ -55,48 +55,50 @@ export default function Project({ post, next, prev }) {
   return (
     <>
       <Header />
-      <motion.div
-        exit="exit"
-        initial="initial"
-        animate="animate"
-        className="container mx-auto sm:mt-24 mt-20"
-        variants={stagger}
-      >
-        <div className="">
-          <div className="grid grid-cols-12 gap-4">
-            <div className="col-start-1 col-span-12 sm:col-start-2 sm:col-span-10 md:col-start-2 md:col-span-9">
-              <motion.h1
-                variants={fadeInUp}
-                className="font-tdspace text-lg md:text-2xl"
-              >
-                {client_name}:
-              </motion.h1>
-            </div>
-          </div>
-          <div className="grid grid-cols-12 gap-4">
-            <div className="col-start-1 col-span-12 sm:col-start-2 sm:col-span-10 md:col-start-2 md:col-span-9">
-              <motion.h1
-                variants={fadeInUp}
-                className="font-tdspace font-bold text-6xl md:text-7xl lg:text-9xl tracking-tight leading-point-90"
-              >
-                {title}
-              </motion.h1>
-            </div>
-          </div>
-          <div className="grid grid-cols-12 gap-4">
-            <motion.div
-              variants={fadeInUp}
-              className="col-start-1 col-span-12 sm:col-start-5 sm:col-span-7 md:col-start-6 md:col-span-6 sm:mt-6 mt-1"
-            >
-              <div className="w-full">
-                <p className="w-full block font-tdspace text-lg md:text-1xl lg:text-3xl pt-3">
-                  {general_project_description}
-                </p>
+      <div className="w-full">
+        <motion.div
+          exit="exit"
+          initial="initial"
+          animate="animate"
+          variants={stagger}
+          className="container mx-auto sm:mt-24 mt-20"
+        >
+          <div className="">
+            <div className="grid grid-cols-12 gap-4">
+              <div className="col-start-1 col-span-12 sm:col-start-2 sm:col-span-10 md:col-start-2 md:col-span-9">
+                <motion.h1
+                  variants={fadeInUp}
+                  className="font-tdspace text-lg md:text-2xl"
+                >
+                  {client_name}:
+                </motion.h1>
               </div>
-            </motion.div>
+            </div>
+            <div className="grid grid-cols-12 gap-4">
+              <div className="col-start-1 col-span-12 sm:col-start-2 sm:col-span-10 md:col-start-2 md:col-span-9">
+                <motion.h1
+                  variants={fadeInUp}
+                  className="font-tdspace font-bold text-6xl md:text-7xl lg:text-9xl tracking-tight leading-point-90"
+                >
+                  {title}
+                </motion.h1>
+              </div>
+            </div>
+            <div className="grid grid-cols-12 gap-4">
+              <motion.div
+                variants={fadeInUp}
+                className="col-start-1 col-span-12 sm:col-start-5 sm:col-span-7 md:col-start-6 md:col-span-6 sm:mt-6 mt-1"
+              >
+                <div className="w-full">
+                  <p className="w-full block font-tdspace text-lg md:text-1xl lg:text-3xl">
+                    {general_project_description}
+                  </p>
+                </div>
+              </motion.div>
+            </div>
           </div>
-        </div>
-        <div className="content">
+        </motion.div>
+        <div className="content tracking-snug">
           {group_row_repeater.map((row, i) => (
             <div key={i} className={row.group_row_repeater_classes}>
               {row.group_row_repeater_items.map((el, j) => (
@@ -107,7 +109,7 @@ export default function Project({ post, next, prev }) {
             </div>
           ))}
         </div>
-        <div className="w-full flex justify-between mt-20 mb-10 font-tdspace tracking-tight leading-none text-3xl">
+        <div className="w-full flex justify-between my-20 px-10 font-tdspace tracking-snug leading-none text-3xl">
           <Link
             as={`/projects/${prev.slug}`}
             href="/projects/[slug]"
@@ -115,8 +117,11 @@ export default function Project({ post, next, prev }) {
           >
             <a>
               <motion.div variants={fadeInUp} className="flex items-center">
-                <p className="pr-2 font-light text-6xl">&#8598;</p>
-                <p className="font-medium">{prev.title}</p>
+                <p className="pr-2 font-light text-7xl">&#8598;</p>
+                <div>
+                  <p className="font-light text-xl">Prev Project:</p>
+                  <p className="font-medium">{prev.title}</p>
+                </div>
               </motion.div>
             </a>
           </Link>
@@ -126,14 +131,20 @@ export default function Project({ post, next, prev }) {
             scroll={false}
           >
             <a>
-              <motion.div variants={fadeInUp} className="flex items-center">
-                <p className="font-medium text-right">{next.title}</p>
-                <p className="pl-2 font-light text-6xl">&#8599;</p>
+              <motion.div
+                variants={fadeInUp}
+                className="flex items-center text-right"
+              >
+                <div>
+                  <p className="font-light text-xl">Next Project:</p>
+                  <p className="font-medium">{next.title}</p>
+                </div>
+                <p className="pl-2 font-light text-7xl">&#8599;</p>
               </motion.div>
             </a>
           </Link>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 }
