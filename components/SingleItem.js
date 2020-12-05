@@ -4,14 +4,25 @@ import { container } from "tailwindcss/defaultTheme";
 function SingleItem(props) {
   switch (props.acf_fc_layout) {
     case "single_item_video":
+      const url = new URL(props.content_video);
+      const video_id = url.pathname.slice(1);
+      const video_src = url.hostname.toLowerCase().includes("you")
+        ? `https://www.youtube.com/embed/${video_id}`
+        : `http://player.vimeo.com/video/${video_id}?title=0&amp;byline=0&amp;portrait=0&amp;color=006eff`;
+
+      const ratios = props.video_ratio.split("/");
+      const video_ratio = (parseFloat(ratios[1]) / parseFloat(ratios[0])) * 100;
       return (
         <div className={props.video_item_classes}>
-          <div className="relative w-full overflow-hidden pt-16/9">
+          <div
+            className="relative w-full overflow-hidden"
+            style={{ paddingTop: `${video_ratio}%` }}
+          >
             <iframe
               className="absolute inset-0 w-full h-full"
-              src={`http://player.vimeo.com/video/${props.content_video_id}?title=0&amp;byline=0&amp;portrait=0&amp;color=006eff`}
               width="700"
               height="394"
+              src={video_src}
               frameborder="0"
               webkitAllowFullScreen
               mozallowfullscreen

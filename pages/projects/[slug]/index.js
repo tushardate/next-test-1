@@ -3,6 +3,7 @@ import Header from "../../../components/Header";
 import SingleItem from "../../../components/SingleItem";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Footer from "../../../components/Footer";
 
 export default function Project({ post, next, prev }) {
   const {
@@ -13,6 +14,10 @@ export default function Project({ post, next, prev }) {
     client_name,
     group_row_repeater,
   } = post;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const fadeInUp = {
     initial: {
@@ -55,13 +60,13 @@ export default function Project({ post, next, prev }) {
   return (
     <>
       <Header />
-      <div className="w-full">
+      <div className="w-full text-gray-900">
         <motion.div
           exit="exit"
           initial="initial"
           animate="animate"
           variants={stagger}
-          className="container mx-auto sm:mt-24 mt-20"
+          className="container mx-auto sm:mt-32 mt-30"
         >
           <div className="">
             <div className="grid grid-cols-12 gap-4">
@@ -109,7 +114,7 @@ export default function Project({ post, next, prev }) {
             </div>
           ))}
         </div>
-        <div className="w-full flex justify-between my-20 px-10 font-tdspace tracking-snug leading-none text-3xl">
+        <div className="w-full flex justify-between py-20 px-10 font-tdspace tracking-snug leading-none text-3xl">
           <Link
             as={`/projects/${prev.slug}`}
             href="/projects/[slug]"
@@ -145,6 +150,7 @@ export default function Project({ post, next, prev }) {
           </Link>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

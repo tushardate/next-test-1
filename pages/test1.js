@@ -1,12 +1,15 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ProjectMenuItem3 from "../components/ProjectMenuItem3";
+import ProjectMenuItem4 from "../components/ProjectMenuItem4";
 import { motion } from "framer-motion";
 
 export default function Home(props) {
-  // const projects = Object.keys(data).map((key) => data[key]);
   const projects = props.data;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const easing = [0.6, -0.05, 0.01, 0.99];
   const fadeInUp = {
@@ -45,13 +48,14 @@ export default function Home(props) {
 
   const slideIn = {
     initial: (custom) => ({
-      y: "10%",
+      y: "-10%",
       opacity: 0,
     }),
     animate: (custom) => ({
       y: 0,
       opacity: 1,
       transition: {
+        delay: 0.5,
         type: "spring",
         damping: 20,
         stiffness: 100,
@@ -59,9 +63,9 @@ export default function Home(props) {
     }),
     exit: {
       opacity: 0,
-      y: "10%",
+      y: "-10%",
       transition: {
-        duration: 0.55,
+        duration: 0.5,
         ease: [0.4, -0.15, 0.66, 0],
         // ease: [0.36, 0, 0.66, -0.56], //ease back out
         // easing: easing,
@@ -95,7 +99,6 @@ export default function Home(props) {
         <motion.div variants={stagger} className="flex flex-wrap">
           <motion.div variants={slideIn} className="w-full pb-16">
             <p className="w-8/12 font-tdspace font-medium text-9xl headline tracking-tight leading-point-85">
-              {/* Tushar Date is a creative director based in Los Angeles */}
               Work
             </p>
           </motion.div>
@@ -109,13 +112,13 @@ export default function Home(props) {
                 Math.random() < 0.5 ? Math.random() * -1 : Math.random() * 1
               }
               key={project.id}
-              variants={slideIn}
-              style={{
-                originX: 0.5,
-                originY: 1,
-              }}
+              //   variants={slideIn}
+              //   style={{
+              //     originX: 0.5,
+              //     originY: 1,
+              //   }}
             >
-              <ProjectMenuItem3 key={project.id} data={project} />
+              <ProjectMenuItem4 key={project.id} data={project} />
               {/* <ProjectMenuItem key={project.id} data={project} /> */}
             </motion.div>
           ))}
