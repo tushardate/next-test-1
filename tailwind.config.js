@@ -40,6 +40,8 @@ module.exports = {
         snug: "-0.0125em",
       },
       spacing: {
+        7: "1.75rem",
+        9: "2.25rem",
         72: "18rem",
         80: "20rem",
         96: "24rem",

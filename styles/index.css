@@ -4,6 +4,7 @@
 
 body {
   background-color: hsla(0, 10%, 87%, 1);
+  background-color: hsla(60, 5%, 87%, 1);
 }
 
 .project-column:nth-child(odd) {
@@ -19,19 +20,19 @@ body {
 
 @screen lg {
   .project-column:nth-child(odd) {
-    @apply pl-6 pr-0;
+    @apply pl-8 pr-0;
   }
   .project-column:nth-child(even) {
-    @apply pr-6 pl-0;
+    @apply pr-8 pl-0;
   }
 }
 
 @screen xl {
   .project-column:nth-child(odd) {
-    @apply pl-10 pr-0;
+    /* @apply pl-12 pr-0; */
   }
   .project-column:nth-child(even) {
-    @apply pr-10 pl-0;
+    /* @apply pr-12 pl-0; */
   }
 }
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ProjectMenuItem6 from "../components/ProjectMenuItem6";
+import ProjectMenuItem5 from "../components/ProjectMenuItem5";
 import { motion } from "framer-motion";
 
 export default function Home(props) {
@@ -87,14 +87,14 @@ export default function Home(props) {
     <>
       <Header />
       <motion.div
-        className="mx-auto mt-32 xl:px-8 lg:px-4 text-gray-900"
+        className="container mx-auto mt-32 xl:px-8 lg:px-4 text-gray-900"
         exit="exit"
         initial="initial"
         animate="animate"
       >
         <motion.div variants={stagger} className="flex flex-wrap">
-          <motion.div variants={slideIn} className="w-full pb-24">
-            <p className="w-3/4 font-tdspace font-base xl:text-8xl lg:text-8xl xs:text-7xl headline tracking-tighter leading-point-95 px-4 lg:px-0">
+          <motion.div variants={slideIn} className="w-full pb-16">
+            <p className="font-tdspace font-medium xl:text-8xl lg:text-8xl xs:text-7xl headline tracking-tight leading-point-95 px-4 lg:px-0 mb-20">
               Tushar Date is a creative director & art director based in Los
               Angeles
               {/* Work */}
@@ -116,7 +116,7 @@ export default function Home(props) {
                 originY: 1,
               }}
             >
-              <ProjectMenuItem6 key={project.id} data={project} />
+              <ProjectMenuItem5 key={project.id} data={project} />
               {/* <ProjectMenuItem key={project.id} data={project} /> */}
             </motion.div>
           ))}

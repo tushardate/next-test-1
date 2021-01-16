@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Header from "../../../components/Header";
-import PrevNext from "../../../components/PrevNext";
 import SingleItem from "../../../components/SingleItem";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -70,17 +69,17 @@ export default function Project({ post, next, prev }) {
           className="container mx-auto sm:mt-32 mt-30"
         >
           <div className="">
-            <div className="grid grid-cols-12 gap-4 pb-1">
+            <div className="grid grid-cols-12 gap-4 pb-4">
               <div className="col-start-1 col-span-12 sm:col-start-2 sm:col-span-10 md:col-start-2 md:col-span-9">
                 <motion.h1
                   variants={fadeInUp}
-                  className="font-tdspace md:text-3xl font-medium"
+                  className="font-tdspace md:text-xl font-medium"
                 >
                   {client_name}
                 </motion.h1>
               </div>
             </div>
-            <div className="grid grid-cols-12 gap-4 pb-6">
+            <div className="grid grid-cols-12 gap-4 pb-8">
               <div className="col-start-1 col-span-12 sm:col-start-2 sm:col-span-10 md:col-start-2 md:col-span-9">
                 <motion.h1
                   variants={fadeInUp}
@@ -93,7 +92,7 @@ export default function Project({ post, next, prev }) {
             <div className="grid grid-cols-12 gap-4">
               <motion.div
                 variants={fadeInUp}
-                className="xs:col-start-5 sm:col-span-7 md:col-start-6 md:col-span-6 sm:mt-6 mt-1"
+                className="col-start-1 col-span-12 sm:col-start-5 sm:col-span-7 md:col-start-6 md:col-span-6 sm:mt-6 mt-1"
               >
                 <div className="w-full">
                   <p className="w-full block font-tdspace font-light tracking-tight md:text-1xl lg:text-3xl">
@@ -115,9 +114,41 @@ export default function Project({ post, next, prev }) {
             </div>
           ))}
         </div>
-
-        <PrevNext prev={prev} next={next}/>
-
+        <div className="w-full flex justify-between py-20 px-10 font-tdspace tracking-snug leading-none text-3xl">
+          <Link
+            as={`/projects/${prev.slug}`}
+            href="/projects/[slug]"
+            scroll={false}
+          >
+            <a>
+              <motion.div variants={fadeInUp} className="flex items-center">
+                <p className="pr-2 font-light text-7xl">&#8598;</p>
+                <div>
+                  <p className="font-light text-xl">Prev Project:</p>
+                  <p className="font-medium">{prev.title}</p>
+                </div>
+              </motion.div>
+            </a>
+          </Link>
+          <Link
+            as={`/projects/${next.slug}`}
+            href="/projects/[slug]"
+            scroll={false}
+          >
+            <a>
+              <motion.div
+                variants={fadeInUp}
+                className="flex items-center text-right"
+              >
+                <div>
+                  <p className="font-light text-xl">Next Project:</p>
+                  <p className="font-medium">{next.title}</p>
+                </div>
+                <p className="pl-2 font-light text-7xl">&#8599;</p>
+              </motion.div>
+            </a>
+          </Link>
+        </div>
       </div>
       <Footer />
     </>
