@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function Header() {
   const links = [
     { name: "Work", url: "/" },
-    { name: "About", url: "/home4" },
+    { name: "About", url: "/about" },
     { name: "Test", url: "/test1" },
   ];
   return (
