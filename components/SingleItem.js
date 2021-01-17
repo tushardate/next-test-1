@@ -8,7 +8,7 @@ function SingleItem(props) {
       const video_id = url.pathname.slice(1);
       const video_src = url.hostname.toLowerCase().includes("you")
         ? `https://www.youtube.com/embed/${video_id}`
-        : `http://player.vimeo.com/video/${video_id}?title=0&amp;byline=0&amp;portrait=0&amp;color=006eff`;
+        : `https://player.vimeo.com/video/${video_id}?title=0&amp;byline=0&amp;portrait=0&amp;color=006eff`;
 
       const ratios = props.video_ratio.split("/");
       const video_ratio = (parseFloat(ratios[1]) / parseFloat(ratios[0])) * 100;
