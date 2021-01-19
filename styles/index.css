@@ -8,17 +8,50 @@ body {
   background-color: hsla(60, 5%, 87%, 1);
 }
 
-.carouselHeight {
-  height: 80vh !important;
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 24px;
+  color: hsla(60, 5%, 87%, 1);
 }
 
-.swiper-button-next { @apply text-gray-900; }
+.swiper-button-prev,
+.swiper-button-next {
+  @apply bg-gray-900;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+}
 .swiper-button-prev { @apply text-gray-900; }
 .swiper-container-horizontal > .swiper-pagination-bullets{
   bottom: 0;
 }
-.swiper-pagination-bullet-active {
+.swiper-pagination-bullet {
   @apply bg-gray-900;
+}
+
+.carousel-dark {
+  @apply bg-gray-900;
+}
+
+.carousel-dark .swiper-button-next { color: hsla(60, 5%, 87%, 1) }
+.carousel-dark .swiper-button-prev { color: hsla(60, 5%, 87%, 1) }
+.carousel-dark .swiper-pagination-bullet {
+  background-color: hsla(60, 5%, 87%, 1);
+}
+
+
+.carousel-dark .swiper-button-prev:after,
+.carousel-dark .swiper-button-next:after {
+  @apply text-gray-900;
+}
+
+.carousel-dark .swiper-button-prev,
+.carousel-dark .swiper-button-next {
+  background-color: hsla(60, 5%, 87%, 1);
+}
+
+.carouselHeight {
+  max-height: 75vh;
 }
 
 .headline {
