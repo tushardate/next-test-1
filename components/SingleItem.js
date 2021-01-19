@@ -1,5 +1,5 @@
 import React from "react";
-import { container } from "tailwindcss/defaultTheme";
+import Carousel from './Carousel'
 
 function SingleItem(props) {
   switch (props.acf_fc_layout) {
@@ -43,6 +43,10 @@ function SingleItem(props) {
           className={props.image_item_classes}
           src={props.content_image.url}
         ></img>
+      );
+    case "single_item_image_carousel":
+      return (
+        <Carousel {...props}/>
       );
     default:
       return null;

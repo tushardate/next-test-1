@@ -1,4 +1,5 @@
 @import "./fonts.css";
+@import "swiper/swiper-bundle.css";
 @tailwind base;
 @tailwind components;
 
@@ -7,6 +8,18 @@ body {
   background-color: hsla(60, 5%, 87%, 1);
 }
 
+.carouselHeight {
+  height: 80vh !important;
+}
+
+.swiper-button-next { @apply text-gray-900; }
+.swiper-button-prev { @apply text-gray-900; }
+.swiper-container-horizontal > .swiper-pagination-bullets{
+  bottom: 0;
+}
+.swiper-pagination-bullet-active {
+  @apply bg-gray-900;
+}
 
 .headline {
   font-size: 11vw;

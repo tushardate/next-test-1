@@ -15,3 +15,5 @@ a {
 * {
   box-sizing: border-box;
 } */
+
+.swiper-button-next { color: red; }
