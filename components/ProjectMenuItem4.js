@@ -96,7 +96,7 @@ function ProjectMenuItem4(props) {
           ></motion.div>
           <div className="flex flex-col w-7/12 sm:w-6/12 pt-3 xs:pt-4">
             <motion.div variants={slideUp} className="w-full flex-1 h-full">
-              <p className="block w-full text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-5xl font-tdspace font-bold tracking-snug leading-none pr-4 sm:pr-16">
+              <p className="block w-full text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-5xl font-tdspace font-medium leading-none pr-4 sm:pr-16">
                 {title}
               </p>
             </motion.div>

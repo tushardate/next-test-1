@@ -67,24 +67,24 @@ export default function Project({ post, next, prev }) {
           initial="initial"
           animate="animate"
           variants={stagger}
-          className="container mx-auto sm:mt-32 mt-30"
+          className="mt-20 md:mt-32"
         >
-          <div className="">
-            <div className="grid grid-cols-12 gap-4 pb-1">
-              <div className="col-start-1 col-span-12 sm:col-start-2 sm:col-span-10 md:col-start-2 md:col-span-9">
+          <div className="mx-4 md:mx-8 lg:mx-0">
+            <div className="grid grid-cols-12 gap-4 pb-3 pl-1">
+              <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-10 lg:col-start-2 lg:col-span-9">
                 <motion.h1
                   variants={fadeInUp}
-                  className="font-tdspace md:text-3xl font-medium"
+                  className="font-tdspace text-md md:text-2xl lg:text-3xl font-medium"
                 >
                   {client_name}
                 </motion.h1>
               </div>
             </div>
-            <div className="grid grid-cols-12 gap-4 pb-6">
-              <div className="col-start-1 col-span-12 sm:col-start-2 sm:col-span-10 md:col-start-2 md:col-span-9">
+            <div className="grid grid-cols-12 gap-4 pb-3 md:pb-5 lg:pb-7">
+              <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-12 lg:col-start-2 lg:col-span-9">
                 <motion.h1
                   variants={fadeInUp}
-                  className="font-tdspace md:text-7xl lg:text-9xl tracking-tighter leading-point-90"
+                  className="font-tdspace font-semibold text-5xl md:text-8xl lg:text-9xl tracking-snug leading-point-90"
                 >
                   {title}
                 </motion.h1>
@@ -93,10 +93,10 @@ export default function Project({ post, next, prev }) {
             <div className="grid grid-cols-12 gap-4">
               <motion.div
                 variants={fadeInUp}
-                className="xs:col-start-5 sm:col-span-7 md:col-start-6 md:col-span-6 sm:mt-6 mt-1"
+                className="col-start-1 col-span-12 md:col-start-4 md:col-span-9 lg:col-start-6 lg:col-span-6"
               >
                 <div className="w-full">
-                  <p className="w-full block font-tdspace font-light tracking-tight md:text-1xl lg:text-3xl">
+                  <p className="w-full block font-tdspace font-light text-lg md:text-2xl lg:text-3xl">
                     {general_project_description}
                   </p>
                 </div>
@@ -104,7 +104,7 @@ export default function Project({ post, next, prev }) {
             </div>
           </div>
         </motion.div>
-        <div className="content tracking-snug">
+        <div className="content font-light">
           {group_row_repeater.map((row, i) => (
             <div key={i} className={row.group_row_repeater_classes}>
               {row.group_row_repeater_items.map((el, j) => (

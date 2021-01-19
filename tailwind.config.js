@@ -19,7 +19,7 @@ module.exports = {
           "'Space Grotesk'",
           ...defaultTheme.fontFamily.sans,
         ],
-        tdspace: ["'Space Grotesk'", ...defaultTheme.fontFamily.sans],
+        tdspace: ["Telegraf","'Space Grotesk'", ...defaultTheme.fontFamily.sans],
       },
       fontSize: {
         "7xl": "4.5rem",

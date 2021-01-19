@@ -7,12 +7,6 @@ body {
   background-color: hsla(60, 5%, 87%, 1);
 }
 
-.project-column:nth-child(odd) {
-  @apply pl-4 pr-4;
-}
-.project-column:nth-child(even) {
-  @apply pr-4 pl-4;
-}
 
 .headline {
   font-size: 11vw;

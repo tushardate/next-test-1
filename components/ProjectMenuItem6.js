@@ -84,6 +84,43 @@ function ProjectMenuItem6(props) {
         ease: [0.4, -0.15, 0.66, 0],
       },
     },
+    hover: {
+      opacity: 0,
+      x: "-5px",
+      transition: {
+        duration: 0.25,
+      },
+    }
+  };
+  const onHoverShow = {
+    initial: (custom) => ({
+      opacity: 0,
+      x: "-20px",
+    }),
+    animate: (custom) => ({
+      opacity: 0,
+      x: "-5px",
+      transition: {
+        type: "spring",
+        damping: 20,
+        stiffness: 100,
+      },
+    }),
+    exit: {
+      opacity: 0,
+      x: "-5px",
+      transition: {
+        duration: 0.5,
+        ease: [0.4, -0.15, 0.66, 0],
+      },
+    },
+    hover: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.25,
+      },
+    }
   };
 
   return (
@@ -101,10 +138,15 @@ function ProjectMenuItem6(props) {
             style={{ originX: 1 }}
             className="w-full h-px bg-gray-700 absolute z-50"
           ></motion.div>
-          <div className="flex flex-col xl:w-5/12 xs:w-6/12 pt-3 xs:pt-4">
+          <div className="flex flex-col md:w-5/12 w-6/12 pt-3 xs:pt-4 relative">
             <motion.div variants={slideUp} className="w-full flex-1 h-full">
               <p className="block w-full text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl font-tdspace font-light tracking-snug leading-tight pr-4 sm:pr-16">
                 {title}
+              </p>
+            </motion.div>
+            <motion.div variants={onHoverShow} className="absolute flex items-center justify-center top-0 left-0 w-full h-full">
+              <p className="block text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl font-tdspace font-light">
+                View &#8594;
               </p>
             </motion.div>
             <motion.div
@@ -122,7 +164,7 @@ function ProjectMenuItem6(props) {
             </motion.div>
           </div>
 
-          <motion.div className="xl:w-7/12 xs:w-6/12 overflow-hidden">
+          <motion.div className="md:w-7/12 w-6/12 overflow-hidden">
             <motion.img
               variants={scaleDown}
               className="object-cover h-full w-full"

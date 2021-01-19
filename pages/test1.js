@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ProjectMenuItem4 from "../components/ProjectMenuItem4";
+import ProjectMenuItem6 from "../components/ProjectMenuItem6";
 import { motion } from "framer-motion";
 
 export default function Home(props) {
@@ -91,18 +91,17 @@ export default function Home(props) {
     <>
       <Header />
       <motion.div
-        className="container mx-auto mt-24 text-gray-900"
+        className="mx-8 mt-32 text-gray-900"
         exit="exit"
         initial="initial"
         animate="animate"
       >
-        <motion.div variants={stagger} className="flex flex-wrap">
-          <motion.div variants={slideIn} className="w-full pb-16">
-            <p className="w-8/12 font-tdspace font-medium text-9xl headline tracking-tight leading-point-85">
-              Work
+        <motion.div variants={stagger} className="flex flex-wrap w-full">
+          <motion.div variants={slideIn} className="w-full pb-8">
+            <p className="w-8/12 font-tdspace font-medium text-7xl headline tracking-tight leading-point-85">
+            
             </p>
           </motion.div>
-
           {projects.map((project, i) => (
             <motion.div
               className={`project-column xl:w-1/2 lg:w-1/2 w-full xl:pb-20 pb-16 ${
@@ -118,7 +117,7 @@ export default function Home(props) {
               //     originY: 1,
               //   }}
             >
-              <ProjectMenuItem4 key={project.id} data={project} />
+              <ProjectMenuItem6 key={project.id} data={project} />
               {/* <ProjectMenuItem key={project.id} data={project} /> */}
             </motion.div>
           ))}
