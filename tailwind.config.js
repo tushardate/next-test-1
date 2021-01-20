@@ -1,7 +1,13 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: [],
+  purge: [
+    "./pages/**/*.js",
+    "./pages/**/*.jsx",
+    "./components/**/*.js",
+    "./components/**/*.jsx",
+  ],
+  darkMode: false,
   theme: {
     screens: {
       xs: "500px",
@@ -19,7 +25,11 @@ module.exports = {
           "'Space Grotesk'",
           ...defaultTheme.fontFamily.sans,
         ],
-        tdspace: ["Telegraf","'Space Grotesk'", ...defaultTheme.fontFamily.sans],
+        tdspace: [
+          "Telegraf",
+          "'Space Grotesk'",
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
       fontSize: {
         "7xl": "4.5rem",
@@ -89,11 +99,11 @@ module.exports = {
         "95vh": "95vh",
         "100vh": "100vh",
       },
-      maxHeight: theme => ({
-        ...theme('spacing'),
-        full: '100%', // You can add additional custom options below it too
-        screen: '100vh',
-  }),
+      maxHeight: (theme) => ({
+        ...theme("spacing"),
+        full: "100%", // You can add additional custom options below it too
+        screen: "100vh",
+      }),
     },
   },
   variants: {},
