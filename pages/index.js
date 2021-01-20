@@ -94,7 +94,7 @@ export default function Home(props) {
       >
         <motion.div variants={stagger} className="flex flex-wrap">
           <motion.div variants={slideIn} className="w-full pb-16 md:pb-24">
-            <p className="w-full md:w-4/5 font-tdspace font-base xl:text-8xl md:text-7xl text-5xl headline tracking-snug leading-point-95">
+            <p className="w-full md:w-4/5 font-tdspace font-medium xl:text-8xl md:text-7xl text-5xl headline tracking-tighter leading-point-90">
               Tushar Date is a creative director & art director based in Los
               Angeles
               {/* Work */}

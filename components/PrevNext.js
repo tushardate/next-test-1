@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 export default function PrevNext(props) {
   return (
-    <div className="grid grid-cols-12 pt-32 pb-20 px-4 font-tdspace leading-tight xs:text-lg md:text-2xl lg:text-5xl">
-      <div className="col-start-1 col-span-4">
+    <div className="grid grid-cols-12 pt-32 pb-20 px-4 font-tdspace tracking-snug leading-tight xs:text-lg md:text-2xl lg:text-5xl">
+      <div className="col-start-1 col-span-5 xl:col-start-1 xl:col-span-4">
         <Link
           as={`/projects/${props.prev.slug}`}
           href="/projects/[slug]"
@@ -23,7 +23,7 @@ export default function PrevNext(props) {
           </a>
         </Link>
       </div>
-      <div className="col-start-9 col-span-4">
+      <div className="col-start-8 col-span-5 xl:col-start-9 xl:col-span-4">
         <Link
           as={`/projects/${props.next.slug}`}
           href="/projects/[slug]"
