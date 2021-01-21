@@ -15,23 +15,23 @@ function Carousel(props) {
   useEffect(() => {
     arrowPrev = document.querySelector(".swiper-button-prev");
     arrowNext = document.querySelector(".swiper-button-next");
-    if (size.width < 800) {
-      setNumOfSlides(1);
+    if (size.width < 768) {
       arrowPrev.style.display = 'none';
       arrowNext.style.display = 'none';
     } else {
-      setNumOfSlides(2);
       arrowPrev.style.display = 'flex';
       arrowNext.style.display = 'flex';
     }
+    let res = Math.ceil(size.width / (size.height * 0.75));
+    setNumOfSlides(res);
   }, [size]);
   const slides = [];
 
   props.content_carousel.forEach((el, i) => {
     return slides.push(
       <SwiperSlide key={i}>
-        <div className="w-full h-full flex justify-center carouselHeight">
-          <img className="w-full object-scale-down" src={el.url}></img>
+        <div className="w-full flex justify-center">
+          <img className="w-full h-full object-contain" src={el.url}></img>
         </div>
       </SwiperSlide>
     );
