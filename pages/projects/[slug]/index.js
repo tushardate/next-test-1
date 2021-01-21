@@ -61,14 +61,13 @@ export default function Project({ post, next, prev }) {
   return (
     <>
       <Header />
-      <div className="w-full text-gray-900">
-        <motion.div
-          exit="exit"
-          initial="initial"
-          animate="animate"
-          variants={stagger}
-          className="mt-20 md:mt-32"
-        >
+      <motion.div
+        exit="exit"
+        initial="initial"
+        animate="animate"
+        className="w-full text-gray-900"
+      >
+        <motion.div variants={stagger} className="mt-20 md:mt-32">
           <div className="mx-4 md:mx-8 xl:mx-0">
             <div className="grid grid-cols-12 gap-4 pb-3 pl-1">
               <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-10 xl:col-start-3 xl:col-span-9">
@@ -104,7 +103,7 @@ export default function Project({ post, next, prev }) {
             </div>
           </div>
         </motion.div>
-        <div className="content font-light">
+        <motion.div variants={fadeInUp} className="content font-light">
           {group_row_repeater.map((row, i) => (
             <div key={i} className={row.group_row_repeater_classes}>
               {row.group_row_repeater_items.map((el, j) => (
@@ -114,11 +113,10 @@ export default function Project({ post, next, prev }) {
               ))}
             </div>
           ))}
-        </div>
+        </motion.div>
 
-        <PrevNext prev={prev} next={next}/>
-
-      </div>
+        <PrevNext prev={prev} next={next} />
+      </motion.div>
       <Footer />
     </>
   );
