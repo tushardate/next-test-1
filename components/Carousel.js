@@ -6,13 +6,26 @@ import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 function Carousel(props) {
+  console.log(props)
   const size = useWindowSize();
   const [numOfSlides, setNumOfSlides] = useState(1);
   const [showArrows, setShowArrows] = useState(true);
   let arrowPrev = undefined;
   let arrowNext = undefined;
+  const carouselBreakpoints = {
+      '@0.85': {
+        slidesPerView: 2,
+      },
+      '@1.5': {
+        slidesPerView: 3,
+      },
+      '@2.00': {
+        slidesPerView: 4,
+      },
+    }
 
   useEffect(() => {
+    
     arrowPrev = document.querySelector(".swiper-button-prev");
     arrowNext = document.querySelector(".swiper-button-next");
     if (size.width < 768) {
@@ -30,7 +43,9 @@ function Carousel(props) {
   props.content_carousel.forEach((el, i) => {
     return slides.push(
       <SwiperSlide key={i}>
-          <img className="w-full h-full object-contain" src={el.url}></img>
+        <div className="w-full h-full flex justify-center items-center">
+          <img className="w-full carouselHeight object-contain" src={el.url}></img>
+        </div>
       </SwiperSlide>
     );
   });
@@ -39,30 +54,18 @@ function Carousel(props) {
     <>
       <div className={props.carousel_item_classes}>
         <Swiper
-          breakpoints={ {
-            '@0.85': {
-              slidesPerView: 2,
-            },
-            '@1.5': {
-              slidesPerView: 3,
-            },
-            '@2.00': {
-              slidesPerView: 4,
-              spaceBetween: 50,
-            },
-          }}
+          breakpoints={ props.slides_per_view == 0 ? carouselBreakpoints : {} }
           id="main"
           speed={600}
-          className="w-full h-full td-swiper-design"
-          autoplay={{ delay: 4000 }}
-          
+          className="td-swiper-design"
+          // autoplay={{ delay: 4000 }}
           navigation={showArrows}
           pagination
           centeredSlides
           centerInsufficientSlides
           grabCursor
           spaceBetween={24}
-          slidesPerView={1}
+          slidesPerView={props.slides_per_view == 0 ? 1 : props.slides_per_view}
         >
           {slides}
         </Swiper>

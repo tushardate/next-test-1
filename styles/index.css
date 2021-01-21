@@ -12,6 +12,14 @@ body {
   overflow: visible;
 }
 
+/* .td-swiper-design .swiper-wrapper {
+  height:80vh !important;
+} */
+
+.td-swiper-design .swiper-slide {
+  height:auto !important;
+}
+
 .td-swiper-design .swiper-button-prev:after,
 .td-swiper-design .swiper-button-next:after {
   font-size: 24px;
