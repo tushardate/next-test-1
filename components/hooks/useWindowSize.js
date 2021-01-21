@@ -13,7 +13,7 @@ export default function useWindowSize() {
         height: window.innerHeight,
       });
     };
-    const debounceHandleResize = debounce(handleResize, 1000);
+    const debounceHandleResize = debounce(handleResize, 300);
 
     window.addEventListener("resize", debounceHandleResize);
     handleResize();

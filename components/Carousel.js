@@ -16,23 +16,21 @@ function Carousel(props) {
     arrowPrev = document.querySelector(".swiper-button-prev");
     arrowNext = document.querySelector(".swiper-button-next");
     if (size.width < 768) {
-      arrowPrev.style.display = 'none';
-      arrowNext.style.display = 'none';
+      arrowPrev.style.display = "none";
+      arrowNext.style.display = "none";
     } else {
-      arrowPrev.style.display = 'flex';
-      arrowNext.style.display = 'flex';
+      arrowPrev.style.display = "flex";
+      arrowNext.style.display = "flex";
     }
-    let res = Math.ceil(size.width / (size.height * 0.75));
-    setNumOfSlides(res);
+    // let res = Math.ceil(size.width / (size.height * 0.75));
+    // setNumOfSlides(res);
   }, [size]);
   const slides = [];
 
   props.content_carousel.forEach((el, i) => {
     return slides.push(
       <SwiperSlide key={i}>
-        <div className="w-full flex justify-center">
           <img className="w-full h-full object-contain" src={el.url}></img>
-        </div>
       </SwiperSlide>
     );
   });
@@ -41,14 +39,30 @@ function Carousel(props) {
     <>
       <div className={props.carousel_item_classes}>
         <Swiper
+          breakpoints={ {
+            '@0.85': {
+              slidesPerView: 2,
+            },
+            '@1.5': {
+              slidesPerView: 3,
+            },
+            '@2.00': {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+          }}
           id="main"
-          className="w-full h-full pb-6"
+          speed={600}
+          className="w-full h-full td-swiper-design"
           autoplay={{ delay: 4000 }}
+          
           navigation={showArrows}
           pagination
           centeredSlides
+          centerInsufficientSlides
+          grabCursor
           spaceBetween={24}
-          slidesPerView={numOfSlides}
+          slidesPerView={1}
         >
           {slides}
         </Swiper>
