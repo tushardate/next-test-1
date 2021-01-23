@@ -46,12 +46,12 @@ export default function Home(props) {
 
   const staggerTitle = {
     initial: {
-      x: 20,
-      y: 10,
+      // x: 20,
+      y: 20,
       opacity: 0,
     },
     animate: i => ({
-      x: 0,
+      // x: 0,
       y:0,
       opacity: 1,
       transition: {
