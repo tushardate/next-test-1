@@ -2,47 +2,12 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProjectMenuItem6 from "../components/ProjectMenuItem6";
+import { SplitText } from "../components/SplitText";
 import { motion } from "framer-motion";
 
 export default function Home(props) {
   // const projects = Object.keys(data).map((key) => data[key]);
   const projects = props.data;
-
-  const easing = [0.6, -0.05, 0.01, 0.99];
-  const fadeInUp = {
-    initial: (custom) => ({
-      x: "20%",
-      y: "0%",
-      skewX: "1deg",
-      rotate: "2deg",
-      opacity: 0,
-    }),
-    animate: (custom) => ({
-      x: 0,
-      y: 0,
-      skewX: "0deg",
-      rotate: "0deg",
-      opacity: 1,
-      transition: {
-        type: "spring",
-        damping: 20,
-        stiffness: 100,
-      },
-    }),
-    exit: {
-      opacity: 0,
-      x: "-20%",
-      y: "0%",
-      skewX: "3deg",
-      rotate: "-2deg",
-      transition: {
-        duration: 0.55,
-        ease: [0.32, 0, 0.67, 0],
-        // easing: easing,
-      },
-    },
-  };
-
   const slideIn = {
     initial: (custom) => ({
       y: "10%",
@@ -59,26 +24,49 @@ export default function Home(props) {
     }),
     exit: {
       opacity: 0,
-      y: "10%",
+      y: "8%",
       transition: {
         duration: 0.55,
-        ease: [0.4, -0.15, 0.66, 0],
-        // ease: [0.36, 0, 0.66, -0.56], //ease back out
-        // easing: easing,
+        ease: "easeOut"
       },
     },
+  };
+
+  const slideTitleOut = {
+    exit: {
+      opacity: 0,
+      y: "8%",
+      transition: {
+        type: "spring",
+        damping: 20,
+        stiffness: 100,
+      },
+    },
+  };
+
+  const staggerTitle = {
+    initial: {
+      x: 20,
+      y: 10,
+      opacity: 0,
+    },
+    animate: i => ({
+      x: 0,
+      y:0,
+      opacity: 1,
+      transition: {
+        delay: i * 0.065,
+        type: "spring",
+        damping: 25,
+        stiffness: 100,
+      },
+    }),
   };
 
   const stagger = {
     animate: {
       transition: {
         staggerChildren: 0.025,
-      },
-    },
-    exit: {
-      transition: {
-        staggerChildren: 0.025,
-        // staggerDirection: -1,
       },
     },
   };
@@ -93,12 +81,12 @@ export default function Home(props) {
         animate="animate"
       >
         <motion.div variants={stagger} className="flex flex-wrap">
-          <motion.div variants={slideIn} className="w-full pb-16 md:pb-24">
-            <p className="w-full md:w-4/5 font-tdspace font-medium xl:text-8xl md:text-7xl text-5xl headline tracking-tighter leading-point-90">
+          <motion.div variants={slideTitleOut} className="w-full pb-16 md:pb-24">
+            <SplitText variants={staggerTitle} className="w-full md:w-4/5 font-tdspace font-medium xl:text-8xl md:text-7xl text-5xl headline tracking-tighter leading-point-90">
               Tushar Date is a creative director & art director based in Los
               Angeles
               {/* Work */}
-            </p>
+            </SplitText>
           </motion.div>
 
           {projects.map((project, i) => (

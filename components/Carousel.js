@@ -6,7 +6,6 @@ import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 function Carousel(props) {
-  console.log(props)
   const size = useWindowSize();
   const [numOfSlides, setNumOfSlides] = useState(1);
   const [showArrows, setShowArrows] = useState(true);
@@ -54,13 +53,13 @@ function Carousel(props) {
     <>
       <div className={props.carousel_item_classes}>
         <Swiper
-          breakpoints={ props.slides_per_view == 0 ? carouselBreakpoints : {} }
+          breakpoints={ props.slides_per_view == 0 ? carouselBreakpoints : {'@0.00': { slidesPerView: props.slides_per_view}} }
           id="main"
           speed={600}
           className="td-swiper-design"
           // autoplay={{ delay: 4000 }}
           navigation={showArrows}
-          pagination
+          pagination={{dynamicBullets: true, dynamicMainBullets: 3, clickable: true, }}
           centeredSlides
           centerInsufficientSlides
           grabCursor

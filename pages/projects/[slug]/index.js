@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import Header from "../../../components/Header";
 import PrevNext from "../../../components/PrevNext";
-import SingleItem from "../../../components/SingleItem";
+import SingleItemTest from "../../../components/SingleItemTest";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Footer from "../../../components/Footer";
+import { SplitText } from "../../../components/SplitText";
 
 export default function Project({ post, next, prev }) {
   const {
@@ -22,7 +23,7 @@ export default function Project({ post, next, prev }) {
 
   const fadeInUp = {
     initial: {
-      y: 20,
+      y: 30,
       opacity: 0,
     },
     animate: {
@@ -30,10 +31,35 @@ export default function Project({ post, next, prev }) {
       opacity: 1,
       transition: {
         type: "spring",
-        damping: 20,
+        damping: 25,
         stiffness: 100,
       },
     },
+    exit: {
+      y: 20,
+      opacity: 0,
+      transition: {
+        duration: 0.75,
+        ease: [0.36, 0, 0.66, -0.56],
+      },
+    },
+  };
+
+  const staggerTitle = {
+    initial: {
+      y: 30,
+      opacity: 0,
+    },
+    animate: i => ({
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: i * 0.1,
+        type: "spring",
+        damping: 25,
+        stiffness: 100,
+      },
+    }),
     exit: {
       y: 20,
       opacity: 0,
@@ -52,7 +78,7 @@ export default function Project({ post, next, prev }) {
     },
     exit: {
       transition: {
-        staggerChildren: 0.025,
+        // staggerChildren: 0.025,
         // staggerDirection: -1,
       },
     },
@@ -80,13 +106,21 @@ export default function Project({ post, next, prev }) {
               </div>
             </div>
             <div className="grid grid-cols-12 gap-4 pb-3 md:pb-5 lg:pb-7">
-              <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-12 xl:col-start-3 xl:col-span-9">
+              {/* <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-12 xl:col-start-3 xl:col-span-9">
                 <motion.h1
                   variants={fadeInUp}
                   className="font-tdspace font-medium text-5xl md:text-8xl lg:text-9xl tracking-tighter leading-point-90"
                 >
                   {title}
                 </motion.h1>
+              </div> */}
+              <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-12 xl:col-start-3 xl:col-span-9">
+                <SplitText
+                  variants={staggerTitle}
+                  className="font-tdspace font-medium text-5xl md:text-8xl lg:text-9xl tracking-tighter leading-point-90"
+                >
+                  {title}
+                </SplitText>
               </div>
             </div>
             <div className="grid grid-cols-12 gap-4">
@@ -108,7 +142,7 @@ export default function Project({ post, next, prev }) {
             <div key={i} className={row.group_row_repeater_classes}>
               {row.group_row_repeater_items.map((el, j) => (
                 <div key={j} className={el.single_item_classes}>
-                  <SingleItem {...el.single_item[0]} />
+                  <SingleItemTest {...el.single_item[0]} />
                 </div>
               ))}
             </div>

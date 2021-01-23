@@ -8,14 +8,6 @@ body {
   background-color: hsla(60, 5%, 87%, 1);
 }
 
-.td-swiper-design.swiper-container {
-  overflow: visible;
-}
-
-/* .td-swiper-design .swiper-wrapper {
-  height:80vh !important;
-} */
-
 .td-swiper-design .swiper-slide {
   height:auto !important;
 }
@@ -34,10 +26,10 @@ body {
   border-radius: 9999px;
 }
 
-.td-swiper-design .swiper-button-prev { @apply text-gray-900; }
+/* .td-swiper-design .swiper-button-prev { @apply text-gray-900; }
 .swiper-container-horizontal.td-swiper-design .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
   bottom: -24px;
-}
+} */
 
 .td-swiper-design .swiper-pagination-bullet {
   @apply bg-gray-900;
