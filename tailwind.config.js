@@ -34,6 +34,34 @@ module.exports = {
       "9xl": "8rem",
       "10xl": "10rem",
     },
+    columnCount: [1, 2, 3, 4, 5],
+    columnGap: {
+      // will fallback to 'gap' || 'gridGap' values
+      // sm: '1rem',
+      // md: '1.5rem',
+      // lg: '2rem',
+    },
+    columnWidth: {
+      // sm: '120px',
+      // md: '240px',
+      // lg: '360px',
+    },
+    columnRuleColor: false, // will fallback to `borderColor` values
+    columnRuleWidth: false, // will fallback to `borderWidth` values
+    columnRuleStyle: [
+      "none",
+      "hidden",
+      "dotted",
+      "dashed",
+      "solid",
+      "double",
+      "groove",
+      "ridge",
+      "inset",
+      "outset",
+    ],
+    columnFill: ["auto", "balance", "balance-all"],
+    columnSpan: ["none", "all"],
     extend: {
       fontFamily: {
         tdserif: ["Canela", ...defaultTheme.fontFamily.sans],
@@ -124,7 +152,6 @@ module.exports = {
         "90vw": "90vw",
         "95vw": "95vw",
         "100vw": "100vw",
-
       },
       maxHeight: (theme) => ({
         ...theme("spacing"),
@@ -133,6 +160,15 @@ module.exports = {
       }),
     },
   },
-  variants: {},
-  plugins: [],
+  variants: { // all the following default to ['responsive']
+    columnCount: ['responsive'],
+    columnGap: ['responsive'],
+    columnWidth: ['responsive'],
+    columnRuleColor: ['responsive'],
+    columnRuleWidth: ['responsive'],
+    columnRuleStyle: ['responsive'],
+    columnFill: ['responsive'],
+    columnSpan: ['responsive'],
+  },
+  plugins: [require("tailwindcss-multi-column")()],
 };

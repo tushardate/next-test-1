@@ -37,7 +37,7 @@ export default function PrevNext(props) {
   };
 
   return (
-    <div className="grid grid-cols-12 pt-32 pb-20 px-4 font-tdspace tracking-snug leading-tight xs:text-lg md:text-2xl lg:text-5xl">
+    <div className="grid grid-cols-12 py-16 md:pt-32 md:pb-20 px-4 font-tdspace tracking-snug leading-tight xs:text-lg md:text-2xl lg:text-5xl">
       <div className="col-start-1 col-span-5 xl:col-start-1 xl:col-span-4">
         <Link
           as={`/projects/${props.prev.slug}`}
