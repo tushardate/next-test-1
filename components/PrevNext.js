@@ -37,7 +37,7 @@ export default function PrevNext(props) {
   };
 
   return (
-    <div className="grid grid-cols-12 py-16 md:pt-32 md:pb-20 px-4 font-tdspace tracking-snug leading-tight xs:text-lg md:text-2xl lg:text-5xl">
+    <div className="grid grid-cols-12 my-12 lg:my-20 px-4 font-tdspace tracking-snug leading-snug text-xl md:text-2xl lg:text-5xl">
       <div className="col-start-1 col-span-5 xl:col-start-1 xl:col-span-4">
         <Link
           as={`/projects/${props.prev.slug}`}
@@ -47,13 +47,13 @@ export default function PrevNext(props) {
           <a className="ml-auto">
             <motion.div initial="initial" whileHover="hover" className="text-right">
               <div>
-                <motion.div className="inline-block pr-3" variants={prevArrow}>
+                <motion.div className="inline-block pr-1" variants={prevArrow}>
                   &#8598;
                 </motion.div>
-                <motion.p className="font-medium inline-block">
+                <motion.p className="font-bold inline-block">
                   Prev Project
                 </motion.p>
-                <p className="font-light xs:text-medium md:text-2xl lg:text-4xl">
+                <p>
                   {props.prev.title}
                 </p>
               </div>
@@ -70,13 +70,13 @@ export default function PrevNext(props) {
           <a>
             <motion.div initial="initial" whileHover="hover">
               <div>
-                <motion.p className="font-medium inline-block">
+                <motion.p className="font-bold inline-block">
                   Next Project{" "}
                 </motion.p>
-                <motion.div className="inline-block pl-3" variants={nextArrow}>
+                <motion.div className="inline-block pl-1" variants={nextArrow}>
                   &#8599;
                 </motion.div>
-                <p className="font-light xs:text-medium md:text-2xl lg:text-4xl">
+                <p>
                   {props.next.title}
                 </p>
               </div>

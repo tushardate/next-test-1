@@ -117,7 +117,7 @@ export default function Project({ post, next, prev }) {
               <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-12 xl:col-start-3 xl:col-span-9">
                 <SplitText
                   variants={staggerTitle}
-                  className="font-tdspace font-medium text-5xl md:text-8xl lg:text-9xl tracking-tighter leading-point-90"
+                  className="font-tdspace font-medium text-5.5xl md:text-8xl lg:text-9xl tracking-tighter leading-none md:leading-point-90"
                 >
                   {title}
                 </SplitText>
@@ -128,8 +128,8 @@ export default function Project({ post, next, prev }) {
                 variants={fadeInUp}
                 className="col-start-1 col-span-12 md:col-start-4 md:col-span-9 xl:col-start-5 xl:col-span-6"
               >
-                <div className="w-full">
-                  <p className="w-full block text-lg md:text-2xl lg:text-3xl font-tdspace font-light tracking-snug leading-snug">
+                <div className="w-full pl-1 md:pl-0">
+                  <p className="w-full block text-xl md:text-2xl lg:text-3xl font-tdspace md:font-light md:tracking-snug md:leading-snug">
                     {general_project_description}
                   </p>
                 </div>
@@ -139,7 +139,7 @@ export default function Project({ post, next, prev }) {
         </motion.div>
         <motion.div variants={fadeInUp} className="content font-light">
           {group_row_repeater.map((row, i) => (
-            <div key={i} className={row.group_row_repeater_classes}>
+            <div key={i} className={`my-12 md:my-20 lg:my-32 ${row.group_row_repeater_classes}`}>
               {row.group_row_repeater_items.map((el, j) => (
                 <div key={j} className={el.single_item_classes}>
                   <SingleItemTest {...el.single_item[0]} />

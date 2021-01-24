@@ -57,7 +57,7 @@ function Carousel(props) {
           id="main"
           speed={600}
           className="td-swiper-design"
-          // autoplay={{ delay: 4000 }}
+          autoplay={{ delay: 4000 }}
           navigation={showArrows}
           pagination={{dynamicBullets: true, dynamicMainBullets: 3, clickable: true, }}
           centeredSlides
