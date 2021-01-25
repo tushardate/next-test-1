@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Header from "../../../components/Header";
-import PrevNext from "../../../components/PrevNext";
+import PrevNextTest from "../../../components/PrevNextTest";
 import SingleItemTest from "../../../components/SingleItemTest";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -120,7 +120,7 @@ export default function Project({ post, next, prev }) {
         </motion.div>
         
         <motion.div variants={fadeInUp}>
-          <PrevNext prev={prev} next={next} />
+          <PrevNextTest prev={prev} next={next} />
         </motion.div>
       </motion.div>
       <Footer />
@@ -141,8 +141,11 @@ export async function getStaticProps({ params }) {
 
   const projects = await resAll.json();
   const currentIdx = projects.findIndex((p) => p.slug === params.slug);
-  const nextIdx = currentIdx < projects.length - 1 ? currentIdx + 1 : 0;
-  const prevIdx = currentIdx > 0 ? currentIdx - 1 : projects.length - 1;
+  // const nextIdx = currentIdx < projects.length - 1 ? currentIdx + 1 : 0;
+  // const prevIdx = currentIdx > 0 ? currentIdx - 1 : projects.length - 1;
+
+  const nextIdx = (currentIdx + 1) % projects.length;
+  const prevIdx = (currentIdx - 1 + projects.length) % projects.length;
 
   // Pass post data to the page via props
   return {

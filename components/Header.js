@@ -6,10 +6,9 @@ export default function Header() {
   const links = [
     { name: "Work", url: "/" },
     { name: "About", url: "/about" },
-    { name: "Test", url: "/test1" },
   ];
   return (
-    <nav className="mx-auto font-tdspace text-gray-900 text-md px-4 md:px-8 fixed z-50 top-0 left-0 right-0 list-none w-full mt-4 md:mt-8 flex justify-between">
+    <nav className="mx-auto font-tdspace font-medium text-gray-900 text-md px-4 md:px-8 fixed z-50 top-0 left-0 right-0 list-none w-full mt-4 md:mt-8 flex justify-between">
       <div className="">
         <Link href={"/"} scroll={false}>
           <a className="">
@@ -28,7 +27,7 @@ export default function Header() {
       </div>
       <div className="flex justify-center items-center">
         {links.map((link) => (
-          <div key={link.name} className="pl-10 text-lg md:text-xl">
+          <div key={link.name} className="pl-10vw lg:pl-24 text-lg md:text-xl">
             <li className="inline-block">
               <Link href={link.url} scroll={false}>
                 <a>{link.name}</a>
