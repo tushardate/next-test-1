@@ -37,8 +37,8 @@ export default function PrevNext(props) {
   };
 
   return (
-    <div className="grid grid-cols-12 my-12 lg:my-20 px-4 font-tdspace tracking-snug leading-snug text-xl md:text-2xl lg:text-5xl">
-      <div className="col-start-1 col-span-5 xl:col-start-1 xl:col-span-4">
+    <div className="grid grid-cols-12 my-12 lg:my-20 px-4 font-tdspace tracking-snug leading-snug text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl">
+      <div className="col-start-1 col-span-6 sm:col-start-1 sm:col-span-5 lg:col-start-2 lg:col-span-4 xl:col-start-2 xl:col-span-3 pr-4 sm:pr-0">
         <Link
           as={`/projects/${props.prev.slug}`}
           href="/projects/[slug]"
@@ -61,7 +61,7 @@ export default function PrevNext(props) {
           </a>
         </Link>
       </div>
-      <div className="col-start-8 col-span-5 xl:col-start-9 xl:col-span-4">
+      <div className="col-start-7 col-span-6 sm:col-start-8 sm:col-span-5 lg:col-start-8 lg:col-span-4 xl:col-start-9 xl:col-span-3 pl-4 sm:pl-0">
         <Link
           as={`/projects/${props.next.slug}`}
           href="/projects/[slug]"

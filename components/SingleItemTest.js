@@ -32,7 +32,7 @@ function SingleItemTest(props) {
       );
     case "single_item_text_block":
       return (
-        <p className={`font-tdspace text-xl md:text-2xl lg:text-3xl font-normal md:font-light ${props.text_item_classes}`}>
+        <p className={`font-tdspace text-xl md:text-2xl lg:text-3xl font-normal ${props.text_item_classes}`}>
           {props.content_text_item}
         </p>
       );

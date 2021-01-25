@@ -45,41 +45,10 @@ export default function Project({ post, next, prev }) {
     },
   };
 
-  const staggerTitle = {
-    initial: {
-      y: 30,
-      opacity: 0,
-    },
-    animate: i => ({
-      y: 0,
-      opacity: 1,
-      transition: {
-        delay: i * 0.1,
-        type: "spring",
-        damping: 25,
-        stiffness: 100,
-      },
-    }),
-    exit: {
-      y: 20,
-      opacity: 0,
-      transition: {
-        duration: 0.75,
-        ease: [0.36, 0, 0.66, -0.56],
-      },
-    },
-  };
-
   const stagger = {
     animate: {
       transition: {
-        staggerChildren: 0.025,
-      },
-    },
-    exit: {
-      transition: {
-        // staggerChildren: 0.025,
-        // staggerDirection: -1,
+        staggerChildren: 0.06,
       },
     },
   };
@@ -92,8 +61,9 @@ export default function Project({ post, next, prev }) {
         initial="initial"
         animate="animate"
         className="w-full text-gray-900"
+        variants={stagger}
       >
-        <motion.div variants={stagger} className="mt-20 md:mt-32">
+        <div className="mt-20 md:mt-32">
           <div className="mx-4 md:mx-8 xl:mx-0">
             <div className="grid grid-cols-12 gap-4 pb-3 pl-1">
               <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-10 xl:col-start-3 xl:col-span-9">
@@ -116,7 +86,7 @@ export default function Project({ post, next, prev }) {
               </div> */}
               <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-12 xl:col-start-3 xl:col-span-9">
                 <SplitText
-                  variants={staggerTitle}
+                  variants={fadeInUp}
                   className="font-tdspace font-medium text-5.5xl md:text-8xl lg:text-9xl tracking-tighter leading-none md:leading-point-90"
                 >
                   {title}
@@ -136,8 +106,8 @@ export default function Project({ post, next, prev }) {
               </motion.div>
             </div>
           </div>
-        </motion.div>
-        <motion.div variants={fadeInUp} className="content font-light">
+        </div>
+        <motion.div variants={fadeInUp} className="content">
           {group_row_repeater.map((row, i) => (
             <div key={i} className={`my-12 md:my-20 lg:my-32 ${row.group_row_repeater_classes}`}>
               {row.group_row_repeater_items.map((el, j) => (
@@ -148,8 +118,10 @@ export default function Project({ post, next, prev }) {
             </div>
           ))}
         </motion.div>
-
-        <PrevNext prev={prev} next={next} />
+        
+        <motion.div variants={fadeInUp}>
+          <PrevNext prev={prev} next={next} />
+        </motion.div>
       </motion.div>
       <Footer />
     </>

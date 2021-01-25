@@ -9,25 +9,25 @@ export default function Home(props) {
   // const projects = Object.keys(data).map((key) => data[key]);
   const projects = props.data;
   const slideIn = {
-    initial: (custom) => ({
-      y: "10%",
+    initial: {
+      y: 30,
       opacity: 0,
-    }),
-    animate: (custom) => ({
+    },
+    animate: {
       y: 0,
       opacity: 1,
       transition: {
         type: "spring",
-        damping: 20,
+        damping: 25,
         stiffness: 100,
       },
-    }),
+    },
     exit: {
+      y: 20,
       opacity: 0,
-      y: "8%",
       transition: {
-        duration: 0.55,
-        ease: "easeOut"
+        duration: 0.75,
+        ease: [0.36, 0, 0.66, -0.56],
       },
     },
   };
@@ -36,10 +36,14 @@ export default function Home(props) {
     exit: {
       opacity: 0,
       y: "8%",
+      // transition: {
+      //   type: "spring",
+      //   damping: 20,
+      //   stiffness: 100,
+      // },
       transition: {
-        type: "spring",
-        damping: 20,
-        stiffness: 100,
+        duration: 0.75,
+        ease: [0.36, 0, 0.66, -0.56],
       },
     },
   };
@@ -66,7 +70,7 @@ export default function Home(props) {
   const stagger = {
     animate: {
       transition: {
-        staggerChildren: 0.025,
+        staggerChildren: 0.12,
       },
     },
   };
@@ -81,8 +85,8 @@ export default function Home(props) {
         animate="animate"
       >
         <motion.div variants={stagger} className="flex flex-wrap">
-          <motion.div variants={slideTitleOut} className="w-full pb-16 md:pb-24">
-            <SplitText variants={staggerTitle} className="w-full md:w-4/5 font-tdspace font-medium xl:text-8xl md:text-7xl text-5xl headline tracking-tighter leading-point-90">
+          <motion.div className="w-full pb-16 md:pb-24">
+            <SplitText variants={slideIn} className="w-full md:w-4/5 font-tdspace font-medium xl:text-8xl md:text-7xl text-5xl headline tracking-tighter leading-point-90">
               Tushar Date is a creative director & art director based in Los
               Angeles
               {/* Work */}
@@ -98,7 +102,7 @@ export default function Home(props) {
                 Math.random() < 0.5 ? Math.random() * -1 : Math.random() * 1
               }
               key={project.id}
-              variants={slideIn}
+              // variants={slideIn}
               style={{
                 originX: 0.5,
                 originY: 1,

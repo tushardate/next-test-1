@@ -72,7 +72,6 @@ module.exports = {
           ...defaultTheme.fontFamily.sans,
         ],
         tdspace: [
-          // "Telegraf",
           "Neue Machina",
           "'Space Grotesk'",
           ...defaultTheme.fontFamily.sans,
