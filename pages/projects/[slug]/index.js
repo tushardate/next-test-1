@@ -84,7 +84,7 @@ export default function Project({ post, next, prev }) {
                   {title}
                 </motion.h1>
               </div> */}
-              <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-12 xl:col-start-3 xl:col-span-9">
+              <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-12 xl:col-start-3 xl:col-span-8">
                 <SplitText
                   variants={fadeInUp}
                   className="font-tdspace font-medium text-5.5xl md:text-8xl lg:text-9xl tracking-tighter leading-none md:leading-point-90"
@@ -99,7 +99,7 @@ export default function Project({ post, next, prev }) {
                 className="col-start-1 col-span-12 md:col-start-4 md:col-span-9 xl:col-start-5 xl:col-span-6"
               >
                 <div className="w-full pl-1 md:pl-0">
-                  <p className="w-full block text-xl md:text-2xl lg:text-3xl font-tdspace md:font-light md:tracking-snug md:leading-snug">
+                  <p className="w-full block md:text-justify text-xl md:text-2xl lg:text-3xl font-tdspace md:font-light md:tracking-snug md:leading-snug">
                     {general_project_description}
                   </p>
                 </div>
