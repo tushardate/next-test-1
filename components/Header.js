@@ -8,7 +8,7 @@ export default function Header() {
     { name: "About", url: "/about" },
   ];
   return (
-    <nav className="mx-auto font-tdspace font-medium text-gray-900 text-md px-4 md:px-8 fixed z-50 top-0 left-0 right-0 list-none w-full mt-4 md:mt-8 flex justify-between">
+    <nav className="mx-auto font-tdsans font-medium text-gray-900 text-md px-4 md:px-8 fixed z-50 top-0 left-0 right-0 list-none w-full mt-4 md:mt-8 flex justify-between">
       <div className="">
         <Link href={"/"} scroll={false}>
           <a className="">

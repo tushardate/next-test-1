@@ -98,7 +98,7 @@ export default function Home(props) {
       >
         <motion.div variants={stagger} className="flex flex-wrap w-full">
           <motion.div variants={slideIn} className="w-full pb-8">
-            <p className="w-8/12 font-tdspace font-medium text-7xl headline tracking-tight leading-point-85">
+            <p className="w-8/12 font-tdspace font-medium text-7xl  tracking-tight leading-point-85">
             
             </p>
           </motion.div>

@@ -38,9 +38,12 @@ module.exports = {
     columnCount: [1, 2, 3, 4, 5],
     columnGap: {
       // will fallback to 'gap' || 'gridGap' values
-      // sm: '1rem',
-      // md: '1.5rem',
-      // lg: '2rem',
+      "sm": '1rem',
+      "md": '1.5rem',
+      "lg": '2rem',
+      "xl": '3rem',
+      "2xl": '4rem',
+      "3xl": '5rem',
     },
     columnWidth: {
       // sm: '120px',
@@ -67,7 +70,7 @@ module.exports = {
       fontFamily: {
         tdserif: ["Canela", ...defaultTheme.fontFamily.sans],
         tdsans: [
-          "Sharp Grotesk",
+          // "Sharp Grotesk",
           "'Space Grotesk'",
           ...defaultTheme.fontFamily.sans,
         ],

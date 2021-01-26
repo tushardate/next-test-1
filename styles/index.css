@@ -9,7 +9,7 @@ body {
 }
 
 .td-swiper-design .swiper-slide {
-  height:auto !important;
+  height: auto !important;
 }
 
 .td-swiper-design .swiper-button-prev:after,
@@ -39,13 +39,15 @@ body {
   @apply bg-gray-900;
 }
 
-
-.carousel-dark .swiper-button-next { color: hsla(60, 5%, 87%, 1) }
-.carousel-dark .swiper-button-prev { color: hsla(60, 5%, 87%, 1) }
+.carousel-dark .swiper-button-next {
+  color: hsla(60, 5%, 87%, 1);
+}
+.carousel-dark .swiper-button-prev {
+  color: hsla(60, 5%, 87%, 1);
+}
 .carousel-dark .swiper-pagination-bullet {
   background-color: hsla(60, 5%, 87%, 1);
 }
-
 
 .carousel-dark .swiper-button-prev:after,
 .carousel-dark .swiper-button-next:after {
@@ -59,10 +61,6 @@ body {
 
 .carouselHeight {
   max-height: 75vh;
-}
-
-.headline {
-  font-size: 11vw;
 }
 
 @screen lg {
@@ -81,6 +79,29 @@ body {
   .project-column:nth-child(even) {
     /* @apply pr-12 pl-0; */
   }
+}
+
+.avoid-break {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.orphans-2 {
+  orphans: 2;
+}
+
+.widows-2 {
+  widows: 4;
+}
+
+.col-rule-thin {
+  column-rule-width: thin;
+}
+
+.about-col:last-child {
+  background-color: "#ff00ff";
+  padding-bottom: 0;
 }
 
 @tailwind utilities;
