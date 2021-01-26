@@ -46,37 +46,85 @@ export default function About(props) {
       >
         <motion.div variants={stagger} className="flex flex-wrap">
           <motion.div className="w-full lg:pl-1/4 pb-12 lg:pb-16">
-            <div className="md:-ml-2 font-medium md:text-6xl text-5xl leading-tight">
+            <div className="md:-ml-2 font-medium md:text-6xl sm:text-5xl text-3xl leading-tight">
               <SplitText variants={slideIn}>{acf.td_about_name}</SplitText>
             </div>
-            <div className="font-medium md:text-5xl text-4xl leading-tight">
+            <div className="font-medium md:text-5xl sm:text-4xl text-2xl leading-tight">
               <SplitText variants={slideIn}>{acf.td_about_title}</SplitText>
             </div>
-            <div className="font-medium md:text-5xl text-4xl leading-tight">
-            <a className="hover:text-gray-500" href={`tel:+1-${acf.td_about_phone}`}>
-              <SplitText variants={slideIn}>{acf.td_about_phone}</SplitText>
-            </a>
+            {/* <div className="font-medium md:text-5xl sm:text-4xl text-2xl leading-tight">
+              <a
+                className="hover:text-gray-500"
+                href={`tel:+1-${acf.td_about_phone}`}
+              >
+                <SplitText variants={slideIn}>{acf.td_about_phone}</SplitText>
+              </a>
             </div>
-            <div className="font-medium md:text-5xl text-4xl leading-tight">
-            <a className="hover:text-gray-500" href={`mailto:${acf.td_about_email}`}>
-              <SplitText variants={slideIn}>{acf.td_about_email}</SplitText>
+            <div className="font-medium md:text-5xl sm:text-4xl text-2xl leading-tight">
+              <a
+                className="hover:text-gray-500"
+                href={`mailto:${acf.td_about_email}`}
+              >
+                <SplitText variants={slideIn}>{acf.td_about_email}</SplitText>
+              </a>
+            </div> */}
+          </motion.div>
+
+          <motion.div
+            variants={slideIn}
+            className="w-full lg:flex pb-12 lg:pb-24"
+          >
+            <div className="w-full lg:w-1/4 text-2xl font-medium pb-2">
+              Contact
+            </div>
+            <div className="font-tdsans">
+              <a
+                className="hover:text-gray-500"
+                href={`tel:+1-${acf.td_about_phone}`}
+              >
+                <p>{acf.td_about_phone}</p>
+              </a>
+              <a
+                className="hover:text-gray-500"
+                href={`mailto:${acf.td_about_email}`}
+              >
+                <p>{acf.td_about_email}</p>
+              </a>
+              <a
+                className="hover:text-gray-500"
+                href="http://www.linkedin.com/pub/tushar-date/11/315/a25"
+                target="_blank"
+              >
+                <p>LinkedIn Profile</p>
               </a>
             </div>
           </motion.div>
 
-          <motion.div variants={slideIn} className="w-full lg:flex pb-12 lg:pb-24">
-            <div className="w-1/4 pr-20 pt-2">
-              {/* <img className="w-full object-contain" src={acf.td_about_picture}></img> */}
+          <motion.div
+            variants={slideIn}
+            className="w-full lg:flex pb-12 lg:pb-24"
+          >
+            <div className="w-full lg:w-1/4 text-2xl font-medium pb-2">
+              About
             </div>
-            <div
-              className="w-3/4 font-tdsans lg:col-count-2 lg:col-gap-2xl"
-            >
-              <p className="" dangerouslySetInnerHTML={{ __html: acf.td_about_bio }}></p>
+            {/* <div className="w-1/4 pr-20 pt-2">
+              <img className="w-full object-contain" src={acf.td_about_picture}></img>
+            </div> */}
+            <div className="lg:w-3/4 font-tdsans lg:col-count-2 lg:col-gap-2xl">
+              <p
+                className=""
+                dangerouslySetInnerHTML={{ __html: acf.td_about_bio }}
+              ></p>
             </div>
           </motion.div>
 
-          <motion.div variants={slideIn} className="w-full lg:flex pb-12 lg:pb-16">
-            <div className="w-full lg:w-1/4 text-2xl font-medium pb-2">Experience</div>
+          <motion.div
+            variants={slideIn}
+            className="w-full lg:flex pb-12 lg:pb-16"
+          >
+            <div className="w-full lg:w-1/4 text-2xl font-medium pb-2">
+              Experience
+            </div>
             <div className="w-full lg:w-3/4 font-tdsans lg:col-count-2 lg:col-gap-2xl font-light">
               {acf.td_about_work_experience.map((el, i) => (
                 <div className="pb-8 avoid-break about-col" key={i}>
@@ -89,25 +137,39 @@ export default function About(props) {
             </div>
           </motion.div>
 
-          <motion.div variants={slideIn} className="w-full lg:flex pb-12 lg:pb-16">
-            <div className="w-full lg:w-1/4 text-2xl font-medium pb-2">Recognition</div>
+          <motion.div
+            variants={slideIn}
+            className="w-full lg:flex pb-12 lg:pb-16"
+          >
+            <div className="w-full lg:w-1/4 text-2xl font-medium pb-2">
+              Recognition
+            </div>
             <div className="w-full lg:w-3/4 font-tdsans lg:col-count-2 lg:col-gap-2xl font-light">
               {acf.td_about_awards.map((el, i) => (
-                <p><span className="font-medium">{el.td_awards_name}</span>, {el.td_awards_type}, {el.td_awards_client}</p>
+                <p>
+                  <span className="font-medium">{el.td_awards_name}</span>,{" "}
+                  {el.td_awards_type}, {el.td_awards_client}
+                </p>
               ))}
             </div>
           </motion.div>
 
-          <motion.div variants={slideIn} className="w-full lg:flex pb-12 lg:pb-16">
-            <div className="w-full lg:w-1/4 text-2xl font-medium pb-2">Education</div>
+          <motion.div
+            variants={slideIn}
+            className="w-full lg:flex pb-12 lg:pb-16"
+          >
+            <div className="w-full lg:w-1/4 text-2xl font-medium pb-2">
+              Education
+            </div>
             <div className="w-full lg:w-3/4 font-tdsans font-light">
               {acf.td_about_edu.map((el, i) => (
-                <p><span className="font-medium">{el.td_edu_name}</span>, {el.td_edu_dates}, {el.td_edu_degree}</p>
+                <p>
+                  <span className="font-medium">{el.td_edu_name}</span>,{" "}
+                  {el.td_edu_dates}, {el.td_edu_degree}
+                </p>
               ))}
             </div>
           </motion.div>
-
-
         </motion.div>
       </motion.div>
     </>
