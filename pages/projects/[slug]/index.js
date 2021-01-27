@@ -109,7 +109,10 @@ export default function Project({ post, next, prev }) {
         </div>
         <motion.div variants={fadeInUp} className="content">
           {group_row_repeater.map((row, i) => (
-            <div key={i} className={`my-12 md:my-20 lg:my-32 ${row.group_row_repeater_classes}`}>
+            <div
+              key={i}
+              className={`my-12 md:my-20 lg:my-32 ${row.group_row_repeater_classes}`}
+            >
               {row.group_row_repeater_items.map((el, j) => (
                 <div key={j} className={el.single_item_classes}>
                   <SingleItemTest {...el.single_item[0]} />
@@ -118,7 +121,7 @@ export default function Project({ post, next, prev }) {
             </div>
           ))}
         </motion.div>
-        
+
         <motion.div variants={fadeInUp}>
           <PrevNextTest prev={prev} next={next} />
         </motion.div>

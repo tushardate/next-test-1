@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function PrevNextTest(props) {
   const nextArrow = {
-    intial: {
+    initial: {
       x: 0,
     },
     hover: {
@@ -18,7 +18,7 @@ export default function PrevNextTest(props) {
     },
   };
   const prevArrow = {
-    intial: {
+    initial: {
       x: 0,
     },
     hover: {

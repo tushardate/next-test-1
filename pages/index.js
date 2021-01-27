@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProjectMenuItem6 from "../components/ProjectMenuItem6";
@@ -8,6 +8,11 @@ import { motion } from "framer-motion";
 export default function Home(props) {
   // const projects = Object.keys(data).map((key) => data[key]);
   const projects = props.data;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const slideIn = {
     initial: {
       y: 20,
@@ -35,16 +40,16 @@ export default function Home(props) {
   const stagger = {
     animate: {
       transition: {
-        staggerChildren: 0.12,
+        staggerChildren: 0.08,
       },
     },
   };
 
   return (
-    <>
+    <div>
       <Header />
       <motion.div
-        className="mt-24 md:mt-36 lg:mt-40 px-4 md:px-8 text-gray-900"
+        className="pt-24 md:pt-36 lg:pt-40 px-4 md:px-8 text-gray-900"
         exit="exit"
         initial="initial"
         animate="animate"
@@ -80,7 +85,7 @@ export default function Home(props) {
         </motion.div>
       </motion.div>
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -3,6 +3,32 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Header() {
+  const leftRight = {
+    initial: {
+      scaleX: 0,
+      originX: 0,
+    },
+    hover: {
+      scaleX: 1,
+      originX: 0,
+      transition: {
+        duration: 0.35,
+      }
+    }
+  }
+  const rightLeft = {
+    initial: {
+      scaleX: 0,
+      originX: 1,
+    },
+    hover: {
+      scaleX: 1,
+      originX: 1,
+      transition: {
+        duration: 0.35,
+      }
+    }
+  }
   const links = [
     { name: "Work", url: "/" },
     { name: "About", url: "/about" },
@@ -27,13 +53,15 @@ export default function Header() {
       </div>
       <div className="flex justify-center items-center">
         {links.map((link) => (
-          <div key={link.name} className="pl-10vw lg:pl-24 text-lg md:text-xl">
+          <motion.div initial="initial" whileHover="hover" key={link.name} className="relative ml-10vw lg:ml-24 text-lg md:text-xl">
+            <motion.div variants={rightLeft} className="h-0.5 bg-gray-900 absolute w-full top-0 left-0"/>
             <li className="inline-block">
               <Link href={link.url} scroll={false}>
                 <a>{link.name}</a>
               </Link>
             </li>
-          </div>
+            <motion.div variants={leftRight} className="h-0.5 bg-gray-900 absolute w-full bottom-0 left-0"/>
+          </motion.div>
         ))}
       </div>
     </nav>

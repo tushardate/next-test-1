@@ -1,10 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import { SplitText } from "../components/SplitText";
-import { motion } from "framer-motion";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 export default function About(props) {
   const { acf } = props.data;
+  // const { scrollYProgress } = useViewportScroll();
+  // const hueRotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
+  // const [hueColor, setHueColor] = useState(hueRotate.get())
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // const dh = document.documentElement.scrollHeight;
+    // const wh = window.innerHeight;
+    // hueRotate.onChange(setHueColor)
+
+  }, []);
+
   const slideIn = {
     initial: {
       y: 25,
@@ -36,10 +49,11 @@ export default function About(props) {
     },
   };
   return (
-    <>
+    <div>
       <Header />
       <motion.div
-        className="font-tdspace text-lg sm:text-xl mt-24 md:mt-36 lg:mt-40 px-4 md:pl-8 md:pr-16 lg:pr-24 text-gray-900"
+        // style={{ backgroundColor: `hsla(${hueColor}, 15%, 87%, 1)` }}
+        className="font-tdspace text-lg sm:text-xl pt-24 md:pt-36 lg:pt-40 pb-32 px-4 md:pl-8 md:pr-16 lg:pr-24 text-gray-900"
         exit="exit"
         initial="initial"
         animate="animate"
@@ -146,7 +160,7 @@ export default function About(props) {
             </div>
             <div className="w-full lg:w-3/4 font-tdsans lg:col-count-2 lg:col-gap-2xl font-light">
               {acf.td_about_awards.map((el, i) => (
-                <p>
+                <p key={i}>
                   <span className="font-medium">{el.td_awards_name}</span>,{" "}
                   {el.td_awards_type}, {el.td_awards_client}
                 </p>
@@ -163,7 +177,7 @@ export default function About(props) {
             </div>
             <div className="w-full lg:w-3/4 font-tdsans font-light">
               {acf.td_about_edu.map((el, i) => (
-                <p>
+                <p key={i}>
                   <span className="font-medium">{el.td_edu_name}</span>,{" "}
                   {el.td_edu_dates}, {el.td_edu_degree}
                 </p>
@@ -172,7 +186,7 @@ export default function About(props) {
           </motion.div>
         </motion.div>
       </motion.div>
-    </>
+    </div>
   );
 }
 
