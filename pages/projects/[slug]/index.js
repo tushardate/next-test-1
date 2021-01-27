@@ -99,7 +99,7 @@ export default function Project({ post, next, prev }) {
                 className="col-start-1 col-span-12 md:col-start-4 md:col-span-9 xl:col-start-5 xl:col-span-6"
               >
                 <div className="w-full pl-1 md:pl-0">
-                  <p className="w-full block md:text-justify text-xl md:text-2xl lg:text-3xl font-tdspace md:font-light md:tracking-snug md:leading-snug">
+                  <p className="w-full block text-xl md:text-2xl lg:text-3xl font-tdspace md:font-light md:tracking-snug md:leading-snug">
                     {general_project_description}
                   </p>
                 </div>

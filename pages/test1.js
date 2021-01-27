@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ProjectMenuItem6 from "../components/ProjectMenuItem6";
+import ProjectMenuItem5 from "../components/ProjectMenuItem5";
 import { motion } from "framer-motion";
 
 export default function Home(props) {
@@ -90,20 +90,15 @@ export default function Home(props) {
   return (
     <>
       <Header />
-      <motion.div
+      <div
         className="mx-8 mt-32 text-gray-900"
-        exit="exit"
-        initial="initial"
-        animate="animate"
       >
-        <motion.div variants={stagger} className="flex flex-wrap w-full">
-          <motion.div variants={slideIn} className="w-full pb-8">
-            <p className="w-8/12 font-tdspace font-medium text-7xl  tracking-tight leading-point-85">
-            
-            </p>
-          </motion.div>
+        <div className="flex flex-wrap w-full">
+          <div className="w-full pb-8">
+            <p className="w-8/12 font-tdspace font-medium text-7xl  tracking-tight leading-point-85"></p>
+          </div>
           {projects.map((project, i) => (
-            <motion.div
+            <div
               className={`project-column xl:w-1/2 lg:w-1/2 w-full xl:pb-20 pb-16 ${
                 i % 2 === 0 ? "even" : "odd"
               }`}
@@ -111,18 +106,12 @@ export default function Home(props) {
                 Math.random() < 0.5 ? Math.random() * -1 : Math.random() * 1
               }
               key={project.id}
-              //   variants={slideIn}
-              //   style={{
-              //     originX: 0.5,
-              //     originY: 1,
-              //   }}
             >
-              <ProjectMenuItem6 key={project.id} data={project} />
-              {/* <ProjectMenuItem key={project.id} data={project} /> */}
-            </motion.div>
+              <ProjectMenuItem5 key={project.id} data={project} />
+            </div>
           ))}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
       <Footer />
     </>
   );
