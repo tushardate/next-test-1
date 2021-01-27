@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import Image from 'next/image'
 import Carousel from "./Carousel";
 import ReactPlayer from "react-player";
 
@@ -39,11 +38,10 @@ function SingleItemTest(props) {
       );
     case "single_item_image":
       return (
-        // <img
-        //   className={props.image_item_classes}
-        //   src={props.content_image.url}
-        // ></img>
-        <Image className={props.image_item_classes} src={props.content_image.url} width={props.content_image.width} height={props.content_image.height}></Image>
+        <img
+          className={props.image_item_classes}
+          src={props.content_image.url}
+        ></img>
       );
     case "single_item_image_carousel":
       return <Carousel {...props} />;
