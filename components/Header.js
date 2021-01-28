@@ -32,7 +32,6 @@ export default function Header() {
   const links = [
     { name: "Work", url: "/" },
     { name: "About", url: "/about" },
-    { name: "Test", url: "/test1" },
   ];
   return (
     <nav className="mx-auto font-tdsans font-medium text-gray-900 text-md px-4 md:px-8 fixed z-50 top-0 left-0 right-0 list-none w-full mt-4 md:mt-8 flex justify-between">
