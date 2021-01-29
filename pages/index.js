@@ -59,6 +59,7 @@ export default function Home(props) {
             <SplitText
               variants={slideIn}
               className="font-tdspace font-medium xl:text-7xl sm:text-6xl text-5xl tracking-tight leading-none"
+
             >
               Tushar Date is a creative&nbsp;director & art&nbsp;director based
               in Los&nbsp;Angeles

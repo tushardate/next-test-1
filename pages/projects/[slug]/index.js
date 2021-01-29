@@ -68,7 +68,7 @@ export default function Project({ post, next, prev }) {
               <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-10 xl:col-start-3 xl:col-span-9">
                 <motion.h1
                   variants={fadeInUp}
-                  className="font-tdsans text-md md:text-2xl lg:text-2xl"
+                  className="font-tdsans font-medium sm:font-normal text-md md:text-2xl lg:text-2xl"
                 >
                   {client_name}
                 </motion.h1>
@@ -90,7 +90,7 @@ export default function Project({ post, next, prev }) {
                 className="col-start-1 col-span-12 md:col-start-4 md:col-span-9 xl:col-start-6 xl:col-span-5"
               >
                 <div className="w-full pl-1 md:pl-0">
-                  <p className="w-full block text-xl md:text-2xl lg:text-3xl font-tdsans font-light md:tracking-snug md:leading-snug">
+                  <p className="w-full block text-xl md:text-2xl lg:text-3xl font-tdsans font-normal sm:font-light md:tracking-snug md:leading-snug">
                     {general_project_description}
                   </p>
                 </div>
