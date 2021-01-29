@@ -33,7 +33,7 @@ export default function PrevNextTest(props) {
   };
 
   return (
-    <div className="mx-2 md:mx-6 grid grid-cols-12 my-12 lg:my-20 px-4 font-tdspace tracking-snug leading-tightest text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
+    <div className="mx-2 md:mx-4 grid grid-cols-12 mt-12 mb-16 lg:mt-20 lg:mb-24 px-4 font-tdspace leading-tightest text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
       <div className="col-start-1 col-span-6 sm:col-start-1 sm:col-span-5 lg:col-start-2 lg:col-span-4 xl:col-start-2 xl:col-span-3 pr-4 sm:pr-0">
         <Link
           as={`/projects/${props.prev.slug}`}
@@ -43,10 +43,13 @@ export default function PrevNextTest(props) {
           <a>
             <motion.div initial="initial" whileHover="hover">
               <div className="flex items-center">
-                <motion.div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl pr-1 sm:pr-2 font-light" variants={prevArrow}>
-                  &#8592;
+                <motion.div
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl pr-1 sm:pr-2 font-light"
+                  variants={prevArrow}
+                >
+                  &#171;
                 </motion.div>
-                <motion.p className="font-bold">Prev Project</motion.p>
+                <motion.p className="font-semibold">Prev Project</motion.p>
               </div>
             </motion.div>
           </a>
@@ -61,9 +64,12 @@ export default function PrevNextTest(props) {
           <a>
             <motion.div initial="initial" whileHover="hover">
               <div className="flex items-center justify-end">
-                <motion.p className="font-bold">Next Project</motion.p>
-                <motion.div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl pl-1 sm:pl-2 font-light" variants={nextArrow}>
-                  &#8594;
+                <motion.p className="font-semibold">Next Project</motion.p>
+                <motion.div
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl pl-1 sm:pl-2 font-light"
+                  variants={nextArrow}
+                >
+                  &#187;
                 </motion.div>
               </div>
             </motion.div>

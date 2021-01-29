@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Header from "../../../components/Header";
 import PrevNextTest from "../../../components/PrevNextTest";
 import SingleItemTest from "../../../components/SingleItemTest";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import Footer from "../../../components/Footer";
 import { SplitText } from "../../../components/SplitText";
@@ -65,29 +64,21 @@ export default function Project({ post, next, prev }) {
       >
         <div className="mt-20 md:mt-32">
           <div className="mx-4 md:mx-8 xl:mx-0">
-            <div className="grid grid-cols-12 gap-4 pb-3 pl-1">
+            <div className="grid grid-cols-12 gap-4 pb-4 pl-1">
               <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-10 xl:col-start-3 xl:col-span-9">
                 <motion.h1
                   variants={fadeInUp}
-                  className="font-tdspace text-md md:text-2xl lg:text-3xl font-medium"
+                  className="font-tdsans text-md md:text-2xl lg:text-2xl"
                 >
                   {client_name}
                 </motion.h1>
               </div>
             </div>
-            <div className="grid grid-cols-12 gap-4 pb-3 md:pb-5 lg:pb-7">
-              {/* <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-12 xl:col-start-3 xl:col-span-9">
-                <motion.h1
-                  variants={fadeInUp}
-                  className="font-tdspace font-medium text-5xl md:text-8xl lg:text-9xl tracking-tighter leading-point-90"
-                >
-                  {title}
-                </motion.h1>
-              </div> */}
+            <div className="grid grid-cols-12 gap-4 pb-3 md:pb-5">
               <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-12 xl:col-start-3 xl:col-span-8">
                 <SplitText
                   variants={fadeInUp}
-                  className="font-tdspace font-medium text-5.5xl md:text-8xl lg:text-9xl tracking-tighter leading-none md:leading-point-90"
+                  className="font-tdspace font-semibold text-5.5xl md:text-8xl lg:text-9xl tracking-snug leading-none md:leading-point-95"
                 >
                   {title}
                 </SplitText>
@@ -96,10 +87,10 @@ export default function Project({ post, next, prev }) {
             <div className="grid grid-cols-12 gap-4">
               <motion.div
                 variants={fadeInUp}
-                className="col-start-1 col-span-12 md:col-start-4 md:col-span-9 xl:col-start-5 xl:col-span-6"
+                className="col-start-1 col-span-12 md:col-start-4 md:col-span-9 xl:col-start-6 xl:col-span-5"
               >
                 <div className="w-full pl-1 md:pl-0">
-                  <p className="w-full block text-xl md:text-2xl lg:text-3xl font-tdspace md:font-light md:tracking-snug md:leading-snug">
+                  <p className="w-full block text-xl md:text-2xl lg:text-3xl font-tdsans font-light md:tracking-snug md:leading-snug">
                     {general_project_description}
                   </p>
                 </div>

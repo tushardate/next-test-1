@@ -200,132 +200,202 @@
   font-display: swap;
 }
 
-/* @font-face {
-  font-family: 'GT Flexa Extended';
-  src: url('/fonts/GTFlexa-ExtendedBold.woff2') format('woff2'),
-      url('/fonts/GTFlexa-ExtendedBold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
 @font-face {
-  font-family: 'GT Flexa Extended';
-  src: url('/fonts/GTFlexa-ExtendedLazer.woff2') format('woff2'),
-      url('/fonts/GTFlexa-ExtendedLazer.woff') format('woff');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'GT Flexa Extended';
-  src: url('/fonts/GTFlexa-ExtendedBlack.woff2') format('woff2'),
-      url('/fonts/GTFlexa-ExtendedBlack.woff') format('woff');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'GT Flexa Extended';
-  src: url('/fonts/GTFlexa-ExtendedRegular.woff2') format('woff2'),
-      url('/fonts/GTFlexa-ExtendedRegular.woff') format('woff');
+  font-family: 'Saol Display';
+  src: url('/fonts/SaolDisplay-Regular.woff2') format('woff2'),
+      url('/fonts/SaolDisplay-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'GT Flexa Extended';
-  src: url('/fonts/GTFlexa-ExtendedMedium.woff2') format('woff2'),
-      url('/fonts/GTFlexa-ExtendedMedium.woff') format('woff');
+  font-family: 'Saol Display';
+  src: url('/fonts/SaolDisplay-Medium.woff2') format('woff2'),
+      url('/fonts/SaolDisplay-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'GT Flexa Extended';
-  src: url('/fonts/GTFlexa-ExtendedLight.woff2') format('woff2'),
-      url('/fonts/GTFlexa-ExtendedLight.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'GT Flexa Extended';
-  src: url('/fonts/GTFlexa-ExtendedThin.woff2') format('woff2'),
-      url('/fonts/GTFlexa-ExtendedThin.woff') format('woff');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-
-@font-face {
-  font-family: 'GT Flexa';
-  src: url('/fonts/GTFlexa-Lazer.woff2') format('woff2'),
-      url('/fonts/GTFlexa-Lazer.woff') format('woff');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'GT Flexa';
-  src: url('/fonts/GTFlexa-Black.woff2') format('woff2'),
-      url('/fonts/GTFlexa-Black.woff') format('woff');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'GT Flexa';
-  src: url('/fonts/GTFlexa-Bold.woff2') format('woff2'),
-      url('/fonts/GTFlexa-Bold.woff') format('woff');
+  font-family: 'Saol Display';
+  src: url('/fonts/SaolDisplay-Bold.woff2') format('woff2'),
+      url('/fonts/SaolDisplay-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'GT Flexa';
-  src: url('/fonts/GTFlexa-Regular.woff2') format('woff2'),
-      url('/fonts/GTFlexa-Regular.woff') format('woff');
-  font-weight: normal;
+  font-family: 'Saol Display';
+  src: url('/fonts/SaolDisplay-Semibold.woff2') format('woff2'),
+      url('/fonts/SaolDisplay-Semibold.woff') format('woff');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'GT Flexa';
-  src: url('/fonts/GTFlexa-Light.woff2') format('woff2'),
-      url('/fonts/GTFlexa-Light.woff') format('woff');
+  font-family: 'Saol Display';
+  src: url('/fonts/SaolDisplay-Light.woff2') format('woff2'),
+      url('/fonts/SaolDisplay-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'GT Flexa';
-  src: url('/fonts/GTFlexa-Medium.woff2') format('woff2'),
-      url('/fonts/GTFlexa-Medium.woff') format('woff');
+  font-family: 'Saol Display';
+  src: url('/fonts/SaolDisplay-Thin.woff2') format('woff2'),
+      url('/fonts/SaolDisplay-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/TTNormsPro-Black.woff2') format('woff2'),
+      url('/fonts/TTNormsPro-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/TTNormsPro-Bold.woff2') format('woff2'),
+      url('/fonts/TTNormsPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/TTNormsPro-ExtraBlack.woff2') format('woff2'),
+      url('/fonts/TTNormsPro-ExtraBlack.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/TTNormsPro-ExtraBold.woff2') format('woff2'),
+      url('/fonts/TTNormsPro-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/TTNormsPro-ExtraLight.woff2') format('woff2'),
+      url('/fonts/TTNormsPro-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/TTNormsPro-Light.woff2') format('woff2'),
+      url('/fonts/TTNormsPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/TTNormsPro-Medium.woff2') format('woff2'),
+      url('/fonts/TTNormsPro-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'GT Flexa';
-  src: url('/fonts/GTFlexa-Thin.woff2') format('woff2'),
-      url('/fonts/GTFlexa-Thin.woff') format('woff');
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/TTNormsPro-Regular.woff2') format('woff2'),
+      url('/fonts/TTNormsPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('/fonts/TTNormsPro-Thin.woff2') format('woff2'),
+      url('/fonts/TTNormsPro-Thin.woff') format('woff');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
-} */
+}
 
+
+@font-face {
+  font-family: 'Saol Text';
+  src: url('/fonts/SaolText-Book.woff2') format('woff2'),
+      url('/fonts/SaolText-Book.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Saol Text';
+  src: url('/fonts/SaolText-Bold.woff2') format('woff2'),
+      url('/fonts/SaolText-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Saol Text';
+  src: url('/fonts/SaolText-Light.woff2') format('woff2'),
+      url('/fonts/SaolText-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Saol Text';
+  src: url('/fonts/SaolText-Medium.woff2') format('woff2'),
+      url('/fonts/SaolText-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Saol Text';
+  src: url('/fonts/SaolText-Regular.woff2') format('woff2'),
+      url('/fonts/SaolText-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Saol Text';
+  src: url('/fonts/SaolText-Thin.woff2') format('woff2'),
+      url('/fonts/SaolText-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Saol Text';
+  src: url('/fonts/SaolText-Semibold.woff2') format('woff2'),
+      url('/fonts/SaolText-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 

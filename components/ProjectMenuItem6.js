@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 function ProjectMenuItem6(props) {
   const { client_name, title, id, featured_image, slug } = props.data;
+  const backgroundColor = "hsla(60, 5%, 87%, 1)";
 
   const drawLine = {
     initial: {
@@ -136,17 +137,17 @@ function ProjectMenuItem6(props) {
           <motion.div
             variants={drawLine}
             style={{ originX: 1 }}
-            className="w-full h-px bg-gray-700 absolute z-50"
+            className="w-full h-0.5 bg-gray-700 absolute z-50"
           ></motion.div>
-          <div className="flex flex-col md:w-5/12 w-6/12 pt-3 xs:pt-4 relative">
+          <div className="flex flex-col md:w-6/12 w-6/12 pt-3 xs:pt-4 relative">
             <motion.div variants={slideUp} className="w-full flex-1 h-full">
-              <p className="block w-full text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl font-tdspace font-base tracking-snug leading-tighter pr-4 sm:pr-16">
+              <p className="block w-full text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl font-tdspace font-medium leading-tightest pr-4 sm:pr-16">
                 {title}
               </p>
             </motion.div>
             <motion.div variants={onHoverShow} className="absolute flex items-center justify-center top-0 left-0 w-full h-full">
-              <p className="block text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl font-tdspace font-light">
-                View &#8594;
+              <p className="block text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl font-tdspace">
+              View &#8250;
               </p>
             </motion.div>
             <motion.div
@@ -154,17 +155,17 @@ function ProjectMenuItem6(props) {
               className="w-full transform translate-y-1 flex items-end"
             >
               <div>
-              <p className="block text-xs sm:text-lg font-tdspace w-full">
+              <p className="block text-xs sm:text-lg font-tdsans leading-snug w-full">
                 Client:
               </p>
-              <p className="block text-xs sm:text-lg font-tdspace w-full">
+              <p className="block text-xs sm:text-lg font-tdsans leading-snug w-full">
                 {client_name && `${client_name}`}
               </p>
               </div>
             </motion.div>
           </div>
 
-          <motion.div className="md:w-7/12 w-6/12 overflow-hidden">
+          <motion.div className="md:w-6/12 w-6/12 overflow-hidden">
             <motion.img
               variants={scaleDown}
               className="object-cover h-full w-full"
@@ -174,7 +175,7 @@ function ProjectMenuItem6(props) {
             <motion.div
               variants={revealImage}
               className="absolute inset-0"
-              style={{ originY: 1, backgroundColor: "hsla(60, 5%, 87%, 1)" }}
+              style={{ originY: 1, backgroundColor: backgroundColor }}
             ></motion.div>
           </motion.div>
         </motion.div>

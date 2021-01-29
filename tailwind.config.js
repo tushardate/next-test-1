@@ -68,15 +68,18 @@ module.exports = {
     columnSpan: ["none", "all"],
     extend: {
       fontFamily: {
-        tdserif: ["Canela", ...defaultTheme.fontFamily.sans],
+        tdserif: ["Saol Text", ...defaultTheme.fontFamily.serif],
+        tdserifdisplay: ["Saol Display", ...defaultTheme.fontFamily.serif],
         tdsans: [
           // "Sharp Grotesk",
-          "'Space Grotesk'",
+          "TT Norms Pro",
+          // "'Space Grotesk'",
           ...defaultTheme.fontFamily.sans,
         ],
         tdspace: [
-          "Neue Machina",
-          "'Space Grotesk'",
+          "Saol Display",
+          // "Neue Machina",
+          // "'Space Grotesk'",
           ...defaultTheme.fontFamily.sans,
         ],
       },

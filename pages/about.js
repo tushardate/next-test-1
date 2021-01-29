@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import Header from "../components/Header";
 import { SplitText } from "../components/SplitText";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
@@ -9,13 +9,11 @@ export default function About(props) {
   // const hueRotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
   // const [hueColor, setHueColor] = useState(hueRotate.get())
 
-
   useEffect(() => {
     window.scrollTo(0, 0);
     // const dh = document.documentElement.scrollHeight;
     // const wh = window.innerHeight;
     // hueRotate.onChange(setHueColor)
-
   }, []);
 
   const slideIn = {
@@ -53,17 +51,17 @@ export default function About(props) {
       <Header />
       <motion.div
         // style={{ backgroundColor: `hsla(${hueColor}, 15%, 87%, 1)` }}
-        className="font-tdspace text-lg sm:text-xl pt-24 md:pt-36 lg:pt-40 pb-32 px-4 md:pl-8 md:pr-16 lg:pr-24 text-gray-900"
+        className="font-tdspace text-lg sm:text-xl pt-24 md:pt-36 lg:pt-40 pb-32 px-4 md:pl-8 md:pr-8 xl:pr-24 text-gray-900"
         exit="exit"
         initial="initial"
         animate="animate"
       >
         <motion.div variants={stagger} className="flex flex-wrap">
           <motion.div className="w-full lg:pl-1/4 pb-12 lg:pb-16">
-            <div className="md:-ml-2 font-medium md:text-6xl sm:text-5xl text-3xl leading-tight">
+            <div className="md:-ml-2 font-medium md:text-6xl sm:text-5xl text-4xl tracking-snug leading-tight md:leading-none">
               <SplitText variants={slideIn}>{acf.td_about_name}</SplitText>
             </div>
-            <div className="font-medium md:text-5xl sm:text-4xl text-2xl leading-tight">
+            <div className="font-medium md:text-5xl sm:text-4xl text-3xl tracking-snug leading-tight md:leading-none">
               <SplitText variants={slideIn}>{acf.td_about_title}</SplitText>
             </div>
             {/* <div className="font-medium md:text-5xl sm:text-4xl text-2xl leading-tight">
@@ -88,7 +86,7 @@ export default function About(props) {
             variants={slideIn}
             className="w-full lg:flex pb-12 lg:pb-24"
           >
-            <div className="w-full lg:w-1/4 text-2xl font-medium pb-2">
+            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2">
               Contact
             </div>
             <div className="font-tdsans">
@@ -118,7 +116,7 @@ export default function About(props) {
             variants={slideIn}
             className="w-full lg:flex pb-12 lg:pb-24"
           >
-            <div className="w-full lg:w-1/4 text-2xl font-medium pb-2">
+            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2">
               About
             </div>
             {/* <div className="w-1/4 pr-20 pt-2">
@@ -136,7 +134,7 @@ export default function About(props) {
             variants={slideIn}
             className="w-full lg:flex pb-12 lg:pb-16"
           >
-            <div className="w-full lg:w-1/4 text-2xl font-medium pb-2">
+            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2">
               Experience
             </div>
             <div className="w-full lg:w-3/4 font-tdsans lg:col-count-2 lg:col-gap-2xl font-light">
@@ -155,7 +153,7 @@ export default function About(props) {
             variants={slideIn}
             className="w-full lg:flex pb-12 lg:pb-16"
           >
-            <div className="w-full lg:w-1/4 text-2xl font-medium pb-2">
+            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2">
               Recognition
             </div>
             <div className="w-full lg:w-3/4 font-tdsans lg:col-count-2 lg:col-gap-2xl font-light">
@@ -172,7 +170,7 @@ export default function About(props) {
             variants={slideIn}
             className="w-full lg:flex pb-12 lg:pb-16"
           >
-            <div className="w-full lg:w-1/4 text-2xl font-medium pb-2">
+            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2">
               Education
             </div>
             <div className="w-full lg:w-3/4 font-tdsans font-light">

@@ -1,11 +1,14 @@
 import "../styles/index.css";
-import { AnimatePresence} from "framer-motion";
+import { AnimatePresence } from "framer-motion";
+import Store from "../components/stores/Store";
 
 function MyApp({ Component, pageProps, router }) {
   return (
-    <AnimatePresence exitBeforeEnter>
-      <Component {...pageProps} key={router.asPath} />
-    </AnimatePresence>
+    <Store>
+      <AnimatePresence exitBeforeEnter>
+        <Component {...pageProps} key={router.asPath} />
+      </AnimatePresence>
+    </Store>
   );
 }
 

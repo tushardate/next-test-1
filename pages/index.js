@@ -56,9 +56,12 @@ export default function Home(props) {
       >
         <motion.div variants={stagger} className="flex flex-wrap">
           <motion.div className="w-full pb-16 md:pb-24">
-            <SplitText variants={slideIn} className="font-tdspace font-medium xl:text-7xl sm:text-6xl text-5xl  tracking-tighter leading-point-90">
-              Tushar Date is a creative director & art director based in Los
-              Angeles
+            <SplitText
+              variants={slideIn}
+              className="font-tdspace font-medium xl:text-7xl sm:text-6xl text-5xl tracking-tight leading-none"
+            >
+              Tushar Date is a creative&nbsp;director & art&nbsp;director based
+              in Los&nbsp;Angeles
               {/* Work */}
             </SplitText>
           </motion.div>
@@ -78,7 +81,10 @@ export default function Home(props) {
                 originY: 1,
               }}
             >
-              <ProjectMenuItem6 key={project.id} data={project} />
+              <ProjectMenuItem6
+                key={project.id}
+                data={project}
+              />
               {/* <ProjectMenuItem key={project.id} data={project} /> */}
             </motion.div>
           ))}
