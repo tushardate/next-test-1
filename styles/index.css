@@ -3,13 +3,20 @@
 @tailwind components;
 @import "swiper/swiper-bundle.css";
 
-body {
-  background-color: hsla(0, 10%, 87%, 1);
-  background-color: hsla(60, 5%, 87%, 1);
+:root {
+  --hue-bg-color: hsla(60, 10%, 87%, 1);
+  --dark-color: rgb(17, 24, 39);
 }
 
+body {
+  background-color: var(--hue-bg-color);
+}
 .overlay-15 {
-  background-color: rgba(0, 0, 0, .15);
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.imageMask {
+  background-color: var(--hue-bg-color);
 }
 
 .td-swiper-design .swiper-slide {
@@ -19,7 +26,7 @@ body {
 .td-swiper-design .swiper-button-prev:after,
 .td-swiper-design .swiper-button-next:after {
   font-size: 24px;
-  color: hsla(60, 5%, 87%, 1);
+  color: var(--hue-bg-color);
 }
 
 .td-swiper-design .swiper-button-prev,
@@ -44,13 +51,13 @@ body {
 }
 
 .carousel-dark .swiper-button-next {
-  color: hsla(60, 5%, 87%, 1);
+  color: var(--hue-bg-color);
 }
 .carousel-dark .swiper-button-prev {
-  color: hsla(60, 5%, 87%, 1);
+  color: var(--hue-bg-color);
 }
 .carousel-dark .swiper-pagination-bullet {
-  background-color: hsla(60, 5%, 87%, 1);
+  background-color: var(--hue-bg-color);
 }
 
 .carousel-dark .swiper-button-prev:after,
@@ -60,7 +67,7 @@ body {
 
 .carousel-dark .swiper-button-prev,
 .carousel-dark .swiper-button-next {
-  background-color: hsla(60, 5%, 87%, 1);
+  background-color: var(--hue-bg-color);
 }
 
 .carouselHeight {
@@ -105,6 +112,56 @@ body {
 
 .about-col:last-child {
   padding-bottom: 0;
+}
+
+.svg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.svg-container:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.svg-container:hover .svgLayer1 {
+  transform: scale(1);
+}
+.svg-container:hover .svgLayer2 {
+  fill: var(--dark-color);
+}
+
+.svg-content {
+  display: inline-block;
+  width: clamp(60px, 10%, 125px);
+  opacity: 1;
+  transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.svgLayer0 {
+  fill: var(--dark-color);
+}
+.svgLayer1 {
+  fill: var(--hue-bg-color);
+  transform: scale(0);
+  transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+  transform-origin: center center;
+}
+.svgLayer2 {
+  transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+  fill: var(--hue-bg-color);
 }
 
 @tailwind utilities;

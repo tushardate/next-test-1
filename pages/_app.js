@@ -1,13 +1,16 @@
 import "../styles/index.css";
+import Layout from "../components/Layout";
 import { AnimatePresence } from "framer-motion";
-import Store from "../components/stores/Store";
+import Store, { Context } from "../components/stores/Store";
 
 function MyApp({ Component, pageProps, router }) {
   return (
     <Store>
-      <AnimatePresence exitBeforeEnter>
-        <Component {...pageProps} key={router.asPath} />
-      </AnimatePresence>
+      {/* <Layout> */}
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} key={router.asPath} />
+        </AnimatePresence>
+      {/* </Layout> */}
     </Store>
   );
 }

@@ -1,9 +1,19 @@
+import React, { useContext, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
+
 
 function ProjectMenuItem6(props) {
+  // const [store, setStore] = useContext(Context)
   const { client_name, title, id, featured_image, slug } = props.data;
-  const backgroundColor = "hsla(60, 5%, 87%, 1)";
+  const backgroundColor = `hsla(60, 5%, 87%, 1)`;
+  const { ref, inView, entry } = useInView({threshold: 0.75, triggerOnce: true});
+
+
+  useEffect(() => {
+    console.log(inView)
+  }, [inView])
 
   const drawLine = {
     initial: {
@@ -128,9 +138,10 @@ function ProjectMenuItem6(props) {
     <Link as={`/projects/${slug}`} href="/projects/[slug]" scroll={false}>
       <a>
         <motion.div
+          ref={ref}
           exit="exit"
           initial="initial"
-          animate="animate"
+          animate={inView ? "animate" : "exit"}
           whileHover="hover"
           className="flex w-full relative"
         >
@@ -174,8 +185,8 @@ function ProjectMenuItem6(props) {
             ></motion.img>
             <motion.div
               variants={revealImage}
-              className="absolute inset-0"
-              style={{ originY: 1, backgroundColor: backgroundColor }}
+              className="absolute inset-0 imageMask"
+              style={{ originY: 1 }}
             ></motion.div>
           </motion.div>
         </motion.div>

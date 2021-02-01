@@ -1,17 +1,46 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "./Carousel";
 import ReactPlayer from "react-player";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+import PlayButton from './PlayButton'
 
 function SingleItemTest(props) {
   const [playing, setPlaying] = useState(false);
-  const handlePlay = () => setPlaying(true)
+  const handlePlay = () => setPlaying(true);
+  let component;
+
+  const { ref, inView, entry } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+
+  const singleReveal = {
+    initial: {
+      opacity: 0.2,
+      scale: 0.92,
+      y: 30,
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeOut"
+      }
+    },
+    exit: {
+      opacity: 0,
+    },
+  };
 
   switch (props.acf_fc_layout) {
     case "single_item_video":
       const url = new URL(props.content_video);
       const ratios = props.video_ratio.split("/");
       const video_ratio = (parseFloat(ratios[1]) / parseFloat(ratios[0])) * 100;
-      return (
+      component = (
         <div className={props.video_item_classes}>
           <div
             className="relative w-full overflow-hidden"
@@ -25,29 +54,46 @@ function SingleItemTest(props) {
               light={true}
               width="100%"
               height="100%"
-              onClickPreview={()=> handlePlay()}
+              playIcon={<PlayButton></PlayButton>}
+              onClickPreview={() => handlePlay()}
             />
           </div>
         </div>
       );
+      break;
     case "single_item_text_block":
-      return (
-        <p className={`font-tdsans text-xl md:text-2xl lg:text-3xl font-medium sm:font-normal ${props.text_item_classes}`}>
+      component = (
+        <p
+          className={`font-tdsans text-xl md:text-2xl lg:text-3xl font-medium sm:font-normal ${props.text_item_classes}`}
+        >
           {props.content_text_item}
         </p>
       );
+      break;
     case "single_item_image":
-      return (
+      component = (
         <img
           className={props.image_item_classes}
           src={props.content_image.url}
         ></img>
       );
+      break;
     case "single_item_image_carousel":
-      return <Carousel {...props} />;
+      component = <Carousel {...props} />;
+      break;
     default:
-      return null;
+      component = null;
   }
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={singleReveal.initial}
+      animate={inView ? singleReveal.animate : singleReveal.exit}
+    >
+      {component}
+    </motion.div>
+  );
 }
 
 export default SingleItemTest;

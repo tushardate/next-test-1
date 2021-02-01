@@ -1,8 +1,8 @@
 import { createContext, useState } from "react";
 
 const initialState = {
-  hue: 25,
-  lastScrollPos: 0,
+  hue: 60,
+  changeColor: 0
 };
 
 export const Context = createContext();

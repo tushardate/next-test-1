@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import Header from "../../../components/Header";
 import PrevNextTest from "../../../components/PrevNextTest";
 import SingleItemTest from "../../../components/SingleItemTest";
 import { motion } from "framer-motion";
 import Footer from "../../../components/Footer";
 import { SplitText } from "../../../components/SplitText";
+import { useRouter } from "next/router";
+import { Context } from "../../../components/stores/Store";
 
 export default function Project({ post, next, prev }) {
   const {
@@ -16,9 +18,18 @@ export default function Project({ post, next, prev }) {
     group_row_repeater,
   } = post;
 
+  let rand = Math.round(Math.random() * 360);
+
+  const route = useRouter();
+  const [store, setStore] = useContext(Context);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    setStore({ changeColor: Math.random() });
+  }, [route.asPath]);
 
   const fadeInUp = {
     initial: {
@@ -105,9 +116,12 @@ export default function Project({ post, next, prev }) {
               className={`my-12 md:my-20 lg:my-32 ${row.group_row_repeater_classes}`}
             >
               {row.group_row_repeater_items.map((el, j) => (
-                <div key={j} className={el.single_item_classes}>
+                <motion.div
+                  key={j}
+                  className={el.single_item_classes}
+                >
                   <SingleItemTest {...el.single_item[0]} />
-                </div>
+                </motion.div>
               ))}
             </div>
           ))}
