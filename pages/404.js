@@ -2,13 +2,14 @@ import {useEffect} from 'react'
 import Link from 'next/link';
 import {useRouter} from "next/router"
 import {motion} from "framer-motion"
+import Header from '../components/Header'
 
 export default function Custom404() {
     let router = useRouter()
 
     useEffect(() => {
         setTimeout(() => {
-            router.push("/")
+            // router.push("/")
         }, 3000)
         
     }, [])
@@ -37,9 +38,12 @@ export default function Custom404() {
       };
 
   return (
-    <motion.div initial="initial" animate='animate' exit='exit' variants={fadeInUp} className="w-full min-h-screen flex justify-center items-center flex-col">
-      <div className="px-4 font-tdspace font-semibold fs-20">4OH!4</div>
-      <div className="px-4 font-tdsans text-2xl sm:text-3xl text-center">You're in the wrong neighborhood homie. Let's&nbsp;go&nbsp;<Link href={"/"}><a className="font-medium">home.</a></Link></div>
+      <>
+      <Header />
+    <motion.div initial="initial" animate='animate' exit='exit' variants={fadeInUp} className="w-full mt-32 flex justify-center items-center flex-col">
+      <div className="px-4 font-tdspace font-semibold fs-20">4&nbsp;OH!&nbsp;4</div>
+      <div className="px-4 font-tdsans text-2xl sm:text-3xl text-center">You're in the wrong neighborhood. <Link href={"/"}><a className="font-medium">Skedaddle!</a></Link></div>
     </motion.div>
+    </>
   );
 }

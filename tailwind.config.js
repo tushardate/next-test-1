@@ -67,6 +67,9 @@ module.exports = {
     columnFill: ["auto", "balance", "balance-all"],
     columnSpan: ["none", "all"],
     extend: {
+      borderWidth: {
+        "0.5": "0.5px"
+      },
       fontFamily: {
         tdserif: ["Saol Text", ...defaultTheme.fontFamily.serif],
         tdserifdisplay: ["Saol Display", ...defaultTheme.fontFamily.serif],
@@ -163,6 +166,11 @@ module.exports = {
         ...theme("spacing"),
         full: "100%", // You can add additional custom options below it too
         screen: "100vh",
+      }),
+      minWidth: (theme) => ({
+        ...theme("spacing"),
+        full: "100%", // You can add additional custom options below it too
+        screen: "100vw",
       }),
       maxHeight: (theme) => ({
         ...theme("spacing"),

@@ -6,10 +6,26 @@ import PasswordForm from "../../../components/PasswordForm";
 import { motion } from "framer-motion";
 import Footer from "../../../components/Footer";
 import { SplitText } from "../../../components/SplitText";
+import Link from "next/link";
 
-export default function Project({ post, next, prev }) {
+export default function Project({ post, next, prev, allPosts }) {
   const [showProject, setShowProject] = useState(false);
   const [wrongPass, setWrongPass] = useState(0);
+
+  const hoverBounce = {
+    initial: {
+      x: 0,
+    },
+    hover: {
+      x: 4,
+      transition: {
+        repeat: Infinity,
+        repeatType: "reverse",
+        easing: "easeOut",
+        duration: 0.25,
+      },
+    },
+  };
 
   const {
     id,
@@ -28,7 +44,7 @@ export default function Project({ post, next, prev }) {
       let ls = { loggedIn: true, pass: pass, dateString: Date.now() };
       localStorage.setItem(id, JSON.stringify(ls));
     } else {
-      setWrongPass((val) => val+1);
+      setWrongPass((val) => val + 1);
       localStorage.removeItem(id);
     }
   };
@@ -38,21 +54,24 @@ export default function Project({ post, next, prev }) {
   }, []);
 
   useLayoutEffect(() => {
-    if(!password_protect) {
-      setShowProject(true)
-      localStorage.removeItem(id)
-      return
+    if (!password_protect) {
+      setShowProject(true);
+      localStorage.removeItem(id);
+      return;
     }
     const ls = localStorage.getItem(id);
-    const timeperiod = 60 * 1000;
+    const timeperiod = 90 * 24 * 60 * 60 * 1000; // 90 days since last visit
     if (ls) {
       const { loggedIn = false, pass = "", dateString = "" } = JSON.parse(ls);
-      let date = dateString == "" ? new Date('December 17, 1995 03:24:00').getTime() : dateString;
-      console.log(Date.now() - date)
-      if(Date.now() - date > timeperiod) {
-        setShowProject(false)
-        localStorage.removeItem(id)
-        return
+      let date =
+        dateString == ""
+          ? new Date("December 17, 1995 03:24:00").getTime()
+          : dateString;
+      console.log(Date.now() - date);
+      if (Date.now() - date > timeperiod) {
+        setShowProject(false);
+        localStorage.removeItem(id);
+        return;
       }
       if (loggedIn && pass === password) {
         setShowProject(true);
@@ -167,6 +186,31 @@ export default function Project({ post, next, prev }) {
         <motion.div variants={fadeInUp}>
           <PrevNextTest prev={prev} next={next} />
         </motion.div>
+
+        <motion.div
+          variants={fadeInUp}
+          className="hidden md:flex font-tdsans text-lg mx-5 lg:mx-2 mt-12 mb-6 lg:mt-20 lg:mb-8 justify-between flex-wrap flexGrid"
+        >
+          {allPosts.map((el, i) => (
+            <Link
+              as={`/projects/${el.slug}`}
+              href="/projects/[slug]"
+              scroll={false}
+            >
+              <a className={` ${el.id === id ? "font-medium" : ""}`}>
+                <motion.div
+                  whileHover="hover"
+                  className="whitespace-pre my-2 px-3 lg:px-6 flex items-center cursor-pointer"
+                >
+                  <motion.p className="pr-1">{`${el.title}`}</motion.p>
+                  <motion.div variants={hoverBounce}>
+                    {el.id === id ? <>&#10003;</> : <>&#8594;</>}
+                  </motion.div>
+                </motion.div>
+              </a>
+            </Link>
+          ))}
+        </motion.div>
       </motion.div>
       <Footer />
     </>
@@ -183,7 +227,6 @@ export async function getStaticProps({ params }) {
   const resAll = await fetch(
     `${process.env.NEXT_PUBLIC_WORDPRESS_SITE_URL}/wp-json/td/v1/projects`
   );
-
   const projects = await resAll.json();
   const currentIdx = projects.findIndex((p) => p.slug === params.slug);
   // const nextIdx = currentIdx < projects.length - 1 ? currentIdx + 1 : 0;
@@ -194,7 +237,12 @@ export async function getStaticProps({ params }) {
 
   // Pass post data to the page via props
   return {
-    props: { post, next: projects[nextIdx], prev: projects[prevIdx] },
+    props: {
+      post,
+      next: projects[nextIdx],
+      prev: projects[prevIdx],
+      allPosts: projects,
+    },
     revalidate: 1,
   };
 }

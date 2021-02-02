@@ -11,8 +11,8 @@ function SingleItemTest(props) {
   let component;
 
   const { ref, inView, entry } = useInView({
-    rootMargin: "0% 0% -10% 0%",
-    // triggerOnce: true,
+    rootMargin: "0% 0% 20px 0%",
+    triggerOnce: true,
   });
 
   const singleReveal = {
@@ -26,7 +26,7 @@ function SingleItemTest(props) {
       scale: 1,
       y: 0,
       transition: {
-        duration: 1,
+        duration: 0.75,
         ease: "easeOut"
       }
     },
@@ -34,7 +34,7 @@ function SingleItemTest(props) {
       opacity: 0,
       scale: 0.92,
       transition: {
-        duration: 1,
+        duration: 0.75,
         ease: "easeOut"
       }
     },

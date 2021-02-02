@@ -126,7 +126,7 @@ function ProjectMenuItem6(props) {
     }
   };
 
-  const viewArrow = {
+  const hoverBounce = {
     initial: {
       x: 0,
     },
@@ -167,7 +167,7 @@ function ProjectMenuItem6(props) {
                 <motion.p className="text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl">View</motion.p>
                 <motion.div
                   className="text-3xl sm:text-4xl md:text-6xl lg:text-4xl xl:text-5xl pl-1 font-light"
-                  variants={viewArrow}
+                  variants={hoverBounce}
                 >
                   &#187;
                 </motion.div>
