@@ -159,6 +159,11 @@ module.exports = {
         "95vw": "95vw",
         "100vw": "100vw",
       },
+      minHeight: (theme) => ({
+        ...theme("spacing"),
+        full: "100%", // You can add additional custom options below it too
+        screen: "100vh",
+      }),
       maxHeight: (theme) => ({
         ...theme("spacing"),
         full: "100%", // You can add additional custom options below it too

@@ -1,15 +1,15 @@
 import React, { useContext, useState, useEffect, useLayoutEffect } from "react";
 import Header from "../components/Header";
-import {useRouter} from 'next/router';
-import {Context} from '../components/stores/Store'
+import { useRouter } from "next/router";
+import { Context } from "../components/stores/Store";
 import { SplitText } from "../components/SplitText";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
 
 export default function About(props) {
   const { acf } = props.data;
-  const route = useRouter()
-  const [store, setStore] = useContext(Context)
+  const route = useRouter();
+  const [store, setStore] = useContext(Context);
   // const { scrollYProgress } = useViewportScroll();
   // const hueRotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
   // const [hueColor, setHueColor] = useState(hueRotate.get())
@@ -22,8 +22,8 @@ export default function About(props) {
   }, []);
 
   useEffect(() => {
-    setStore({changeColor: Math.random()})
-  }, [route.asPath])
+    setStore({ changeColor: Math.random() });
+  }, [route.asPath]);
 
   const slideIn = {
     initial: {
@@ -71,24 +71,10 @@ export default function About(props) {
               <SplitText variants={slideIn}>{acf.td_about_name}</SplitText>
             </div>
             <div className="font-medium md:text-5xl sm:text-4xl text-3xl tracking-snug leading-tight md:leading-none">
-              <SplitText variants={slideIn}>Creative&nbsp;Director &amp; Art&nbsp;Director</SplitText>
+              <SplitText variants={slideIn}>
+                Creative&nbsp;Director &amp; Art&nbsp;Director
+              </SplitText>
             </div>
-            {/* <div className="font-medium md:text-5xl sm:text-4xl text-2xl leading-tight">
-              <a
-                className="hover:text-gray-500"
-                href={`tel:+1-${acf.td_about_phone}`}
-              >
-                <SplitText variants={slideIn}>{acf.td_about_phone}</SplitText>
-              </a>
-            </div>
-            <div className="font-medium md:text-5xl sm:text-4xl text-2xl leading-tight">
-              <a
-                className="hover:text-gray-500"
-                href={`mailto:${acf.td_about_email}`}
-              >
-                <SplitText variants={slideIn}>{acf.td_about_email}</SplitText>
-              </a>
-            </div> */}
           </motion.div>
 
           <motion.div

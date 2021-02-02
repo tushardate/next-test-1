@@ -1,19 +1,11 @@
 import React, { useContext, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useInView } from 'react-intersection-observer';
 
 
 function ProjectMenuItem6(props) {
-  // const [store, setStore] = useContext(Context)
   const { client_name, title, id, featured_image, slug } = props.data;
   const backgroundColor = `hsla(60, 5%, 87%, 1)`;
-  const { ref, inView, entry } = useInView({threshold: 0.75, triggerOnce: true});
-
-
-  useEffect(() => {
-    console.log(inView)
-  }, [inView])
 
   const drawLine = {
     initial: {
@@ -134,14 +126,28 @@ function ProjectMenuItem6(props) {
     }
   };
 
+  const viewArrow = {
+    initial: {
+      x: 0,
+    },
+    hover: {
+      x: 6,
+      transition: {
+        repeat: Infinity,
+        repeatType: "reverse",
+        easing: "easeOut",
+        duration: 0.25,
+      },
+    },
+  };
+
   return (
     <Link as={`/projects/${slug}`} href="/projects/[slug]" scroll={false}>
       <a>
         <motion.div
-          ref={ref}
           exit="exit"
           initial="initial"
-          animate={inView ? "animate" : "exit"}
+          animate={"animate"}
           whileHover="hover"
           className="flex w-full relative"
         >
@@ -157,9 +163,15 @@ function ProjectMenuItem6(props) {
               </p>
             </motion.div>
             <motion.div variants={onHoverShow} className="absolute flex items-center justify-center top-0 left-0 w-full h-full">
-              <p className="block text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl font-tdspace">
-              View &#8250;
-              </p>
+              <div className="flex items-center justify-end font-tdspace">
+                <motion.p className="text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl">View</motion.p>
+                <motion.div
+                  className="text-3xl sm:text-4xl md:text-6xl lg:text-4xl xl:text-5xl pl-1 font-light"
+                  variants={viewArrow}
+                >
+                  &#187;
+                </motion.div>
+              </div>
             </motion.div>
             <motion.div
               variants={slideUp}
@@ -176,7 +188,7 @@ function ProjectMenuItem6(props) {
             </motion.div>
           </div>
 
-          <motion.div className="md:w-6/12 w-6/12 overflow-hidden">
+          <motion.div className="md:w-7/12 w-6/12 overflow-hidden">
             <motion.img
               variants={scaleDown}
               className="object-cover h-full w-full"

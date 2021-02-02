@@ -3,24 +3,23 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProjectMenuItem6 from "../components/ProjectMenuItem6";
 import { SplitText } from "../components/SplitText";
-import { motion, useSpring } from "framer-motion";
-import {useRouter} from 'next/router';
-import {Context} from '../components/stores/Store'
+import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+import { Context } from "../components/stores/Store";
 
 export default function Home(props) {
   // const projects = Object.keys(data).map((key) => data[key]);
   const projects = props.data;
-  const route = useRouter()
-  const [store, setStore] = useContext(Context)
- 
+  const route = useRouter();
+  const [store, setStore] = useContext(Context);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
-    setStore({changeColor: Math.random()})
-  }, [route.asPath])
+    setStore({ changeColor: Math.random() });
+  }, [route.asPath]);
 
   const slideIn = {
     initial: {
@@ -68,36 +67,31 @@ export default function Home(props) {
             <SplitText
               variants={slideIn}
               className="font-tdspace font-medium xl:text-7xl sm:text-6xl text-5xl tracking-tight leading-none"
-
             >
-              Tushar Date is a creative&nbsp;director &amp; art&nbsp;director based
-              in Los&nbsp;Angeles
+              Tushar Date is a creative&nbsp;director &amp; art&nbsp;director
+              based in Los&nbsp;Angeles
               {/* Work */}
             </SplitText>
           </motion.div>
-
-          {projects.map((project, i) => (
-            <motion.div
-              className={`project-column xl:w-1/2 lg:w-1/2 w-full xl:pb-24 pb-16 ${
-                i % 2 === 0 ? "even" : "odd"
-              }`}
-              custom={
-                Math.random() < 0.5 ? Math.random() * -1 : Math.random() * 1
-              }
-              key={project.id}
-              // variants={slideIn}
-              style={{
-                originX: 0.5,
-                originY: 1,
-              }}
-            >
-              <ProjectMenuItem6
+            {projects.map((project, i) => (
+              <motion.div
+                className={`project-column xl:w-1/2 lg:w-1/2 w-full xl:pb-24 pb-16 ${
+                  i % 2 === 0 ? "even" : "odd"
+                }`}
+                custom={
+                  Math.random() < 0.5 ? Math.random() * -1 : Math.random() * 1
+                }
                 key={project.id}
-                data={project}
-              />
-              {/* <ProjectMenuItem key={project.id} data={project} /> */}
-            </motion.div>
-          ))}
+                // variants={slideIn}
+                style={{
+                  originX: 0.5,
+                  originY: 1,
+                }}
+              >
+                <ProjectMenuItem6 key={project.id} data={project} />
+                {/* <ProjectMenuItem key={project.id} data={project} /> */}
+              </motion.div>
+            ))}
         </motion.div>
       </motion.div>
       <Footer />

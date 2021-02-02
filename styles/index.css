@@ -164,4 +164,8 @@ body {
   fill: var(--hue-bg-color);
 }
 
+.fs-20 {
+  font-size: 20vw;
+}
+
 @tailwind utilities;
