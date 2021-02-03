@@ -65,7 +65,7 @@ export default function About(props) {
         initial="initial"
         animate="animate"
       >
-        <motion.div variants={stagger} className="flex flex-wrap">
+        <motion.div variants={stagger} className="flex flex-wrap leading-relaxed">
           <motion.div className="w-full lg:pl-1/4 pb-12 lg:pb-16">
             <div className="md:-ml-2 font-medium md:text-6xl sm:text-5xl text-4xl tracking-snug leading-tight md:leading-none">
               <SplitText variants={slideIn}>{acf.td_about_name}</SplitText>
@@ -81,7 +81,7 @@ export default function About(props) {
             variants={slideIn}
             className="w-full lg:flex pb-12 lg:pb-24"
           >
-            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2">
+            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2 lg:pr-20 lg:text-right">
               Contact
             </div>
             <div className="font-tdsans">
@@ -111,7 +111,7 @@ export default function About(props) {
             variants={slideIn}
             className="w-full lg:flex pb-12 lg:pb-24"
           >
-            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2">
+            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2 lg:pr-20 lg:text-right">
               About
             </div>
             {/* <div className="w-1/4 pr-20 pt-2">
@@ -129,16 +129,16 @@ export default function About(props) {
             variants={slideIn}
             className="w-full lg:flex pb-12 lg:pb-16"
           >
-            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2">
+            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2 lg:pr-20 lg:text-right">
               Experience
             </div>
-            <div className="w-full lg:w-3/4 font-tdsans lg:col-count-2 lg:col-gap-2xl font-light">
+            <div className="w-full lg:w-3/4 font-tdsans lg:col-count-2 lg:col-gap-2xl">
               {acf.td_about_work_experience.map((el, i) => (
                 <div className="pb-8 avoid-break about-col" key={i}>
                   <p className="font-medium">{el.td_exp_role}</p>
-                  <p>{el.td_exp_agency}</p>
-                  <p>{el.td_exp_dates}</p>
-                  <p>Clients: {el.td_exp_clients}</p>
+                  <p className="text-base">{el.td_exp_agency}</p>
+                  <p className="text-base">{el.td_exp_dates}</p>
+                  <p className="text-base">Clients: {el.td_exp_clients}</p>
                 </div>
               ))}
             </div>
@@ -148,7 +148,7 @@ export default function About(props) {
             variants={slideIn}
             className="w-full lg:flex pb-12 lg:pb-16"
           >
-            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2">
+            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2 lg:pr-20 lg:text-right">
               Recognition
             </div>
             <div className="w-full lg:w-3/4 font-tdsans lg:col-count-2 lg:col-gap-2xl font-light">
@@ -165,7 +165,7 @@ export default function About(props) {
             variants={slideIn}
             className="w-full lg:flex pb-12 lg:pb-16"
           >
-            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2">
+            <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2 lg:pr-20 lg:text-right">
               Education
             </div>
             <div className="w-full lg:w-3/4 font-tdsans font-light">

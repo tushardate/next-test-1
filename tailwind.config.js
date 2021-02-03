@@ -10,6 +10,7 @@ module.exports = {
   darkMode: false,
   theme: {
     screens: {
+      xxs: "375px",
       xs: "500px",
       sm: "640px",
       md: "768px",

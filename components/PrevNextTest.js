@@ -1,8 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function PrevNextTest(props) {
+  const [ref, inView, entry] = useInView({triggerOnce: true});
+
+  const inViewAnim = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 0.75,
+      },
+    },
+    exit: {
+      opacity: 0,
+    },
+  };
+
   const nextArrow = {
     initial: {
       x: 0,
@@ -33,7 +51,12 @@ export default function PrevNextTest(props) {
   };
 
   return (
-    <div className="mx-2 md:mx-4 grid grid-cols-12 mt-12 mb-16 lg:mt-20 lg:mb-24 px-4 font-tdspace leading-tightest text-2xl sm:text-3xl lg:text-4xl xl:text-5xl">
+    <motion.div
+      initial={inViewAnim.initial}
+      animate={inView ? inViewAnim.animate : inViewAnim.exit}
+      ref={ref}
+      className="mx-2 md:mx-4 grid grid-cols-12 mt-12 mb-16 lg:mt-20 lg:mb-24 px-4 font-tdspace leading-tightest text-lg xxs:text-2xl sm:text-3xl lg:text-4xl xl:text-5xl"
+    >
       <div className="col-start-1 col-span-6 sm:col-start-1 sm:col-span-5 lg:col-start-2 lg:col-span-4 xl:col-start-2 xl:col-span-3 pr-4 sm:pr-0">
         <Link
           as={`/projects/${props.prev.slug}`}
@@ -76,6 +99,6 @@ export default function PrevNextTest(props) {
           </a>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 }

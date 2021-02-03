@@ -6,26 +6,13 @@ import PasswordForm from "../../../components/PasswordForm";
 import { motion } from "framer-motion";
 import Footer from "../../../components/Footer";
 import { SplitText } from "../../../components/SplitText";
-import Link from "next/link";
+import ProjectLinks from "../../../components/ProjectLinks";
 
 export default function Project({ post, next, prev, allPosts }) {
   const [showProject, setShowProject] = useState(false);
   const [wrongPass, setWrongPass] = useState(0);
 
-  const hoverBounce = {
-    initial: {
-      x: 0,
-    },
-    hover: {
-      x: 4,
-      transition: {
-        repeat: Infinity,
-        repeatType: "reverse",
-        easing: "easeOut",
-        duration: 0.25,
-      },
-    },
-  };
+  
 
   const {
     id,
@@ -96,6 +83,9 @@ export default function Project({ post, next, prev, allPosts }) {
         damping: 25,
         stiffness: 100,
       },
+    },
+    hover: {
+      scale: 1.2,
     },
     exit: {
       y: 20,
@@ -187,30 +177,7 @@ export default function Project({ post, next, prev, allPosts }) {
           <PrevNextTest prev={prev} next={next} />
         </motion.div>
 
-        <motion.div
-          variants={fadeInUp}
-          className="hidden md:flex font-tdsans text-lg mx-5 lg:mx-2 mt-12 mb-6 lg:mt-20 lg:mb-8 justify-between flex-wrap flexGrid"
-        >
-          {allPosts.map((el, i) => (
-            <Link
-              as={`/projects/${el.slug}`}
-              href="/projects/[slug]"
-              scroll={false}
-            >
-              <a className={` ${el.id === id ? "font-medium" : ""}`}>
-                <motion.div
-                  whileHover="hover"
-                  className="whitespace-pre my-2 px-3 lg:px-6 flex items-center cursor-pointer"
-                >
-                  <motion.p className="pr-1">{`${el.title}`}</motion.p>
-                  <motion.div variants={hoverBounce}>
-                    {el.id === id ? <>&#10003;</> : <>&#8594;</>}
-                  </motion.div>
-                </motion.div>
-              </a>
-            </Link>
-          ))}
-        </motion.div>
+        <ProjectLinks allPosts={allPosts} currentId={id}></ProjectLinks>
       </motion.div>
       <Footer />
     </>
