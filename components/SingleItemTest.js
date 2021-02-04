@@ -3,7 +3,7 @@ import Carousel from "./Carousel";
 import ReactPlayer from "react-player";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-import PlayButton from './PlayButton'
+import PlayButton from "./PlayButton";
 
 function SingleItemTest(props) {
   const [playing, setPlaying] = useState(false);
@@ -27,16 +27,16 @@ function SingleItemTest(props) {
       y: 0,
       transition: {
         duration: 0.75,
-        ease: "easeOut"
-      }
+        ease: "easeOut",
+      },
     },
     exit: {
       opacity: 0,
       scale: 0.92,
       transition: {
         duration: 0.75,
-        ease: "easeOut"
-      }
+        ease: "easeOut",
+      },
     },
   };
 
@@ -70,9 +70,8 @@ function SingleItemTest(props) {
       component = (
         <p
           className={`font-tdsans text-xl md:text-2xl lg:text-3xl font-medium sm:font-normal ${props.text_item_classes}`}
-        >
-          {props.content_text_item}
-        </p>
+          dangerouslySetInnerHTML={{__html: props.content_text_item}}
+        />
       );
       break;
     case "single_item_image":

@@ -12,8 +12,6 @@ export default function Project({ post, next, prev, allPosts }) {
   const [showProject, setShowProject] = useState(false);
   const [wrongPass, setWrongPass] = useState(0);
 
-  
-
   const {
     id,
     title,
@@ -130,7 +128,7 @@ export default function Project({ post, next, prev, allPosts }) {
                   </div>
                 </div>
                 <div className="grid grid-cols-12 gap-4 pb-3 md:pb-5">
-                  <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-12 xl:col-start-3 xl:col-span-8">
+                  <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-12 xl:col-start-3 xl:col-span-7">
                     <SplitText
                       variants={fadeInUp}
                       className="font-tdserif sm:font-tdspace font-semibold text-5.5xl md:text-8xl lg:text-9xl tracking-snug leading-none md:leading-point-95"
@@ -142,12 +140,15 @@ export default function Project({ post, next, prev, allPosts }) {
                 <div className="grid grid-cols-12 gap-4">
                   <motion.div
                     variants={fadeInUp}
-                    className="col-start-1 col-span-12 md:col-start-4 md:col-span-9 xl:col-start-6 xl:col-span-5"
+                    className="col-start-1 col-span-12 md:col-start-4 md:col-span-9 xl:col-start-5 xl:col-span-6"
                   >
                     <div className="w-full pl-1 md:pl-0">
-                      <p className="w-full block text-xl md:text-2xl lg:text-3xl font-tdsans font-normal sm:font-light md:tracking-snug md:leading-snug">
-                        {general_project_description}
-                      </p>
+                      <p
+                        className="w-full block text-xl md:text-2xl lg:text-3xl font-tdsans font-normal sm:font-light md:tracking-snug md:leading-snug"
+                        dangerouslySetInnerHTML={{
+                          __html: general_project_description,
+                        }}
+                      />
                     </div>
                   </motion.div>
                 </div>
