@@ -60,7 +60,7 @@ export default function About(props) {
       <Header />
       <motion.div
         // style={{ backgroundColor: `hsla(${hueColor}, 15%, 87%, 1)` }}
-        className="font-tdspace text-lg sm:text-xl pt-24 md:pt-36 lg:pt-40 pb-32 px-4 md:pl-8 md:pr-8 xl:pr-24 text-gray-900"
+        className="font-tdserif sm:font-tdspace text-lg sm:text-xl pt-24 md:pt-36 lg:pt-40 pb-32 px-4 md:pl-8 md:pr-8 xl:pr-24 text-gray-900"
         exit="exit"
         initial="initial"
         animate="animate"

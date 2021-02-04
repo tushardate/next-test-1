@@ -158,12 +158,12 @@ function ProjectMenuItem6(props) {
           ></motion.div>
           <div className="flex flex-col md:w-6/12 w-6/12 pt-3 xs:pt-4 relative">
             <motion.div variants={slideUp} className="w-full flex-1 h-full">
-              <p className="block w-full text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl font-tdspace font-medium leading-tightest pr-4 sm:pr-16">
+              <p className="block w-full text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl font-tdserif sm:font-tdspace font-medium leading-tightest pr-4 sm:pr-16">
                 {title}
               </p>
             </motion.div>
             <motion.div variants={onHoverShow} className="absolute flex items-center justify-center top-0 left-0 w-full h-full">
-              <div className="flex items-center justify-end font-tdspace">
+              <div className="flex items-center justify-end font-tdserif sm:font-tdspace">
                 <motion.p className="text-3xl sm:text-4xl md:text-5xl lg:text-3xl xl:text-4xl">View</motion.p>
                 <motion.div
                   className="text-3xl sm:text-4xl md:text-6xl lg:text-4xl xl:text-5xl pl-1 font-light"

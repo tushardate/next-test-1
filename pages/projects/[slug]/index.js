@@ -133,7 +133,7 @@ export default function Project({ post, next, prev, allPosts }) {
                   <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-12 xl:col-start-3 xl:col-span-8">
                     <SplitText
                       variants={fadeInUp}
-                      className="font-tdspace font-semibold text-5.5xl md:text-8xl lg:text-9xl tracking-snug leading-none md:leading-point-95"
+                      className="font-tdserif sm:font-tdspace font-semibold text-5.5xl md:text-8xl lg:text-9xl tracking-snug leading-none md:leading-point-95"
                     >
                       {title}
                     </SplitText>
