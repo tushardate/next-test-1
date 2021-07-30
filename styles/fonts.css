@@ -399,3 +399,266 @@
   font-display: swap;
 }
 
+
+
+@font-face {
+  font-family: 'Gazpacho';
+  src: url('/fonts/Gazpacho-Light.woff2') format('woff2'),
+      url('/fonts/Gazpacho-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gazpacho';
+  src: url('/fonts/Gazpacho-Heavy.woff2') format('woff2'),
+      url('/fonts/Gazpacho-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gazpacho';
+  src: url('/fonts/Gazpacho-Medium.woff2') format('woff2'),
+      url('/fonts/Gazpacho-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gazpacho';
+  src: url('/fonts/Gazpacho-Black.woff2') format('woff2'),
+      url('/fonts/Gazpacho-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gazpacho';
+  src: url('/fonts/Gazpacho-Bold.woff2') format('woff2'),
+      url('/fonts/Gazpacho-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gazpacho';
+  src: url('/fonts/Gazpacho-ItalicLight.woff2') format('woff2'),
+      url('/fonts/Gazpacho-ItalicLight.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gazpacho';
+  src: url('/fonts/Gazpacho-ItalicBlack.woff2') format('woff2'),
+      url('/fonts/Gazpacho-ItalicBlack.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gazpacho';
+  src: url('/fonts/Gazpacho-ItalicBold.woff2') format('woff2'),
+      url('/fonts/Gazpacho-ItalicBold.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gazpacho';
+  src: url('/fonts/Gazpacho-Thin.woff2') format('woff2'),
+      url('/fonts/Gazpacho-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gazpacho';
+  src: url('/fonts/Gazpacho-ItalicHeavy.woff2') format('woff2'),
+      url('/fonts/Gazpacho-ItalicHeavy.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gazpacho';
+  src: url('/fonts/Gazpacho-Regular.woff2') format('woff2'),
+      url('/fonts/Gazpacho-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gazpacho Italic';
+  src: url('/fonts/Gazpacho-ItalicRegular.woff2') format('woff2'),
+      url('/fonts/Gazpacho-ItalicRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gazpacho';
+  src: url('/fonts/Gazpacho-ItalicMedium.woff2') format('woff2'),
+      url('/fonts/Gazpacho-ItalicMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gazpacho';
+  src: url('/fonts/Gazpacho-ItalicThin.woff2') format('woff2'),
+      url('/fonts/Gazpacho-ItalicThin.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moret';
+  src: url('/fonts/Moret-Bold.woff2') format('woff2'),
+      url('/fonts/Moret-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moret Book';
+  src: url('/fonts/Moret-Book.woff2') format('woff2'),
+      url('/fonts/Moret-Book.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moret';
+  src: url('/fonts/Moret-BoldOblique.woff2') format('woff2'),
+      url('/fonts/Moret-BoldOblique.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moret Book';
+  src: url('/fonts/Moret-BookOblique.woff2') format('woff2'),
+      url('/fonts/Moret-BookOblique.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moret';
+  src: url('/fonts/Moret-ExtraBoldOblique.woff2') format('woff2'),
+      url('/fonts/Moret-ExtraBoldOblique.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moret';
+  src: url('/fonts/Moret-SemiBoldOblique.woff2') format('woff2'),
+      url('/fonts/Moret-SemiBoldOblique.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moret';
+  src: url('/fonts/Moret-SemiBold.woff2') format('woff2'),
+      url('/fonts/Moret-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moret';
+  src: url('/fonts/Moret-ExtraBold.woff2') format('woff2'),
+      url('/fonts/Moret-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moret';
+  src: url('/fonts/Moret-RegularOblique.woff2') format('woff2'),
+      url('/fonts/Moret-RegularOblique.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Moret';
+  src: url('/fonts/Moret-Regular.woff2') format('woff2'),
+      url('/fonts/Moret-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PF Mellon';
+  src: url('/fonts/PFMellon-Bold.woff2') format('woff2'),
+      url('/fonts/PFMellon-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PF Mellon';
+  src: url('/fonts/PFMellon-Black.woff2') format('woff2'),
+      url('/fonts/PFMellon-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PF Mellon';
+  src: url('/fonts/PFMellon-Medium.woff2') format('woff2'),
+      url('/fonts/PFMellon-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PF Mellon';
+  src: url('/fonts/PFMellon-Regular.woff2') format('woff2'),
+      url('/fonts/PFMellon-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PF Mellon';
+  src: url('/fonts/PFMellon-Light.woff2') format('woff2'),
+      url('/fonts/PFMellon-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+

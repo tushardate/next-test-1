@@ -6,7 +6,7 @@ import PasswordForm from "../../../components/PasswordForm";
 import { motion } from "framer-motion";
 import Footer from "../../../components/Footer";
 import { SplitText } from "../../../components/SplitText";
-import ProjectLinks from "../../../components/ProjectLinks";
+import ProjectLinks2 from "../../../components/ProjectLinks2";
 
 export default function Project({ post, next, prev, allPosts }) {
   const [showProject, setShowProject] = useState(false);
@@ -178,7 +178,7 @@ export default function Project({ post, next, prev, allPosts }) {
           <PrevNextTest prev={prev} next={next} />
         </motion.div>
 
-        <ProjectLinks allPosts={allPosts} currentId={id}></ProjectLinks>
+        <ProjectLinks2 allPosts={allPosts} currentId={id}></ProjectLinks2>
       </motion.div>
       <Footer />
     </>

@@ -90,7 +90,7 @@ function ProjectLinks({ allPosts, currentId }) {
       animate="animate"
       exit= "exit"
       variants={stagger}
-      className="hidden md:flex font-tdsans text-lg mx-6 mt-16 mb-8 lg:mt-28 lg:mb-12 justify-between flex-wrap flexGrid"
+      className="hidden lg:flex font-tdsans text-md xl:text-lg mx-6 mt-16 mb-8 lg:mt-28 lg:mb-12 justify-between flex-wrap flexGrid"
     >
       {allPosts.map((el, i) => (
         <Link
@@ -107,7 +107,7 @@ function ProjectLinks({ allPosts, currentId }) {
               animate={{opacity: inView ? 1 : 0}}
               transition= {{duration: 0.75}}
               exit={{opacity: 0}}
-              className="whitespace-pre py-1 px-2 flex items-center cursor-pointer"
+              className="whitespace-pre xl:py-0.5 px-2 flex items-center cursor-pointer"
             >
               <motion.div className="pr-0.5">
                 {el.id === currentId ? <>&#10003;</> : ""}

@@ -72,8 +72,8 @@ module.exports = {
         "0.5": "0.5px"
       },
       fontFamily: {
-        tdserif: ["Saol Text", ...defaultTheme.fontFamily.serif],
-        tdserifdisplay: ["Saol Display", ...defaultTheme.fontFamily.serif],
+        tdserif: ["Moret", "Saol Text", ...defaultTheme.fontFamily.serif],
+        tdserifdisplay: ["Moret", "Saol Display", ...defaultTheme.fontFamily.serif],
         tdsans: [
           // "Sharp Grotesk",
           "TT Norms Pro",
@@ -81,6 +81,7 @@ module.exports = {
           ...defaultTheme.fontFamily.sans,
         ],
         tdspace: [
+          "Moret",
           "Saol Display",
           // "Neue Machina",
           // "'Space Grotesk'",
