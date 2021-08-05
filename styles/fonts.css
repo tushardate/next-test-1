@@ -662,3 +662,200 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Fixture Ultra';
+  src: url('/fonts/FixtureUltra-Light.woff2') format('woff2'),
+      url('/fonts/FixtureUltra-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixture Ultra';
+  src: url('/fonts/FixtureUltra-Bold.woff2') format('woff2'),
+      url('/fonts/FixtureUltra-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixture Ultra';
+  src: url('/fonts/FixtureUltra-ExtraBold.woff2') format('woff2'),
+      url('/fonts/FixtureUltra-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixture Ultra';
+  src: url('/fonts/FixtureUltra-Medium.woff2') format('woff2'),
+      url('/fonts/FixtureUltra-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixture Ultra';
+  src: url('/fonts/FixtureUltra-Black.woff2') format('woff2'),
+      url('/fonts/FixtureUltra-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixture Ultra';
+  src: url('/fonts/FixtureUltra-ExtraLight.woff2') format('woff2'),
+      url('/fonts/FixtureUltra-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixture Ultra';
+  src: url('/fonts/FixtureUltra-SemiBold.woff2') format('woff2'),
+      url('/fonts/FixtureUltra-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixture Ultra';
+  src: url('/fonts/FixtureUltra-Thin.woff2') format('woff2'),
+      url('/fonts/FixtureUltra-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fixture Ultra';
+  src: url('/fonts/FixtureUltra-Regular.woff2') format('woff2'),
+      url('/fonts/FixtureUltra-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+      url('/fonts/Gilroy-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Black.woff2') format('woff2'),
+      url('/fonts/Gilroy-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Extrabold.woff2') format('woff2'),
+      url('/fonts/Gilroy-Extrabold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Light.woff2') format('woff2'),
+      url('/fonts/Gilroy-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Medium.woff2') format('woff2'),
+      url('/fonts/Gilroy-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Heavy.woff2') format('woff2'),
+      url('/fonts/Gilroy-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Semibold.woff2') format('woff2'),
+      url('/fonts/Gilroy-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+      url('/fonts/Gilroy-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-UltraLight.woff2') format('woff2'),
+      url('/fonts/Gilroy-UltraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Thin.woff2') format('woff2'),
+      url('/fonts/Gilroy-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* @font-face {
+  font-family:"Heading Now";
+  src:url("/fonts/HeadingNow-18Heavy.woff2") format("woff2"),url("/fonts/HeadingNow-18Heavy.woff") format("woff"),url("/fonts/HeadingNow-18Heavy.otf") format("opentype");
+  font-style:normal;font-weight:400;
+} */
+
+
+@font-face {
+  font-family: 'Heading Now';
+  src: url('/fonts/HeadingNow-46Bold.woff2') format('woff2'),
+      url('/fonts/HeadingNow-46Bold.woff') format('woff'),
+      url('/fonts/HeadingNow-46Bold.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Heading Now';
+  src: url('/fonts/HeadingNow-18Heavy.woff2') format('woff2'),
+      url('/fonts/HeadingNow-18Heavy.woff') format('woff'),
+      url('/fonts/HeadingNow-18Heavy.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

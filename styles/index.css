@@ -19,6 +19,16 @@ body {
   background-color: var(--hue-bg-color);
 }
 
+.text-color-offWhite {
+  color: var(--hue-bg-color);
+}
+
+/***INDEX****/
+.pb-125 {
+  padding-bottom: 125%;
+}
+/************/
+
 .td-swiper-design .swiper-slide {
   height: auto !important;
 }

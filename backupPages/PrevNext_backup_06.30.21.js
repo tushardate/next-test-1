@@ -55,7 +55,7 @@ export default function PrevNextTest(props) {
       initial={inViewAnim.initial}
       animate={inView ? inViewAnim.animate : inViewAnim.exit}
       ref={ref}
-      className="mx-4 sm:mx-8 md:mx-12 xl:mx-24 grid grid-cols-12 mt-12 mb-16 lg:mt-20 lg:mb-24 px-4 font-tdcond uppercase text-9xl"
+      className="mx-2 md:mx-4 grid grid-cols-12 mt-12 mb-16 lg:mt-20 lg:mb-24 px-4 font-tdserif sm:font-tdspace leading-tightest text-lg xxs:text-2xl sm:text-3xl lg:text-4xl xl:text-5xl"
     >
       <div className="col-start-1 col-span-6 sm:col-start-1 sm:col-span-5 lg:col-start-2 lg:col-span-4 xl:col-start-2 xl:col-span-3 pr-4 sm:pr-0">
         <Link
@@ -67,12 +67,12 @@ export default function PrevNextTest(props) {
             <motion.div initial="initial" whileHover="hover">
               <div className="flex items-center">
                 <motion.div
-                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl pr-1 sm:pr-2 font-tdsans font-light"
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl pr-1 sm:pr-2 font-light"
                   variants={prevArrow}
                 >
-                  &#8592;
+                  &#171;
                 </motion.div>
-                <motion.p>Prev Project</motion.p>
+                <motion.p className="font-semibold">Prev Project</motion.p>
               </div>
             </motion.div>
           </a>
@@ -87,12 +87,12 @@ export default function PrevNextTest(props) {
           <a>
             <motion.div initial="initial" whileHover="hover">
               <div className="flex items-center justify-end">
-                <motion.p>Next Project</motion.p>
+                <motion.p className="font-semibold">Next Project</motion.p>
                 <motion.div
-                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl pl-1 sm:pl-2 font-tdsans font-light"
+                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl pl-1 sm:pl-2 font-light"
                   variants={nextArrow}
                 >
-                  &#8594;
+                  &#187;
                 </motion.div>
               </div>
             </motion.div>

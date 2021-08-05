@@ -20,11 +20,13 @@
     "next": "^10.0.5",
     "postcss": "^8.2.4",
     "react": "^16.13.1",
+    "react-device-detect": "^1.17.0",
     "react-dom": "^16.13.1",
     "react-intersection-observer": "^8.31.0",
     "react-player": "^2.8.1",
     "sass": "^1.29.0",
-    "swiper": "^6.4.5"
+    "swiper": "^6.4.5",
+    "ua-parser-js": "^0.7.28"
   },
   "devDependencies": {
     "postcss-flexbugs-fixes": "4.2.1",

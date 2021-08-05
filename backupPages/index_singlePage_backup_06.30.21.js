@@ -115,48 +115,51 @@ export default function Project({ post, next, prev, allPosts }) {
       >
         {showProject ? (
           <>
-            <div className="mx-4 sm:mx-8 md:mx-12 xl:mx-24 mt-24 lg:mt-40">
-              <div className="w-full pb-2">
-                <motion.h1
-                  variants={fadeInUp}
-                  className="font-tdsans md:text-2xl"
-                >
-                  {client_name}
-                </motion.h1>
-              </div>
-              <div className="flex flex-col md:grid grid-cols-2">
-                  <div className="w-full lg:w-50">
+            <div className="mt-20 md:mt-32">
+              <div className="mx-4 md:mx-8 xl:mx-0">
+                <div className="grid grid-cols-12 gap-4 pb-4 pl-1">
+                  <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-10 xl:col-start-3 xl:col-span-9">
+                    <motion.h1
+                      variants={fadeInUp}
+                      className="font-tdsans font-medium sm:font-normal text-md md:text-2xl lg:text-2xl"
+                    >
+                      {client_name}
+                    </motion.h1>
+                  </div>
+                </div>
+                <div className="grid grid-cols-12 gap-4 pb-3 md:pb-5">
+                  <div className="col-start-1 col-span-12 md:col-start-1 md:col-span-12 xl:col-start-3 xl:col-span-7">
                     <SplitText
                       variants={fadeInUp}
-                      className="font-tdcond text-30vw md:text-13vw uppercase tracking-loose leading-point-75"
+                      className="font-tdserif sm:font-tdspace font-semibold text-5.5xl md:text-8xl lg:text-9xl tracking-snug leading-none md:leading-point-95"
                     >
                       {title}
                     </SplitText>
                   </div>
-                  <div className="w-full lg:w-50 mt-4 md:mt-0">
-                    <motion.div
-                      variants={fadeInUp}
-                      className=""
-                    >
-                      <div className="w-full pl-1 md:pl-0">
-                        <p
-                          className="w-full block text-2xl font-tdsans md:tracking-snug md:leading-snug"
-                          dangerouslySetInnerHTML={{
-                            __html: general_project_description,
-                          }}
-                        />
-                      </div>
-                    </motion.div>
-                  </div>
+                </div>
+                <div className="grid grid-cols-12 gap-4">
+                  <motion.div
+                    variants={fadeInUp}
+                    className="col-start-1 col-span-12 md:col-start-4 md:col-span-9 xl:col-start-5 xl:col-span-6"
+                  >
+                    <div className="w-full pl-1 md:pl-0">
+                      <p
+                        className="w-full block text-xl md:text-2xl lg:text-3xl font-tdsans font-normal sm:font-light md:tracking-snug md:leading-snug"
+                        dangerouslySetInnerHTML={{
+                          __html: general_project_description,
+                        }}
+                      />
+                    </div>
+                  </motion.div>
+                </div>
               </div>
-              <hr class="border-gray-900 mt-10 lg:mt-20"/>
             </div>
 
-            <motion.div variants={fadeInUp} className="content mx-4 sm:mx-8 md:mx-12 xl:mx-24">
+            <motion.div variants={fadeInUp} className="content">
               {group_row_repeater.map((row, i) => (
                 <div
                   key={i}
-                  className={`my-12 md:my-20 lg:my-20 ${row.group_row_repeater_classes}`}
+                  className={`my-12 md:my-20 lg:my-32 ${row.group_row_repeater_classes}`}
                 >
                   {row.group_row_repeater_items.map((el, j) => (
                     <motion.div key={j} className={el.single_item_classes}>

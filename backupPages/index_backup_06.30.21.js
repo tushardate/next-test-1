@@ -2,23 +2,19 @@ import { useEffect, useContext } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProjectMenuItem7 from "../components/ProjectMenuItem7";
-import ProjectMenuItem7Mobile from "../components/ProjectMenuItem7_Mobile";
 import { SplitText } from "../components/SplitText";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { Context } from "../components/stores/Store";
-import useIsTouchDevice from '../components/hooks/useIsTouchDevice'
 
 export default function Home(props) {
   // const projects = Object.keys(data).map((key) => data[key]);
   const projects = props.data;
   const route = useRouter();
   const [store, setStore] = useContext(Context);
-  const isTouchDevice = useIsTouchDevice();
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    console.log(isTouchDevice)
   }, []);
 
   useEffect(() => {
@@ -61,19 +57,41 @@ export default function Home(props) {
     <div>
       <Header />
       <motion.div
-        className="mx-4 sm:mx-8 md:mx-12 xl:mx-24 mt-14 md:mt-24 lg:mt-32 mb-20 text-gray-900"
+        className="pt-24 md:pt-36 lg:pt-40 px-4 md:px-8 text-gray-900"
         exit="exit"
         initial="initial"
         animate="animate"
       >
-        <motion.div variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
-            {projects.map((project, i) => {
-                return isTouchDevice ? <motion.div>
-                    <ProjectMenuItem7Mobile key={project.id} data={project} />
-                  </motion.div>
-                : <ProjectMenuItem7 key={project.id} data={project} />
-              } 
-            )}
+        <motion.div variants={stagger} className="flex flex-wrap">
+          <motion.div className="w-full pb-16 md:pb-24">
+            <SplitText
+              variants={slideIn}
+              className="font-tdspace font-medium xl:text-7xl sm:text-6xl text-5xl tracking-tight leading-none"
+            >
+              Tushar Date is a creative&nbsp;director &amp; art&nbsp;director
+              based in Los&nbsp;Angeles
+              {/* Work */}
+            </SplitText>
+          </motion.div>
+            {projects.map((project, i) => (
+              <motion.div
+                className={`project-column xl:w-1/2 lg:w-1/2 w-full xl:pb-24 pb-16 ${
+                  i % 2 === 0 ? "even" : "odd"
+                }`}
+                custom={
+                  Math.random() < 0.5 ? Math.random() * -1 : Math.random() * 1
+                }
+                key={project.id}
+                // variants={slideIn}
+                style={{
+                  originX: 0.5,
+                  originY: 1,
+                }}
+              >
+                <ProjectMenuItem7 key={project.id} data={project} />
+                {/* <ProjectMenuItem key={project.id} data={project} /> */}
+              </motion.div>
+            ))}
         </motion.div>
       </motion.div>
       <Footer />

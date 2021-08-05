@@ -35,6 +35,26 @@ module.exports = {
       "8xl": "6rem",
       "9xl": "8rem",
       "10xl": "10rem",
+      "11xl": "11rem",
+      "12xl": "12rem",
+      "1vw": "1vw",
+      "2vw": "2vw",
+      "3vw": "3vw",
+      "4vw": "4vw",
+      "5vw": "5vw",
+      "6vw": "6vw",
+      "7vw": "7vw",
+      "8.5vw": "8.5vw",
+      "9vw": "9vw",
+      "10vw": "10vw",
+      "11vw": "11vw",
+      "12vw": "12vw",
+      "13vw": "13vw",
+      "20vw": "20vw",
+      "22vw": "22vw",
+      "25vw": "25vw",
+      "30vw": "30vw",
+      "20%": "20%"
     },
     columnCount: [1, 2, 3, 4, 5],
     columnGap: {
@@ -76,7 +96,8 @@ module.exports = {
         tdserifdisplay: ["Moret", "Saol Display", ...defaultTheme.fontFamily.serif],
         tdsans: [
           // "Sharp Grotesk",
-          "TT Norms Pro",
+          // "TT Norms Pro",
+          "Gilroy",
           // "'Space Grotesk'",
           ...defaultTheme.fontFamily.sans,
         ],
@@ -85,6 +106,11 @@ module.exports = {
           "Saol Display",
           // "Neue Machina",
           // "'Space Grotesk'",
+          ...defaultTheme.fontFamily.sans,
+        ],
+        tdcond: [
+          "Heading Now",
+          "Fixture Ultra",
           ...defaultTheme.fontFamily.sans,
         ],
       },
@@ -99,6 +125,8 @@ module.exports = {
       },
       letterSpacing: {
         snug: "-0.0125em",
+        loose: "0.0125em",
+        looser: "0.02em"
       },
       spacing: {
         7: "1.75rem",
