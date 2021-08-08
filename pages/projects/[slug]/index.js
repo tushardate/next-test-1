@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useLayoutEffect } from "react";
 import Header from "../../../components/Header";
-import PrevNextTest from "../../../components/PrevNextTest";
+import PrevNextTest2 from "../../../components/PrevNextTest2";
 import SingleItemTest from "../../../components/SingleItemTest";
 import PasswordForm from "../../../components/PasswordForm";
 import { motion } from "framer-motion";
 import Footer from "../../../components/Footer";
 import { SplitText } from "../../../components/SplitText";
-import ProjectLinks2 from "../../../components/ProjectLinks2";
+import ProjectLinks3 from "../../../components/ProjectLinks3";
 
 export default function Project({ post, next, prev, allPosts }) {
   const [showProject, setShowProject] = useState(false);
@@ -119,28 +119,28 @@ export default function Project({ post, next, prev, allPosts }) {
               <div className="w-full pb-2">
                 <motion.h1
                   variants={fadeInUp}
-                  className="font-tdsans md:text-2xl"
+                  className="font-tdsans text-xl md:text-2xl"
                 >
                   {client_name}
                 </motion.h1>
               </div>
-              <div className="flex flex-col md:grid grid-cols-2">
-                  <div className="w-full lg:w-50">
+              <div className="flex flex-col md:flex-row md:gap-12">
+                  <div className="w-full md:w-3/5">
                     <SplitText
                       variants={fadeInUp}
-                      className="font-tdcond text-30vw md:text-13vw uppercase tracking-loose leading-point-75"
+                      className="font-tdcond font-bold text-25vw sm:text-20vw md:text-15vw lg:text-13vw xl:text-12vw uppercase tracking-none leading-point-75"
                     >
                       {title}
                     </SplitText>
                   </div>
-                  <div className="w-full lg:w-50 mt-4 md:mt-0">
+                  <div className="w-full md:w-2/5 mt-2 md:-mt-2 flex flex-wrap content-end">
                     <motion.div
                       variants={fadeInUp}
                       className=""
                     >
-                      <div className="w-full pl-1 md:pl-0">
+                      <div className="w-full ">
                         <p
-                          className="w-full block text-2xl font-tdsans md:tracking-snug md:leading-snug"
+                          className="w-full block text-xl md:text-2xl"
                           dangerouslySetInnerHTML={{
                             __html: general_project_description,
                           }}
@@ -172,10 +172,10 @@ export default function Project({ post, next, prev, allPosts }) {
         )}
 
         <motion.div variants={fadeInUp}>
-          <PrevNextTest prev={prev} next={next} />
+          <PrevNextTest2 prev={prev} next={next} />
         </motion.div>
 
-        <ProjectLinks2 allPosts={allPosts} currentId={id}></ProjectLinks2>
+        <ProjectLinks3 allPosts={allPosts} currentId={id}></ProjectLinks3>
       </motion.div>
       <Footer />
     </>

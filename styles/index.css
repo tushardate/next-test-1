@@ -183,4 +183,8 @@ body {
   flex: auto;
 }
 
+.projectLinks:last-child {
+  color: green;
+}
+
 @tailwind utilities;

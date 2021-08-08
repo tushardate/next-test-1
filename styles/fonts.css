@@ -1,833 +1,828 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 @font-face {
-  font-family: 'Telegraf';
-  src: url('/fonts/Telegraf-UltraLight.woff2') format('woff2'),
-      url('/fonts/Telegraf-UltraLight.woff') format('woff');
+  font-family: "Telegraf";
+  src: url("/fonts/Telegraf-UltraLight.woff2") format("woff2"),
+    url("/fonts/Telegraf-UltraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Telegraf';
-  src: url('/fonts/Telegraf-Regular.woff2') format('woff2'),
-      url('/fonts/Telegraf-Regular.woff') format('woff');
+  font-family: "Telegraf";
+  src: url("/fonts/Telegraf-Regular.woff2") format("woff2"),
+    url("/fonts/Telegraf-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Telegraf';
-  src: url('/fonts/Telegraf-Light.woff2') format('woff2'),
-      url('/fonts/Telegraf-Light.woff') format('woff');
+  font-family: "Telegraf";
+  src: url("/fonts/Telegraf-Light.woff2") format("woff2"),
+    url("/fonts/Telegraf-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Telegraf';
-  src: url('/fonts/Telegraf-Bold.woff2') format('woff2'),
-      url('/fonts/Telegraf-Bold.woff') format('woff');
+  font-family: "Telegraf";
+  src: url("/fonts/Telegraf-Bold.woff2") format("woff2"),
+    url("/fonts/Telegraf-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Telegraf';
-  src: url('/fonts/Telegraf-UltraBold.woff2') format('woff2'),
-      url('/fonts/Telegraf-UltraBold.woff') format('woff');
+  font-family: "Telegraf";
+  src: url("/fonts/Telegraf-UltraBold.woff2") format("woff2"),
+    url("/fonts/Telegraf-UltraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Telegraf';
-  src: url('/fonts/Telegraf-Black.woff2') format('woff2'),
-      url('/fonts/Telegraf-Black.woff') format('woff');
+  font-family: "Telegraf";
+  src: url("/fonts/Telegraf-Black.woff2") format("woff2"),
+    url("/fonts/Telegraf-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Telegraf';
-  src: url('/fonts/Telegraf-SemiBold.woff2') format('woff2'),
-      url('/fonts/Telegraf-SemiBold.woff') format('woff');
+  font-family: "Telegraf";
+  src: url("/fonts/Telegraf-SemiBold.woff2") format("woff2"),
+    url("/fonts/Telegraf-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Telegraf';
-  src: url('/fonts/Telegraf-Medium.woff2') format('woff2'),
-      url('/fonts/Telegraf-Medium.woff') format('woff');
+  font-family: "Telegraf";
+  src: url("/fonts/Telegraf-Medium.woff2") format("woff2"),
+    url("/fonts/Telegraf-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Sharp Grotesk';
-  src: url('/fonts/SharpGrotesk-Black20.woff2') format('woff2'),
-      url('/fonts/SharpGrotesk-Black20.woff') format('woff');
+  font-family: "Sharp Grotesk";
+  src: url("/fonts/SharpGrotesk-Black20.woff2") format("woff2"),
+    url("/fonts/SharpGrotesk-Black20.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Sharp Grotesk';
-  src: url('/fonts/SharpGrotesk-Book20.woff2') format('woff2'),
-      url('/fonts/SharpGrotesk-Book20.woff') format('woff');
+  font-family: "Sharp Grotesk";
+  src: url("/fonts/SharpGrotesk-Book20.woff2") format("woff2"),
+    url("/fonts/SharpGrotesk-Book20.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Sharp Grotesk';
-  src: url('/fonts/SharpGrotesk-Thin20.woff2') format('woff2'),
-      url('/fonts/SharpGrotesk-Thin20.woff') format('woff');
+  font-family: "Sharp Grotesk";
+  src: url("/fonts/SharpGrotesk-Thin20.woff2") format("woff2"),
+    url("/fonts/SharpGrotesk-Thin20.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Sharp Grotesk';
-  src: url('/fonts/SharpGrotesk-SemiBold20.woff2') format('woff2'),
-      url('/fonts/SharpGrotesk-SemiBold20.woff') format('woff');
+  font-family: "Sharp Grotesk";
+  src: url("/fonts/SharpGrotesk-SemiBold20.woff2") format("woff2"),
+    url("/fonts/SharpGrotesk-SemiBold20.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Sharp Grotesk';
-  src: url('/fonts/SharpGrotesk-Medium20.woff2') format('woff2'),
-      url('/fonts/SharpGrotesk-Medium20.woff') format('woff');
+  font-family: "Sharp Grotesk";
+  src: url("/fonts/SharpGrotesk-Medium20.woff2") format("woff2"),
+    url("/fonts/SharpGrotesk-Medium20.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Sharp Grotesk';
-  src: url('/fonts/SharpGrotesk-Light20.woff2') format('woff2'),
-      url('/fonts/SharpGrotesk-Light20.woff') format('woff');
+  font-family: "Sharp Grotesk";
+  src: url("/fonts/SharpGrotesk-Light20.woff2") format("woff2"),
+    url("/fonts/SharpGrotesk-Light20.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Sharp Grotesk';
-  src: url('/fonts/SharpGrotesk-Bold20.woff2') format('woff2'),
-      url('/fonts/SharpGrotesk-Bold20.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-@font-face {
-  font-family: 'Neue Machina';
-  src: url('/fonts/NeueMachina-Bold.woff2') format('woff2'),
-      url('/fonts/NeueMachina-Bold.woff') format('woff');
+  font-family: "Sharp Grotesk";
+  src: url("/fonts/SharpGrotesk-Bold20.woff2") format("woff2"),
+    url("/fonts/SharpGrotesk-Bold20.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Neue Machina';
-  src: url('/fonts/NeueMachina-Black.woff2') format('woff2'),
-      url('/fonts/NeueMachina-Black.woff') format('woff');
+  font-family: "Neue Machina";
+  src: url("/fonts/NeueMachina-Bold.woff2") format("woff2"),
+    url("/fonts/NeueMachina-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Machina";
+  src: url("/fonts/NeueMachina-Black.woff2") format("woff2"),
+    url("/fonts/NeueMachina-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Neue Machina';
-  src: url('/fonts/NeueMachina-Medium.woff2') format('woff2'),
-      url('/fonts/NeueMachina-Medium.woff') format('woff');
+  font-family: "Neue Machina";
+  src: url("/fonts/NeueMachina-Medium.woff2") format("woff2"),
+    url("/fonts/NeueMachina-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Neue Machina';
-  src: url('/fonts/NeueMachina-Ultralight.woff2') format('woff2'),
-      url('/fonts/NeueMachina-Ultralight.woff') format('woff');
+  font-family: "Neue Machina";
+  src: url("/fonts/NeueMachina-Ultralight.woff2") format("woff2"),
+    url("/fonts/NeueMachina-Ultralight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Neue Machina';
-  src: url('/fonts/NeueMachina-Regular.woff2') format('woff2'),
-      url('/fonts/NeueMachina-Regular.woff') format('woff');
+  font-family: "Neue Machina";
+  src: url("/fonts/NeueMachina-Regular.woff2") format("woff2"),
+    url("/fonts/NeueMachina-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Neue Machina';
-  src: url('/fonts/NeueMachina-Ultrabold.woff2') format('woff2'),
-      url('/fonts/NeueMachina-Ultrabold.woff') format('woff');
+  font-family: "Neue Machina";
+  src: url("/fonts/NeueMachina-Ultrabold.woff2") format("woff2"),
+    url("/fonts/NeueMachina-Ultrabold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Neue Machina';
-  src: url('/fonts/NeueMachina-Light.woff2') format('woff2'),
-      url('/fonts/NeueMachina-Light.woff') format('woff');
+  font-family: "Neue Machina";
+  src: url("/fonts/NeueMachina-Light.woff2") format("woff2"),
+    url("/fonts/NeueMachina-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Saol Display';
-  src: url('/fonts/SaolDisplay-Regular.woff2') format('woff2'),
-      url('/fonts/SaolDisplay-Regular.woff') format('woff');
+  font-family: "Saol Display";
+  src: url("/fonts/SaolDisplay-Regular.woff2") format("woff2"),
+    url("/fonts/SaolDisplay-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Saol Display';
-  src: url('/fonts/SaolDisplay-Medium.woff2') format('woff2'),
-      url('/fonts/SaolDisplay-Medium.woff') format('woff');
+  font-family: "Saol Display";
+  src: url("/fonts/SaolDisplay-Medium.woff2") format("woff2"),
+    url("/fonts/SaolDisplay-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Saol Display';
-  src: url('/fonts/SaolDisplay-Bold.woff2') format('woff2'),
-      url('/fonts/SaolDisplay-Bold.woff') format('woff');
+  font-family: "Saol Display";
+  src: url("/fonts/SaolDisplay-Bold.woff2") format("woff2"),
+    url("/fonts/SaolDisplay-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Saol Display';
-  src: url('/fonts/SaolDisplay-Semibold.woff2') format('woff2'),
-      url('/fonts/SaolDisplay-Semibold.woff') format('woff');
+  font-family: "Saol Display";
+  src: url("/fonts/SaolDisplay-Semibold.woff2") format("woff2"),
+    url("/fonts/SaolDisplay-Semibold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Saol Display';
-  src: url('/fonts/SaolDisplay-Light.woff2') format('woff2'),
-      url('/fonts/SaolDisplay-Light.woff') format('woff');
+  font-family: "Saol Display";
+  src: url("/fonts/SaolDisplay-Light.woff2") format("woff2"),
+    url("/fonts/SaolDisplay-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Saol Display';
-  src: url('/fonts/SaolDisplay-Thin.woff2') format('woff2'),
-      url('/fonts/SaolDisplay-Thin.woff') format('woff');
+  font-family: "Saol Display";
+  src: url("/fonts/SaolDisplay-Thin.woff2") format("woff2"),
+    url("/fonts/SaolDisplay-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'TT Norms Pro';
-  src: url('/fonts/TTNormsPro-Black.woff2') format('woff2'),
-      url('/fonts/TTNormsPro-Black.woff') format('woff');
+  font-family: "TT Norms Pro";
+  src: url("/fonts/TTNormsPro-Black.woff2") format("woff2"),
+    url("/fonts/TTNormsPro-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'TT Norms Pro';
-  src: url('/fonts/TTNormsPro-Bold.woff2') format('woff2'),
-      url('/fonts/TTNormsPro-Bold.woff') format('woff');
+  font-family: "TT Norms Pro";
+  src: url("/fonts/TTNormsPro-Bold.woff2") format("woff2"),
+    url("/fonts/TTNormsPro-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'TT Norms Pro';
-  src: url('/fonts/TTNormsPro-ExtraBlack.woff2') format('woff2'),
-      url('/fonts/TTNormsPro-ExtraBlack.woff') format('woff');
+  font-family: "TT Norms Pro";
+  src: url("/fonts/TTNormsPro-ExtraBlack.woff2") format("woff2"),
+    url("/fonts/TTNormsPro-ExtraBlack.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'TT Norms Pro';
-  src: url('/fonts/TTNormsPro-ExtraBold.woff2') format('woff2'),
-      url('/fonts/TTNormsPro-ExtraBold.woff') format('woff');
+  font-family: "TT Norms Pro";
+  src: url("/fonts/TTNormsPro-ExtraBold.woff2") format("woff2"),
+    url("/fonts/TTNormsPro-ExtraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'TT Norms Pro';
-  src: url('/fonts/TTNormsPro-ExtraLight.woff2') format('woff2'),
-      url('/fonts/TTNormsPro-ExtraLight.woff') format('woff');
+  font-family: "TT Norms Pro";
+  src: url("/fonts/TTNormsPro-ExtraLight.woff2") format("woff2"),
+    url("/fonts/TTNormsPro-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'TT Norms Pro';
-  src: url('/fonts/TTNormsPro-Light.woff2') format('woff2'),
-      url('/fonts/TTNormsPro-Light.woff') format('woff');
+  font-family: "TT Norms Pro";
+  src: url("/fonts/TTNormsPro-Light.woff2") format("woff2"),
+    url("/fonts/TTNormsPro-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'TT Norms Pro';
-  src: url('/fonts/TTNormsPro-Medium.woff2') format('woff2'),
-      url('/fonts/TTNormsPro-Medium.woff') format('woff');
+  font-family: "TT Norms Pro";
+  src: url("/fonts/TTNormsPro-Medium.woff2") format("woff2"),
+    url("/fonts/TTNormsPro-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'TT Norms Pro';
-  src: url('/fonts/TTNormsPro-Regular.woff2') format('woff2'),
-      url('/fonts/TTNormsPro-Regular.woff') format('woff');
+  font-family: "TT Norms Pro";
+  src: url("/fonts/TTNormsPro-Regular.woff2") format("woff2"),
+    url("/fonts/TTNormsPro-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'TT Norms Pro';
-  src: url('/fonts/TTNormsPro-Thin.woff2') format('woff2'),
-      url('/fonts/TTNormsPro-Thin.woff') format('woff');
+  font-family: "TT Norms Pro";
+  src: url("/fonts/TTNormsPro-Thin.woff2") format("woff2"),
+    url("/fonts/TTNormsPro-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
-
 @font-face {
-  font-family: 'Saol Text';
-  src: url('/fonts/SaolText-Book.woff2') format('woff2'),
-      url('/fonts/SaolText-Book.woff') format('woff');
+  font-family: "Saol Text";
+  src: url("/fonts/SaolText-Book.woff2") format("woff2"),
+    url("/fonts/SaolText-Book.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Saol Text';
-  src: url('/fonts/SaolText-Bold.woff2') format('woff2'),
-      url('/fonts/SaolText-Bold.woff') format('woff');
+  font-family: "Saol Text";
+  src: url("/fonts/SaolText-Bold.woff2") format("woff2"),
+    url("/fonts/SaolText-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Saol Text';
-  src: url('/fonts/SaolText-Light.woff2') format('woff2'),
-      url('/fonts/SaolText-Light.woff') format('woff');
+  font-family: "Saol Text";
+  src: url("/fonts/SaolText-Light.woff2") format("woff2"),
+    url("/fonts/SaolText-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Saol Text';
-  src: url('/fonts/SaolText-Medium.woff2') format('woff2'),
-      url('/fonts/SaolText-Medium.woff') format('woff');
+  font-family: "Saol Text";
+  src: url("/fonts/SaolText-Medium.woff2") format("woff2"),
+    url("/fonts/SaolText-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Saol Text';
-  src: url('/fonts/SaolText-Regular.woff2') format('woff2'),
-      url('/fonts/SaolText-Regular.woff') format('woff');
+  font-family: "Saol Text";
+  src: url("/fonts/SaolText-Regular.woff2") format("woff2"),
+    url("/fonts/SaolText-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Saol Text';
-  src: url('/fonts/SaolText-Thin.woff2') format('woff2'),
-      url('/fonts/SaolText-Thin.woff') format('woff');
+  font-family: "Saol Text";
+  src: url("/fonts/SaolText-Thin.woff2") format("woff2"),
+    url("/fonts/SaolText-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Saol Text';
-  src: url('/fonts/SaolText-Semibold.woff2') format('woff2'),
-      url('/fonts/SaolText-Semibold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-
-@font-face {
-  font-family: 'Gazpacho';
-  src: url('/fonts/Gazpacho-Light.woff2') format('woff2'),
-      url('/fonts/Gazpacho-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gazpacho';
-  src: url('/fonts/Gazpacho-Heavy.woff2') format('woff2'),
-      url('/fonts/Gazpacho-Heavy.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gazpacho';
-  src: url('/fonts/Gazpacho-Medium.woff2') format('woff2'),
-      url('/fonts/Gazpacho-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gazpacho';
-  src: url('/fonts/Gazpacho-Black.woff2') format('woff2'),
-      url('/fonts/Gazpacho-Black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gazpacho';
-  src: url('/fonts/Gazpacho-Bold.woff2') format('woff2'),
-      url('/fonts/Gazpacho-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gazpacho';
-  src: url('/fonts/Gazpacho-ItalicLight.woff2') format('woff2'),
-      url('/fonts/Gazpacho-ItalicLight.woff') format('woff');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gazpacho';
-  src: url('/fonts/Gazpacho-ItalicBlack.woff2') format('woff2'),
-      url('/fonts/Gazpacho-ItalicBlack.woff') format('woff');
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gazpacho';
-  src: url('/fonts/Gazpacho-ItalicBold.woff2') format('woff2'),
-      url('/fonts/Gazpacho-ItalicBold.woff') format('woff');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gazpacho';
-  src: url('/fonts/Gazpacho-Thin.woff2') format('woff2'),
-      url('/fonts/Gazpacho-Thin.woff') format('woff');
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gazpacho';
-  src: url('/fonts/Gazpacho-ItalicHeavy.woff2') format('woff2'),
-      url('/fonts/Gazpacho-ItalicHeavy.woff') format('woff');
-  font-weight: 900;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gazpacho';
-  src: url('/fonts/Gazpacho-Regular.woff2') format('woff2'),
-      url('/fonts/Gazpacho-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gazpacho Italic';
-  src: url('/fonts/Gazpacho-ItalicRegular.woff2') format('woff2'),
-      url('/fonts/Gazpacho-ItalicRegular.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gazpacho';
-  src: url('/fonts/Gazpacho-ItalicMedium.woff2') format('woff2'),
-      url('/fonts/Gazpacho-ItalicMedium.woff') format('woff');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gazpacho';
-  src: url('/fonts/Gazpacho-ItalicThin.woff2') format('woff2'),
-      url('/fonts/Gazpacho-ItalicThin.woff') format('woff');
-  font-weight: 100;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Moret';
-  src: url('/fonts/Moret-Bold.woff2') format('woff2'),
-      url('/fonts/Moret-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Moret Book';
-  src: url('/fonts/Moret-Book.woff2') format('woff2'),
-      url('/fonts/Moret-Book.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Moret';
-  src: url('/fonts/Moret-BoldOblique.woff2') format('woff2'),
-      url('/fonts/Moret-BoldOblique.woff') format('woff');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Moret Book';
-  src: url('/fonts/Moret-BookOblique.woff2') format('woff2'),
-      url('/fonts/Moret-BookOblique.woff') format('woff');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Moret';
-  src: url('/fonts/Moret-ExtraBoldOblique.woff2') format('woff2'),
-      url('/fonts/Moret-ExtraBoldOblique.woff') format('woff');
-  font-weight: bold;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Moret';
-  src: url('/fonts/Moret-SemiBoldOblique.woff2') format('woff2'),
-      url('/fonts/Moret-SemiBoldOblique.woff') format('woff');
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Moret';
-  src: url('/fonts/Moret-SemiBold.woff2') format('woff2'),
-      url('/fonts/Moret-SemiBold.woff') format('woff');
+  font-family: "Saol Text";
+  src: url("/fonts/SaolText-Semibold.woff2") format("woff2"),
+    url("/fonts/SaolText-Semibold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Moret';
-  src: url('/fonts/Moret-ExtraBold.woff2') format('woff2'),
-      url('/fonts/Moret-ExtraBold.woff') format('woff');
+  font-family: "Gazpacho";
+  src: url("/fonts/Gazpacho-Light.woff2") format("woff2"),
+    url("/fonts/Gazpacho-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gazpacho";
+  src: url("/fonts/Gazpacho-Heavy.woff2") format("woff2"),
+    url("/fonts/Gazpacho-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gazpacho";
+  src: url("/fonts/Gazpacho-Medium.woff2") format("woff2"),
+    url("/fonts/Gazpacho-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gazpacho";
+  src: url("/fonts/Gazpacho-Black.woff2") format("woff2"),
+    url("/fonts/Gazpacho-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gazpacho";
+  src: url("/fonts/Gazpacho-Bold.woff2") format("woff2"),
+    url("/fonts/Gazpacho-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Moret';
-  src: url('/fonts/Moret-RegularOblique.woff2') format('woff2'),
-      url('/fonts/Moret-RegularOblique.woff') format('woff');
+  font-family: "Gazpacho";
+  src: url("/fonts/Gazpacho-ItalicLight.woff2") format("woff2"),
+    url("/fonts/Gazpacho-ItalicLight.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gazpacho";
+  src: url("/fonts/Gazpacho-ItalicBlack.woff2") format("woff2"),
+    url("/fonts/Gazpacho-ItalicBlack.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gazpacho";
+  src: url("/fonts/Gazpacho-ItalicBold.woff2") format("woff2"),
+    url("/fonts/Gazpacho-ItalicBold.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gazpacho";
+  src: url("/fonts/Gazpacho-Thin.woff2") format("woff2"),
+    url("/fonts/Gazpacho-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gazpacho";
+  src: url("/fonts/Gazpacho-ItalicHeavy.woff2") format("woff2"),
+    url("/fonts/Gazpacho-ItalicHeavy.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gazpacho";
+  src: url("/fonts/Gazpacho-Regular.woff2") format("woff2"),
+    url("/fonts/Gazpacho-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gazpacho Italic";
+  src: url("/fonts/Gazpacho-ItalicRegular.woff2") format("woff2"),
+    url("/fonts/Gazpacho-ItalicRegular.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Moret';
-  src: url('/fonts/Moret-Regular.woff2') format('woff2'),
-      url('/fonts/Moret-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-family: "Gazpacho";
+  src: url("/fonts/Gazpacho-ItalicMedium.woff2") format("woff2"),
+    url("/fonts/Gazpacho-ItalicMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'PF Mellon';
-  src: url('/fonts/PFMellon-Bold.woff2') format('woff2'),
-      url('/fonts/PFMellon-Bold.woff') format('woff');
+  font-family: "Gazpacho";
+  src: url("/fonts/Gazpacho-ItalicThin.woff2") format("woff2"),
+    url("/fonts/Gazpacho-ItalicThin.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Moret";
+  src: url("/fonts/Moret-Bold.woff2") format("woff2"),
+    url("/fonts/Moret-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'PF Mellon';
-  src: url('/fonts/PFMellon-Black.woff2') format('woff2'),
-      url('/fonts/PFMellon-Black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'PF Mellon';
-  src: url('/fonts/PFMellon-Medium.woff2') format('woff2'),
-      url('/fonts/PFMellon-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'PF Mellon';
-  src: url('/fonts/PFMellon-Regular.woff2') format('woff2'),
-      url('/fonts/PFMellon-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'PF Mellon';
-  src: url('/fonts/PFMellon-Light.woff2') format('woff2'),
-      url('/fonts/PFMellon-Light.woff') format('woff');
+  font-family: "Moret Book";
+  src: url("/fonts/Moret-Book.woff2") format("woff2"),
+    url("/fonts/Moret-Book.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Fixture Ultra';
-  src: url('/fonts/FixtureUltra-Light.woff2') format('woff2'),
-      url('/fonts/FixtureUltra-Light.woff') format('woff');
+  font-family: "Moret";
+  src: url("/fonts/Moret-BoldOblique.woff2") format("woff2"),
+    url("/fonts/Moret-BoldOblique.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Moret Book";
+  src: url("/fonts/Moret-BookOblique.woff2") format("woff2"),
+    url("/fonts/Moret-BookOblique.woff") format("woff");
   font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Moret";
+  src: url("/fonts/Moret-ExtraBoldOblique.woff2") format("woff2"),
+    url("/fonts/Moret-ExtraBoldOblique.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Moret";
+  src: url("/fonts/Moret-SemiBoldOblique.woff2") format("woff2"),
+    url("/fonts/Moret-SemiBoldOblique.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Moret";
+  src: url("/fonts/Moret-SemiBold.woff2") format("woff2"),
+    url("/fonts/Moret-SemiBold.woff") format("woff");
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Fixture Ultra';
-  src: url('/fonts/FixtureUltra-Bold.woff2') format('woff2'),
-      url('/fonts/FixtureUltra-Bold.woff') format('woff');
+  font-family: "Moret";
+  src: url("/fonts/Moret-ExtraBold.woff2") format("woff2"),
+    url("/fonts/Moret-ExtraBold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Fixture Ultra';
-  src: url('/fonts/FixtureUltra-ExtraBold.woff2') format('woff2'),
-      url('/fonts/FixtureUltra-ExtraBold.woff') format('woff');
+  font-family: "Moret";
+  src: url("/fonts/Moret-RegularOblique.woff2") format("woff2"),
+    url("/fonts/Moret-RegularOblique.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Moret";
+  src: url("/fonts/Moret-Regular.woff2") format("woff2"),
+    url("/fonts/Moret-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PF Mellon";
+  src: url("/fonts/PFMellon-Bold.woff2") format("woff2"),
+    url("/fonts/PFMellon-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Fixture Ultra';
-  src: url('/fonts/FixtureUltra-Medium.woff2') format('woff2'),
-      url('/fonts/FixtureUltra-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Fixture Ultra';
-  src: url('/fonts/FixtureUltra-Black.woff2') format('woff2'),
-      url('/fonts/FixtureUltra-Black.woff') format('woff');
+  font-family: "PF Mellon";
+  src: url("/fonts/PFMellon-Black.woff2") format("woff2"),
+    url("/fonts/PFMellon-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Fixture Ultra';
-  src: url('/fonts/FixtureUltra-ExtraLight.woff2') format('woff2'),
-      url('/fonts/FixtureUltra-ExtraLight.woff') format('woff');
+  font-family: "PF Mellon";
+  src: url("/fonts/PFMellon-Medium.woff2") format("woff2"),
+    url("/fonts/PFMellon-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PF Mellon";
+  src: url("/fonts/PFMellon-Regular.woff2") format("woff2"),
+    url("/fonts/PFMellon-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PF Mellon";
+  src: url("/fonts/PFMellon-Light.woff2") format("woff2"),
+    url("/fonts/PFMellon-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fixture Ultra";
+  src: url("/fonts/FixtureUltra-Light.woff2") format("woff2"),
+    url("/fonts/FixtureUltra-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fixture Ultra";
+  src: url("/fonts/FixtureUltra-Bold.woff2") format("woff2"),
+    url("/fonts/FixtureUltra-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fixture Ultra";
+  src: url("/fonts/FixtureUltra-ExtraBold.woff2") format("woff2"),
+    url("/fonts/FixtureUltra-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fixture Ultra";
+  src: url("/fonts/FixtureUltra-Medium.woff2") format("woff2"),
+    url("/fonts/FixtureUltra-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fixture Ultra";
+  src: url("/fonts/FixtureUltra-Black.woff2") format("woff2"),
+    url("/fonts/FixtureUltra-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fixture Ultra";
+  src: url("/fonts/FixtureUltra-ExtraLight.woff2") format("woff2"),
+    url("/fonts/FixtureUltra-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Fixture Ultra';
-  src: url('/fonts/FixtureUltra-SemiBold.woff2') format('woff2'),
-      url('/fonts/FixtureUltra-SemiBold.woff') format('woff');
+  font-family: "Fixture Ultra";
+  src: url("/fonts/FixtureUltra-SemiBold.woff2") format("woff2"),
+    url("/fonts/FixtureUltra-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Fixture Ultra';
-  src: url('/fonts/FixtureUltra-Thin.woff2') format('woff2'),
-      url('/fonts/FixtureUltra-Thin.woff') format('woff');
+  font-family: "Fixture Ultra";
+  src: url("/fonts/FixtureUltra-Thin.woff2") format("woff2"),
+    url("/fonts/FixtureUltra-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Fixture Ultra';
-  src: url('/fonts/FixtureUltra-Regular.woff2') format('woff2'),
-      url('/fonts/FixtureUltra-Regular.woff') format('woff');
+  font-family: "Fixture Ultra";
+  src: url("/fonts/FixtureUltra-Regular.woff2") format("woff2"),
+    url("/fonts/FixtureUltra-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Bold.woff2') format('woff2'),
-      url('/fonts/Gilroy-Bold.woff') format('woff');
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Bold.woff2") format("woff2"),
+    url("/fonts/Gilroy-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Black.woff2') format('woff2'),
-      url('/fonts/Gilroy-Black.woff') format('woff');
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Black.woff2") format("woff2"),
+    url("/fonts/Gilroy-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Extrabold.woff2') format('woff2'),
-      url('/fonts/Gilroy-Extrabold.woff') format('woff');
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Extrabold.woff2") format("woff2"),
+    url("/fonts/Gilroy-Extrabold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Light.woff2') format('woff2'),
-      url('/fonts/Gilroy-Light.woff') format('woff');
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Light.woff2") format("woff2"),
+    url("/fonts/Gilroy-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Medium.woff2') format('woff2'),
-      url('/fonts/Gilroy-Medium.woff') format('woff');
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Medium.woff2") format("woff2"),
+    url("/fonts/Gilroy-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Heavy.woff2') format('woff2'),
-      url('/fonts/Gilroy-Heavy.woff') format('woff');
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Heavy.woff2") format("woff2"),
+    url("/fonts/Gilroy-Heavy.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Semibold.woff2') format('woff2'),
-      url('/fonts/Gilroy-Semibold.woff') format('woff');
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Semibold.woff2") format("woff2"),
+    url("/fonts/Gilroy-Semibold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Regular.woff2') format('woff2'),
-      url('/fonts/Gilroy-Regular.woff') format('woff');
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Regular.woff2") format("woff2"),
+    url("/fonts/Gilroy-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-UltraLight.woff2') format('woff2'),
-      url('/fonts/Gilroy-UltraLight.woff') format('woff');
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-UltraLight.woff2") format("woff2"),
+    url("/fonts/Gilroy-UltraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gilroy';
-  src: url('/fonts/Gilroy-Thin.woff2') format('woff2'),
-      url('/fonts/Gilroy-Thin.woff') format('woff');
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Thin.woff2") format("woff2"),
+    url("/fonts/Gilroy-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -841,21 +836,113 @@
 
 
 @font-face {
-  font-family: 'Heading Now';
-  src: url('/fonts/HeadingNow-46Bold.woff2') format('woff2'),
-      url('/fonts/HeadingNow-46Bold.woff') format('woff'),
-      url('/fonts/HeadingNow-46Bold.ttf') format('truetype');
+  font-family: "Heading Now";
+  src: url("/fonts/HeadingNow-18Heavy.woff2") format("woff2"),
+    url("/fonts/HeadingNow-18Heavy.woff") format("woff"),
+    url("/fonts/HeadingNow-18Heavy.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Heading Now";
+  src: url("/fonts/HeadingNow-26Bold.woff2") format("woff2"),
+    url("/fonts/HeadingNow-26Bold.woff") format("woff"),
+    url("/fonts/HeadingNow-26Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Heading Now";
+  src: url("/fonts/HeadingNow-46Bold.woff2") format("woff2"),
+    url("/fonts/HeadingNow-46Bold.woff") format("woff"),
+    url("/fonts/HeadingNow-46Bold.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Heading Now';
-  src: url('/fonts/HeadingNow-18Heavy.woff2') format('woff2'),
-      url('/fonts/HeadingNow-18Heavy.woff') format('woff'),
-      url('/fonts/HeadingNow-18Heavy.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'Apercu';
+  src: url('/fonts/Apercu-LightItalic.woff2') format('woff2'),
+      url('/fonts/Apercu-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apercu';
+  src: url('/fonts/Apercu-MediumItalic.woff2') format('woff2'),
+      url('/fonts/Apercu-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apercu';
+  src: url('/fonts/Apercu-Medium.woff2') format('woff2'),
+      url('/fonts/Apercu-Medium.woff') format('woff');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Apercu';
+  src: url('/fonts/Apercu-BoldItalic.woff2') format('woff2'),
+      url('/fonts/Apercu-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apercu';
+  src: url('/fonts/Apercu-Italic.woff2') format('woff2'),
+      url('/fonts/Apercu-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apercu';
+  src: url('/fonts/Apercu-Light.woff2') format('woff2'),
+      url('/fonts/Apercu-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apercu';
+  src: url('/fonts/Apercu-Bold.woff2') format('woff2'),
+      url('/fonts/Apercu-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apercu Mono';
+  src: url('/fonts/Apercu-Mono.woff2') format('woff2'),
+      url('/fonts/Apercu-Mono.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apercu';
+  src: url('/fonts/Apercu-Regular.woff2') format('woff2'),
+      url('/fonts/Apercu-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+

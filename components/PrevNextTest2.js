@@ -3,7 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-export default function PrevNextTest(props) {
+export default function PrevNextTest2(props) {
   const [ref, inView, entry] = useInView({triggerOnce: true});
 
   const inViewAnim = {
@@ -55,9 +55,9 @@ export default function PrevNextTest(props) {
       initial={inViewAnim.initial}
       animate={inView ? inViewAnim.animate : inViewAnim.exit}
       ref={ref}
-      className="grid grid-cols-12 mt-12 mb-16 lg:mt-20 lg:mb-20 font-tdcond font-bold uppercase text-8xl"
+      className="flex justify-between mx-4 sm:mx-8 md:mx-12 xl:mx-24 mt-24 mt-12 mb-16 lg:mt-20 lg:mb-20 font-tdcond font-bold uppercase text-7xl"
     >
-      <div className="col-start-1 col-span-6 sm:col-start-1 sm:col-span-5 lg:col-start-2 lg:col-span-4 xl:col-start-2 xl:col-span-3 pr-4 sm:pr-0">
+      <div className="">
         <Link
           as={`/projects/${props.prev.slug}`}
           href="/projects/[slug]"
@@ -78,7 +78,7 @@ export default function PrevNextTest(props) {
           </a>
         </Link>
       </div>
-      <div className="col-start-7 col-span-6 sm:col-start-8 sm:col-span-5 lg:col-start-8 lg:col-span-4 xl:col-start-9 xl:col-span-3 pl-4 sm:pl-0">
+      <div className="">
         <Link
           as={`/projects/${props.next.slug}`}
           href="/projects/[slug]"

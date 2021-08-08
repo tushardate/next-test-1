@@ -9,10 +9,10 @@ function ProjectMenuItem7(props) {
 
   const revealImage = {
     initial: {
-      scaleY: 1,
+      scaleX: 1,
     },
     animate: {
-      scaleY: 0,
+      scaleX: 0,
       transition: {
         delay: 0,
         duration: 1,
@@ -20,7 +20,7 @@ function ProjectMenuItem7(props) {
       },
     },
     exit: {
-      scaleY: 1,
+      scaleX: 1,
       transition: {
         duration: 0.75,
         ease: [0.65, 0, 0.35, 1],
@@ -53,15 +53,6 @@ function ProjectMenuItem7(props) {
       y: "10px",
       opacity: 0,
     }),
-    exit: {
-      opacity: 0,
-      y: "10px",
-      transition: {
-        type: "spring",
-        damping: 20,
-        stiffness: 100,
-      },
-    },
     hover: (custom) => ({
         opacity: 1,
         y: "0",
@@ -77,14 +68,6 @@ function ProjectMenuItem7(props) {
     initial: (custom) => ({
       opacity: 0,
     }),
-    exit: {
-      opacity: 0,
-      transition: {
-        type: "spring",
-        damping: 20,
-        stiffness: 100,
-      },
-    },
     hover: {
       x: 0,
       opacity: 1,
@@ -138,7 +121,7 @@ function ProjectMenuItem7(props) {
             <motion.div variants={onHoverShow} className="absolute w-full h-full p-6 bg-gray-900 text-color-offWhite flex flex-col justify-between" >
                 <div class="w-full">
                     <motion.p variants={slideUp} custom={0} className="text-lg leading-3 pb-4">{client_name}</motion.p>
-                    <motion.p variants={slideUp} custom={1} className="font-tdcond text-30vw sm:text-11vw md:text-13vw lg:text-8.5vw uppercase tracking-looser leading-point-85">{title}</motion.p>
+                    <motion.p variants={slideUp} custom={1} className="font-tdcond font-bold text-30vw sm:text-11vw md:text-13vw lg:text-8vw uppercase tracking-looser leading-point-85">{title}</motion.p>
                 </div>
                 <motion.div
                   variants={hoverBounce}
@@ -147,6 +130,11 @@ function ProjectMenuItem7(props) {
                   &#8594;
                 </motion.div>
             </motion.div>
+            <motion.div
+              variants={revealImage}
+              className="absolute inset-0 imageMask"
+              style={{ originX: 1 }}
+            ></motion.div>
           </motion.div>
       </a>
     </Link>
