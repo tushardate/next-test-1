@@ -61,7 +61,7 @@ export default function Home(props) {
     <div>
       <Header />
       <motion.div
-        className="mx-4 sm:mx-8 md:mx-12 xl:mx-24 mt-14 md:mt-24 lg:mt-40 mb-20 text-gray-900"
+        className="mx-4 sm:mx-8 md:mx-12 xl:mx-24 mt-20 md:mt-32 lg:mt-32 mb-20 text-gray-900"
         exit="exit"
         initial="initial"
         animate="animate"

@@ -77,9 +77,9 @@ function ProjectMenuItem7Mobile(props) {
               src={featured_image.large && featured_image.large}
             ></motion.img>
             <motion.div variants={onHoverShow} className="absolute w-full h-full text-color-offWhite flex flex-col justify-end" >
-                <div class="w-full bg-gray-900 bg-opacity-80 p-4">
+                <div class="w-full bg-gray-900 bg-opacity-90 p-4 min-h-2/6">
                     <motion.p className="leading-3 pb-4">{client_name}</motion.p>
-                    <motion.p className="font-tdcond font-black uppercase text-4xl sm:text-3xl leading-none">{title}</motion.p>
+                    <motion.p className="font-tdcond font-black uppercase text-5xl sm:text-4xl leading-none">{title}</motion.p>
                 </div>
             </motion.div>
           </motion.div>

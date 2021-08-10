@@ -67,21 +67,41 @@ export default function Project({ post, next, prev, allPosts }) {
       setShowProject(false);
     }
   }, []);
-
+  
+  const drawLine = {
+    initial: {
+      scaleX: 0,
+    },
+    animate: {
+      scaleX: 1,
+      transition: {
+        duration: 1,
+        ease: [0.65, 0, 0.35, 1],
+      },
+    },
+    exit: {
+      scaleX: 0,
+      transition: {
+        duration: 0.75,
+        ease: [0.65, 0, 0.35, 1],
+      },
+    },
+  };
   const fadeInUp = {
     initial: {
       y: 30,
       opacity: 0,
     },
-    animate: {
+    animate: (custom) => ({
       y: 0,
       opacity: 1,
       transition: {
+        delay: custom * 0.1,
         type: "spring",
         damping: 25,
         stiffness: 100,
       },
-    },
+    }),
     hover: {
       scale: 1.2,
     },
@@ -98,7 +118,7 @@ export default function Project({ post, next, prev, allPosts }) {
   const stagger = {
     animate: {
       transition: {
-        staggerChildren: 0.06,
+        staggerChildren: 0.4,
       },
     },
   };
@@ -149,7 +169,7 @@ export default function Project({ post, next, prev, allPosts }) {
                     </motion.div>
                   </div>
               </div>
-              <hr class="border-gray-900 mt-10 lg:mt-20"/>
+              <motion.hr variants={drawLine} style={{ originX: 0 }} class="border-gray-900 mt-10 lg:mt-20"></motion.hr>
             </div>
 
             <motion.div variants={fadeInUp} className="content mx-4 sm:mx-8 md:mx-12 xl:mx-24">
