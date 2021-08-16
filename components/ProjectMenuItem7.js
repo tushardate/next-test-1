@@ -19,7 +19,7 @@ function ProjectMenuItem7(props) {
       //   ease: [0.65, 0, 0.35, 1],
       // },
       transition: {
-        delay: custom * 0.2,
+        delay: custom * 0.1,
         duration: 1,
         ease: [0.6, 0.01, -0.05, 0.95],
       },
@@ -27,8 +27,8 @@ function ProjectMenuItem7(props) {
     exit: (custom) => ({
       scaleY: 1,
       transition: {
-        delay: custom * 0.075,
-        duration: 0.75,
+        delay: custom * 0.025,
+        duration: 0.5,
         // ease: [0.65, 0, 0.35, 1],
         ease: [0.6, 0.01, -0.05, 0.95],
       },
@@ -47,8 +47,8 @@ function ProjectMenuItem7(props) {
       //   stiffness: 100,
       // },
       transition: {
-        delay: custom * 0.2 + 0.25,
-        duration: 0.5,
+        delay: custom * 0.1 + 0.2,
+        duration: 1,
         ease: [0.6, 0.01, -0.05, 0.95],
       },
     }),

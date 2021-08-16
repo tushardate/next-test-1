@@ -44,18 +44,18 @@ export default function About(props) {
       },
     },
     exit: {
-      y: 25,
+      y: 20,
       opacity: 0,
       transition: {
-        duration: 0.75,
-        ease: [0.36, 0, 0.66, -0.56],
+        duration: 0.5,
+        ease: "easeInOut",
       },
     },
   };
   const stagger = {
     animate: {
       transition: {
-        staggerChildren: 0.06,
+        staggerChildren: 0.2,
       },
     },
   };
@@ -70,16 +70,10 @@ export default function About(props) {
         animate="animate"
       >
         <motion.div variants={stagger} className="flex flex-wrap leading-relaxed">
-          <motion.div className="w-full lg:pl-1/4 pb-12 lg:pb-16">
-            <div className="font-tdcond font-semibold uppercase md:text-14vw sm:text-10xl text-7xl md:-ml-2 tracking-loose leading-none">
-              <SplitText variants={slideIn}>{acf.td_about_name}</SplitText>
-            </div>
-            <div className="font-tdcond font-semibold uppercase md:text-7vw sm:text-7xl text-5xl tracking-loose leading-tight md:leading-none">
-              <SplitText variants={slideIn}>
-                Creative&nbsp;Director &amp; Art&nbsp;Director
-              </SplitText>
-            </div>
-          </motion.div>
+          <div className="w-full lg:pl-1/4 pb-12 lg:pb-16">
+            <motion.div variants={slideIn} className="font-tdcond font-semibold uppercase md:text-14vw sm:text-10xl text-7xl md:-ml-2 tracking-loose leading-none">{acf.td_about_name}</motion.div>
+            <motion.div variants={slideIn} className="font-tdcond font-semibold uppercase md:text-7vw sm:text-7xl text-5xl tracking-loose leading-tight md:leading-none">Creative&nbsp;Director &amp; Art&nbsp;Director</motion.div>
+          </div>
 
           <motion.div
             variants={slideIn}

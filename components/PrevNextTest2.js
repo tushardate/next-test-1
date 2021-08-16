@@ -55,7 +55,7 @@ export default function PrevNextTest2(props) {
       initial={inViewAnim.initial}
       animate={inView ? inViewAnim.animate : inViewAnim.exit}
       ref={ref}
-      className="flex justify-between mx-4 sm:mx-8 md:mx-12 xl:mx-24 mt-24 mt-12 mb-16 lg:mt-20 lg:mb-20 font-tdcond font-bold uppercase text-7xl"
+      className="flex justify-between mx-4 sm:mx-8 md:mx-12 xl:mx-24 mt-24 mt-12 mb-16 lg:mt-20 lg:mb-20 font-tdcond font-bold uppercase text-3xl xxs:text-5xl sm:text-6xl md:text-7xl"
     >
       <div className="">
         <Link
