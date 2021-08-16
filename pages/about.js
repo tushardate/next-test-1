@@ -55,7 +55,7 @@ export default function About(props) {
   const stagger = {
     animate: {
       transition: {
-        staggerChildren: 0.08,
+        staggerChildren: 0.06,
       },
     },
   };
