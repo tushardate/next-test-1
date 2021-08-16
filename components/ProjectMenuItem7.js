@@ -20,7 +20,7 @@ function ProjectMenuItem7(props) {
       // },
       transition: {
         delay: custom * 0.2,
-        duration: 1.6,
+        duration: 1,
         ease: [0.6, 0.01, -0.05, 0.95],
       },
     }),

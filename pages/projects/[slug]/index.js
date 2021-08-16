@@ -77,7 +77,7 @@ export default function Project({ post, next, prev, allPosts }) {
       y: 0,
       opacity: 1,
       transition: {
-        delay: custom * 0.2,
+        delay: custom * 0.075,
         duration: 1,
         ease: [0.6, 0.01, -0.05, 0.95],
       },
