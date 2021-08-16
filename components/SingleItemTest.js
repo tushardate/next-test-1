@@ -11,7 +11,7 @@ function SingleItemTest(props) {
   let component;
 
   const { ref, inView, entry } = useInView({
-    rootMargin: "0% 0% 20px 0%",
+    rootMargin: "0% 0% 30px 0%",
     triggerOnce: true,
   });
 
@@ -26,8 +26,8 @@ function SingleItemTest(props) {
       scale: 1,
       y: 0,
       transition: {
-        duration: 0.75,
-        ease: "easeOut",
+        duration: 1.6,
+        ease: [0.6, 0.01, -0.05, 0.95],
       },
     },
     exit: {
@@ -35,7 +35,7 @@ function SingleItemTest(props) {
       scale: 0.92,
       transition: {
         duration: 0.75,
-        ease: "easeOut",
+        ease: "easeInOut",
       },
     },
   };

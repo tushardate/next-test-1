@@ -68,25 +68,6 @@ export default function Project({ post, next, prev, allPosts }) {
     }
   }, []);
   
-  const drawLine = {
-    initial: {
-      scaleX: 0,
-    },
-    animate: {
-      scaleX: 1,
-      transition: {
-        duration: 1,
-        ease: [0.65, 0, 0.35, 1],
-      },
-    },
-    exit: {
-      scaleX: 0,
-      transition: {
-        duration: 0.75,
-        ease: [0.65, 0, 0.35, 1],
-      },
-    },
-  };
   const fadeInUp = {
     initial: {
       y: 30,
@@ -96,10 +77,9 @@ export default function Project({ post, next, prev, allPosts }) {
       y: 0,
       opacity: 1,
       transition: {
-        delay: custom * 0.1,
-        type: "spring",
-        damping: 25,
-        stiffness: 100,
+        delay: custom * 0.2,
+        duration: 1,
+        ease: [0.6, 0.01, -0.05, 0.95],
       },
     }),
     hover: {
@@ -108,17 +88,13 @@ export default function Project({ post, next, prev, allPosts }) {
     exit: {
       y: 20,
       opacity: 0,
+      // transition: {
+      //   duration: 0.75,
+      //   ease: [0.36, 0, 0.66, -0.56],
+      // },
       transition: {
-        duration: 0.75,
-        ease: [0.36, 0, 0.66, -0.56],
-      },
-    },
-  };
-
-  const stagger = {
-    animate: {
-      transition: {
-        staggerChildren: 0.4,
+        duration: 0.5,
+        ease: "easeInOut",
       },
     },
   };
@@ -131,7 +107,6 @@ export default function Project({ post, next, prev, allPosts }) {
         initial="initial"
         animate="animate"
         className="w-full text-gray-900"
-        variants={stagger}
       >
         {showProject ? (
           <>
@@ -139,23 +114,22 @@ export default function Project({ post, next, prev, allPosts }) {
               <div className="w-full pb-2">
                 <motion.h1
                   variants={fadeInUp}
+                  custom={0}
                   className="font-tdsans text-xl md:text-2xl"
                 >
                   {client_name}
                 </motion.h1>
               </div>
               <div className="flex flex-col md:flex-row md:gap-12">
-                  <div className="w-full md:w-3/5">
-                    <SplitText
-                      variants={fadeInUp}
-                      className="font-tdcond font-bold text-25vw sm:text-20vw md:text-15vw lg:text-13vw xl:text-12vw uppercase tracking-none leading-point-75"
-                    >
+                  <motion.div variants={fadeInUp} custom={1} className="w-full md:w-3/5">
+                    <SplitText className="font-tdcond font-bold text-25vw sm:text-20vw md:text-15vw lg:text-13vw xl:text-12vw uppercase tracking-none leading-point-75">
                       {title}
                     </SplitText>
-                  </div>
+                  </motion.div>
                   <div className="w-full md:w-2/5 md:pl-12 mt-2 md:-mt-2 flex flex-wrap content-end">
                     <motion.div
                       variants={fadeInUp}
+                      custom={2}
                       className=""
                     >
                       <div className="w-full ">
@@ -172,7 +146,7 @@ export default function Project({ post, next, prev, allPosts }) {
               {/* <motion.hr variants={drawLine} style={{ originX: 0 }} class="border-gray-900 mt-10 lg:mt-20"></motion.hr> */}
             </div>
 
-            <motion.div variants={fadeInUp} className="content mx-4 sm:mx-8 md:mx-12 xl:mx-24">
+            <motion.div variants={fadeInUp} custom={3} className="content mx-4 sm:mx-8 md:mx-12 xl:mx-24">
               {group_row_repeater.map((row, i) => (
                 <div
                   key={i}

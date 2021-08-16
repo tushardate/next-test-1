@@ -13,10 +13,15 @@ function ProjectMenuItem7(props) {
     },
     animate: (custom) => ({
       scaleY: 0,
+      // transition: {
+      //   delay: custom * 0.2,
+      //   duration: 1,
+      //   ease: [0.65, 0, 0.35, 1],
+      // },
       transition: {
-        delay: custom * 0.15,
-        duration: 1,
-        ease: [0.65, 0, 0.35, 1],
+        delay: custom * 0.2,
+        duration: 1.6,
+        ease: [0.6, 0.01, -0.05, 0.95],
       },
     }),
     exit: (custom) => ({
@@ -24,7 +29,8 @@ function ProjectMenuItem7(props) {
       transition: {
         delay: custom * 0.075,
         duration: 0.75,
-        ease: [0.65, 0, 0.35, 1],
+        // ease: [0.65, 0, 0.35, 1],
+        ease: [0.6, 0.01, -0.05, 0.95],
       },
     }),
   };
@@ -32,21 +38,32 @@ function ProjectMenuItem7(props) {
     initial: {
       scale: 1.1,
     },
-    animate: {
+    animate: (custom) => ({
       scale: 1,
+      // transition: {
+      //   delay: custom * 0.2 + 0.2,
+      //   type: "spring",
+      //   damping: 20,
+      //   stiffness: 100,
+      // },
       transition: {
-        type: "spring",
-        damping: 20,
-        stiffness: 100,
+        delay: custom * 0.2 + 0.25,
+        duration: 1,
+        ease: [0.6, 0.01, -0.05, 0.95],
       },
-    },
+    }),
     hover: {
       scale: 1.175,
+      // transition: {
+      //   type: "spring",
+      //   damping: 20,
+      //   stiffness: 100,
+      // },
       transition: {
-        type: "spring",
-        damping: 20,
-        stiffness: 100,
+        duration: 1,
+        ease: [0.6, 0.01, -0.05, 0.95],
       },
+      
     },
   };
   const slideUp = {
@@ -115,6 +132,7 @@ function ProjectMenuItem7(props) {
             className="relative overflow-hidden pb-125 rounded-sm">
             <motion.img
               variants={scaleDown}
+              custom={index}
               className="absolute h-full w-full object-cover"
               style={{ originY: 0.5 }}
               src={featured_image.large && featured_image.large}

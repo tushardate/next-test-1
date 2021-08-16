@@ -33,18 +33,26 @@ export default function Home(props) {
     animate: {
       y: 0,
       opacity: 1,
+      // transition: {
+      //   type: "spring",
+      //   damping: 25,
+      //   stiffness: 100,
+      // },
       transition: {
-        type: "spring",
-        damping: 25,
-        stiffness: 100,
+        duration: 0.75,
+        // ease: [0.6, 0.01, -0.05, 0.95],
+        ease: "easeInOut",
       },
     },
     exit: {
       y: 20,
       opacity: 0,
+      // transition: {
+      //   duration: 0.75,
+      //   ease: [0.36, 0, 0.66, -0.56],
+      // },
       transition: {
-        duration: 0.75,
-        ease: [0.36, 0, 0.66, -0.56],
+        ease: "easeInOut",
       },
     },
   };
@@ -52,7 +60,7 @@ export default function Home(props) {
   const stagger = {
     animate: {
       transition: {
-        staggerChildren: 0.08,
+        staggerChildren: 0.2,
       },
     },
   };

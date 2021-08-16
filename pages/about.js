@@ -33,10 +33,14 @@ export default function About(props) {
     animate: {
       y: 0,
       opacity: 1,
+      // transition: {
+      //   type: "spring",
+      //   damping: 25,
+      //   stiffness: 100,
+      // },
       transition: {
-        type: "spring",
-        damping: 25,
-        stiffness: 100,
+        duration: 1,
+        ease: [0.6, 0.01, -0.05, 0.95],
       },
     },
     exit: {
@@ -60,17 +64,17 @@ export default function About(props) {
       <Header />
       <motion.div
         // style={{ backgroundColor: `hsla(${hueColor}, 15%, 87%, 1)` }}
-        className="font-tdserif sm:font-tdspace text-lg sm:text-xl pt-24 md:pt-36 lg:pt-40 pb-32 px-4 md:pl-8 md:pr-8 xl:pr-24 text-gray-900"
+        className="text-lg sm:text-xl pt-24 md:pt-36 lg:pt-40 pb-32 px-4 md:pl-8 md:pr-8 xl:pr-24 text-gray-900"
         exit="exit"
         initial="initial"
         animate="animate"
       >
         <motion.div variants={stagger} className="flex flex-wrap leading-relaxed">
           <motion.div className="w-full lg:pl-1/4 pb-12 lg:pb-16">
-            <div className="md:-ml-2 font-medium md:text-6xl sm:text-5xl text-4xl tracking-snug leading-tight md:leading-none">
+            <div className="font-tdcond font-semibold uppercase md:text-14vw sm:text-10xl text-7xl md:-ml-2 tracking-loose leading-none">
               <SplitText variants={slideIn}>{acf.td_about_name}</SplitText>
             </div>
-            <div className="font-medium md:text-5xl sm:text-4xl text-3xl tracking-snug leading-tight md:leading-none">
+            <div className="font-tdcond font-semibold uppercase md:text-7vw sm:text-7xl text-5xl tracking-loose leading-tight md:leading-none">
               <SplitText variants={slideIn}>
                 Creative&nbsp;Director &amp; Art&nbsp;Director
               </SplitText>
@@ -84,7 +88,7 @@ export default function About(props) {
             <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2 lg:pr-20 lg:text-right">
               Contact
             </div>
-            <div className="font-tdsans">
+            <div className="">
               <a
                 className="hover:text-gray-500"
                 href={`tel:+1-${acf.td_about_phone}`}
@@ -117,7 +121,7 @@ export default function About(props) {
             {/* <div className="w-1/4 pr-20 pt-2">
               <img className="w-full object-contain" src={acf.td_about_picture}></img>
             </div> */}
-            <div className="lg:w-3/4 font-tdsans lg:col-count-2 lg:col-gap-2xl">
+            <div className="lg:w-3/4 lg:col-count-2 lg:col-gap-2xl">
               <p
                 className=""
                 dangerouslySetInnerHTML={{ __html: acf.td_about_bio }}
@@ -132,7 +136,7 @@ export default function About(props) {
             <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2 lg:pr-20 lg:text-right">
               Experience
             </div>
-            <div className="w-full lg:w-3/4 font-tdsans lg:col-count-2 lg:col-gap-2xl">
+            <div className="w-full lg:w-3/4 lg:col-count-2 lg:col-gap-2xl">
               {acf.td_about_work_experience.map((el, i) => (
                 <div className="pb-8 avoid-break about-col" key={i}>
                   <p className="font-medium">{el.td_exp_role}</p>
@@ -151,7 +155,7 @@ export default function About(props) {
             <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2 lg:pr-20 lg:text-right">
               Recognition
             </div>
-            <div className="w-full lg:w-3/4 font-tdsans lg:col-count-2 lg:col-gap-2xl font-light">
+            <div className="w-full lg:w-3/4 lg:col-count-2 lg:col-gap-2xl font-light">
               {acf.td_about_awards.map((el, i) => (
                 <p key={i}>
                   <span className="font-medium">{el.td_awards_name}</span>,{" "}
@@ -168,7 +172,7 @@ export default function About(props) {
             <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2 lg:pr-20 lg:text-right">
               Education
             </div>
-            <div className="w-full lg:w-3/4 font-tdsans font-light">
+            <div className="w-full lg:w-3/4 font-light">
               {acf.td_about_edu.map((el, i) => (
                 <p key={i}>
                   <span className="font-medium">{el.td_edu_name}</span>,{" "}

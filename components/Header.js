@@ -13,7 +13,7 @@ export default function Header() {
       originX: 0,
       transition: {
         duration: 0.35,
-      }
+      },
     }
   }
   const rightLeft = {
@@ -26,7 +26,7 @@ export default function Header() {
       originX: 1,
       transition: {
         duration: 0.35,
-      }
+      },
     }
   }
   const links = [
