@@ -153,7 +153,7 @@ export default function Project({ post, next, prev, allPosts }) {
                       {title}
                     </SplitText>
                   </div>
-                  <div className="w-full md:w-2/5 mt-2 md:-mt-2 flex flex-wrap content-end">
+                  <div className="w-full md:w-2/5 md:pl-12 mt-2 md:-mt-2 flex flex-wrap content-end">
                     <motion.div
                       variants={fadeInUp}
                       className=""
@@ -169,7 +169,7 @@ export default function Project({ post, next, prev, allPosts }) {
                     </motion.div>
                   </div>
               </div>
-              <motion.hr variants={drawLine} style={{ originX: 0 }} class="border-gray-900 mt-10 lg:mt-20"></motion.hr>
+              {/* <motion.hr variants={drawLine} style={{ originX: 0 }} class="border-gray-900 mt-10 lg:mt-20"></motion.hr> */}
             </div>
 
             <motion.div variants={fadeInUp} className="content mx-4 sm:mx-8 md:mx-12 xl:mx-24">

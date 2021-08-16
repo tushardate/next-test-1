@@ -130,6 +130,9 @@ module.exports = {
         loose: "0.0125em",
         looser: "0.02em"
       },
+      gridTemplateColumns: {
+        'fill-40': 'repeat(auto-fill, 15vw)',
+      },
       spacing: {
         7: "1.75rem",
         9: "2.25rem",

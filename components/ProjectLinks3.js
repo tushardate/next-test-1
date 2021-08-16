@@ -32,7 +32,8 @@ function ProjectLinks3({ allPosts, currentId }) {
       animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.75 }}
       exit={{ opacity: 0 }}
-      className="hidden lg:flex font-tdsans leading-4 text-md mx-4 sm:mx-8 md:mx-12 xl:mx-24 lg:mt-20 lg:mb-10 justify-between flex-wrap gap-x-8 gap-y-4"
+      // className="hidden lg:grid grid-cols-fill-40 text-center divide-x divide-gray-400 font-tdsans leading-4 text-md mx-4 sm:mx-8 md:mx-12 xl:mx-24 lg:mt-20 lg:mb-10"
+      className="hidden lg:flex justify-between flex-wrap flexGrid font-tdsans leading-4 text-md mx-4 sm:mx-8 md:mx-12 xl:mx-24 lg:mt-20 lg:mb-10"
     >
       {allPosts.map((el, i) => (
         <>
@@ -42,14 +43,14 @@ function ProjectLinks3({ allPosts, currentId }) {
             scroll={false}
             key={i}
           >
-            <li>
+            <li class="whitespace-pre px-3 py-2 flex items-center cursor-pointer">
             <motion.a
               whileHover={{ opacity: 1, transition: { duration: 0.35 } }}
               className={`${
                 el.id === currentId ? "opacity-100 font-medium" : "opacity-50"
               }`}
             >
-              <motion.div className="cursor-pointer">
+              <motion.div>
                 {`${el.title}`}
               </motion.div>
             </motion.a>

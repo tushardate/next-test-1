@@ -71,7 +71,7 @@ export default function Home(props) {
                 return isTouchDevice ? <motion.div>
                     <ProjectMenuItem7Mobile key={project.id} data={project} />
                   </motion.div>
-                : <ProjectMenuItem7 key={project.id} data={project} />
+                : <ProjectMenuItem7 key={project.id} data={{...project, index: i}} />
               } 
             )}
         </motion.div>

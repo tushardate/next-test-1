@@ -4,28 +4,29 @@ import { motion } from "framer-motion";
 
 
 function ProjectMenuItem7(props) {
-  const { client_name, title, id, featured_image, slug } = props.data;
+  const { client_name, title, id, featured_image, slug, index } = props.data;
   const backgroundColor = `hsla(60, 5%, 87%, 1)`;
 
   const revealImage = {
     initial: {
-      scaleX: 1,
+      scaleY: 1,
     },
-    animate: {
-      scaleX: 0,
+    animate: (custom) => ({
+      scaleY: 0,
       transition: {
-        delay: 0,
+        delay: custom * 0.15,
         duration: 1,
         ease: [0.65, 0, 0.35, 1],
       },
-    },
-    exit: {
-      scaleX: 1,
+    }),
+    exit: (custom) => ({
+      scaleY: 1,
       transition: {
+        delay: custom * 0.075,
         duration: 0.75,
         ease: [0.65, 0, 0.35, 1],
       },
-    },
+    }),
   };
   const scaleDown = {
     initial: {
@@ -87,7 +88,7 @@ function ProjectMenuItem7(props) {
               },
         }),
         exit: {
-            x: "3rem",
+            x: "0px",
             transition: {
               type: "spring",
               damping: 20,
@@ -111,7 +112,7 @@ function ProjectMenuItem7(props) {
             initial="initial"
             animate="animate"
             whileHover="hover"
-            className="relative overflow-hidden pb-125 rounded-md">
+            className="relative overflow-hidden pb-125 rounded-sm">
             <motion.img
               variants={scaleDown}
               className="absolute h-full w-full object-cover"
@@ -133,7 +134,8 @@ function ProjectMenuItem7(props) {
             <motion.div
               variants={revealImage}
               className="absolute inset-0 imageMask"
-              style={{ originX: 1 }}
+              custom={index}
+              style={{ originY: 1 }}
             ></motion.div>
           </motion.div>
       </a>
