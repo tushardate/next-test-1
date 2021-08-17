@@ -138,7 +138,7 @@ function ProjectMenuItem7(props) {
               src={featured_image.large && featured_image.large}
             ></motion.img>
             <motion.div variants={onHoverShow} className="absolute w-full h-full p-6 bg-gray-900 text-color-offWhite flex flex-col justify-between" >
-                <div class="w-full">
+                <div className="w-full">
                     <motion.p variants={slideUp} custom={0} className="text-lg leading-3 pb-4">{client_name}</motion.p>
                     <motion.p variants={slideUp} custom={1} className="font-tdcond font-bold text-30vw sm:text-11vw md:text-13vw lg:text-8vw uppercase tracking-looser leading-point-85">{title}</motion.p>
                 </div>

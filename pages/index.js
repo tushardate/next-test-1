@@ -76,9 +76,8 @@ export default function Home(props) {
       >
         <motion.div variants={stagger} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
             {projects.map((project, i) => {
-                return isTouchDevice ? <motion.div>
-                    <ProjectMenuItem7Mobile key={project.id} data={project} />
-                  </motion.div>
+                return isTouchDevice ? 
+                    <ProjectMenuItem7Mobile key={project.id} data={{...project, index: i}} />
                 : <ProjectMenuItem7 key={project.id} data={{...project, index: i}} />
               } 
             )}

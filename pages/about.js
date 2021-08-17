@@ -64,15 +64,15 @@ export default function About(props) {
       <Header />
       <motion.div
         // style={{ backgroundColor: `hsla(${hueColor}, 15%, 87%, 1)` }}
-        className="text-lg sm:text-xl pt-24 md:pt-36 lg:pt-40 pb-32 px-4 md:pl-8 md:pr-8 xl:pr-24 text-gray-900"
+        className="text-lg sm:text-xl py-24 md:pt-36 px-4 sm:px-8 md:px-12 xl:px-24 text-gray-900"
         exit="exit"
         initial="initial"
         animate="animate"
       >
         <motion.div variants={stagger} className="flex flex-wrap leading-relaxed">
-          <div className="w-full lg:pl-1/4 pb-12 lg:pb-16">
-            <motion.div variants={slideIn} className="font-tdcond font-semibold uppercase md:text-14vw sm:text-10xl text-7xl md:-ml-2 tracking-loose leading-none">{acf.td_about_name}</motion.div>
-            <motion.div variants={slideIn} className="font-tdcond font-semibold uppercase md:text-7vw sm:text-7xl text-5xl tracking-loose leading-tight md:leading-none">Creative&nbsp;Director &amp; Art&nbsp;Director</motion.div>
+          <div className="w-full lg:pl-1/4 pb-12 lg:pb-24">
+            <motion.div variants={slideIn} className="font-tdcond font-semibold uppercase md:text-15vw sm:text-20vw text-25vw md:-ml-2 tracking-looser leading-none">{acf.td_about_name}</motion.div>
+            <motion.div variants={slideIn} className="uppercase md:text-3vw sm:text-5vw text-6vw tracking-looser leading-tight md:leading-none">Creative&nbsp;Director &amp; Art&nbsp;Director</motion.div>
           </div>
 
           <motion.div
@@ -125,7 +125,7 @@ export default function About(props) {
 
           <motion.div
             variants={slideIn}
-            className="w-full lg:flex pb-12 lg:pb-16"
+            className="w-full lg:flex pb-12 lg:pb-24"
           >
             <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2 lg:pr-20 lg:text-right">
               Experience
@@ -144,7 +144,7 @@ export default function About(props) {
 
           <motion.div
             variants={slideIn}
-            className="w-full lg:flex pb-12 lg:pb-16"
+            className="w-full lg:flex pb-12 lg:pb-24"
           >
             <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2 lg:pr-20 lg:text-right">
               Recognition
@@ -161,7 +161,7 @@ export default function About(props) {
 
           <motion.div
             variants={slideIn}
-            className="w-full lg:flex pb-12 lg:pb-16"
+            className="w-full lg:flex pb-12 lg:pb-24"
           >
             <div className="w-full lg:w-1/4 text-2xl font-semibold pb-2 lg:pr-20 lg:text-right">
               Education

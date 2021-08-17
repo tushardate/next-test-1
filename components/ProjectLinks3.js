@@ -43,17 +43,17 @@ function ProjectLinks3({ allPosts, currentId }) {
             scroll={false}
             key={i}
           >
-            <li class="whitespace-pre px-3 py-2 flex items-center cursor-pointer">
-            <motion.a
-              whileHover={{ opacity: 1, transition: { duration: 0.35 } }}
-              className={`${
-                el.id === currentId ? "opacity-100 font-medium" : "opacity-50"
-              }`}
-            >
-              <motion.div>
-                {`${el.title}`}
-              </motion.div>
-            </motion.a>
+            <li key={i} className="whitespace-pre px-3 py-2 flex items-center cursor-pointer">
+              <motion.a
+                whileHover={{ opacity: 1, transition: { duration: 0.35 } }}
+                className={`${
+                  el.id === currentId ? "opacity-100 font-medium" : "opacity-50"
+                }`}
+              >
+                <motion.div>
+                  {`${el.title}`}
+                </motion.div>
+              </motion.a>
             </li>
           </Link>
           {/* {i < allPosts.length - 1 ? (

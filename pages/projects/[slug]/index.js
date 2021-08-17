@@ -169,9 +169,9 @@ export default function Project({ post, next, prev, allPosts }) {
           <PrevNextTest2 prev={prev} next={next} />
         </motion.div>
 
-        <ProjectLinks3 allPosts={allPosts} currentId={id}></ProjectLinks3>
+          <ProjectLinks3 allPosts={allPosts} currentId={id}></ProjectLinks3>
+        <Footer />
       </motion.div>
-      <Footer />
     </>
   );
 }
