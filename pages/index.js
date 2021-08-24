@@ -25,6 +25,32 @@ export default function Home(props) {
     setStore({ changeColor: Math.random() });
   }, [route.asPath]);
 
+  const fadeInUp = {
+    initial: {
+      y: 30,
+      opacity: 0,
+    },
+    animate: (custom) => ({
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: [0.6, 0.01, -0.05, 0.95],
+      },
+    }),
+    hover: {
+      scale: 1.2,
+    },
+    exit: {
+      y: 20,
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   const slideIn = {
     initial: {
       y: 20,
@@ -60,7 +86,7 @@ export default function Home(props) {
   const stagger = {
     animate: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
       },
     },
   };
@@ -78,7 +104,7 @@ export default function Home(props) {
             {projects.map((project, i) => {
                 return isTouchDevice ? 
                     <ProjectMenuItem7Mobile key={project.id} data={{...project, index: i}} />
-                : <ProjectMenuItem7 key={project.id} data={{...project, index: i}} />
+                : <motion.div variants={fadeInUp}><ProjectMenuItem7 key={project.id} data={{...project, index: i}} /></motion.div>
               } 
             )}
         </motion.div>

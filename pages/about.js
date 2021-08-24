@@ -72,7 +72,7 @@ export default function About(props) {
         <motion.div variants={stagger} className="flex flex-wrap leading-relaxed">
           <div className="w-full lg:pl-1/4 pb-12 lg:pb-24">
             <motion.div variants={slideIn} className="font-tdcond font-semibold uppercase md:text-15vw sm:text-20vw text-25vw md:-ml-2 tracking-looser leading-none">{acf.td_about_name}</motion.div>
-            <motion.div variants={slideIn} className="uppercase md:text-3vw sm:text-5vw text-6vw tracking-looser leading-tight md:leading-none">Creative&nbsp;Director &amp; Art&nbsp;Director</motion.div>
+            <motion.div variants={slideIn} className="text-3xl tracking-looser leading-tight md:leading-none">Creative&nbsp;Director &amp; Art&nbsp;Director based in Los Angeles</motion.div>
           </div>
 
           <motion.div

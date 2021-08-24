@@ -36,7 +36,7 @@ function ProjectMenuItem7(props) {
   };
   const scaleDown = {
     initial: {
-      scale: 1.1,
+      scale: 1.05,
     },
     animate: (custom) => ({
       scale: 1,
@@ -47,7 +47,7 @@ function ProjectMenuItem7(props) {
       //   stiffness: 100,
       // },
       transition: {
-        delay: custom * 0.1 + 0.2,
+        delay: custom * 0.1 + 0.1,
         duration: 1,
         ease: [0.6, 0.01, -0.05, 0.95],
       },
@@ -149,12 +149,12 @@ function ProjectMenuItem7(props) {
                   &#8594;
                 </motion.div>
             </motion.div>
-            <motion.div
+            {/* <motion.div
               variants={revealImage}
               className="absolute inset-0 imageMask"
               custom={index}
               style={{ originY: 1 }}
-            ></motion.div>
+            ></motion.div> */}
           </motion.div>
       </a>
     </Link>

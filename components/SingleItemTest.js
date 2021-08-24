@@ -18,7 +18,7 @@ function SingleItemTest(props) {
   const singleReveal = {
     initial: {
       opacity: 0,
-      scale: 0.92,
+      scale: 0.96,
       y: 30,
     },
     animate: {
@@ -32,7 +32,7 @@ function SingleItemTest(props) {
     },
     exit: {
       opacity: 0,
-      scale: 0.92,
+      scale: 0.96,
       transition: {
         duration: 0.75,
         ease: "easeInOut",
