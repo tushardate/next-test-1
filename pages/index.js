@@ -1,7 +1,7 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import ProjectMenuItem7 from "../components/ProjectMenuItem7";
+import ProjectMenuItem8 from "../components/ProjectMenuItem8";
 import ProjectMenuItem7Mobile from "../components/ProjectMenuItem7_Mobile";
 import { SplitText } from "../components/SplitText";
 import { motion } from "framer-motion";
@@ -11,6 +11,8 @@ import useIsTouchDevice from '../components/hooks/useIsTouchDevice'
 
 export default function Home(props) {
   // const projects = Object.keys(data).map((key) => data[key]);
+  const [imageIsLoading, setImageIsLoading] = useState(true)
+
   const projects = props.data;
   const route = useRouter();
   const [store, setStore] = useContext(Context);
@@ -104,7 +106,7 @@ export default function Home(props) {
             {projects.map((project, i) => {
                 return isTouchDevice ? 
                     <ProjectMenuItem7Mobile key={project.id} data={{...project, index: i}} />
-                : <motion.div variants={fadeInUp}><ProjectMenuItem7 key={project.id} data={{...project, index: i}} /></motion.div>
+                : <motion.div variants={fadeInUp}><ProjectMenuItem8 key={project.id} imageIsLoading={imageIsLoading} setImageIsLoading={setImageIsLoading} data={{...project, index: i}} /></motion.div>
               } 
             )}
         </motion.div>
